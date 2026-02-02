@@ -1,0 +1,24 @@
+{
+  "name": "itfac_batch21_group11",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ReezmaCader/ITFac_Batch21_Group11.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/ReezmaCader/ITFac_Batch21_Group11/issues"
+  },
+  "homepage": "https://github.com/ReezmaCader/ITFac_Batch21_Group11#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.58.1",
+    "@types/node": "^25.2.0",
+    "playwright-bdd": "^8.4.2"
+  }
+}
