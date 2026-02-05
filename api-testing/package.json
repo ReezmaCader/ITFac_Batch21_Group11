@@ -1,0 +1,33 @@
+{
+  "name": "api-testing",
+  "version": "1.0.0",
+  "description": "Cucumber-based API testing framework for Sales Management System",
+  "main": "generate-report.js",
+"scripts": {
+  "test": "cucumber-js",
+  "test:user": "cucumber-js --tags '@user'",
+  "test:admin": "cucumber-js --tags '@admin'",
+  "test:positive": "cucumber-js --tags '@positive'",
+  "test:negative": "cucumber-js --tags '@negative'",
+  "test:report": "cucumber-js --format json:reports/cucumber_report.json && node generate-report.js",
+  "clean": "rm -rf reports/*.json reports/*.html",
+  "test:all:report": "npm run clean && npm run test:report"
+},
+
+  "keywords": [
+    "cucumber",
+    "api-testing",
+    "bdd",
+    "automation"
+  ],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@cucumber/cucumber": "^12.6.0",
+    "multiple-cucumber-html-reporter": "^3.9.3"
+  },
+  "dependencies": {
+    "axios": "^1.13.4"
+  }
+}
