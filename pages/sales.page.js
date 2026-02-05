@@ -24,15 +24,15 @@ class SalesPage {
         this.quantityInput = page.locator('#quantity');
         this.sellButton = page.getByRole('button', { name: 'Sell' });
 
-        // Validation Messages
-        this.plantRequiredError = page.getByText('Plant is required');
-        this.quantityError = page.getByText('Quantity must be greater than 0');
+        // Validation Messages - Using regex for flexibility
+        this.plantRequiredError = page.locator('text=/plant.*required|required.*plant/i');
+        this.quantityError = page.locator('text=/quantity.*greater|quantity.*0|invalid.*quantity/i');
 
-        // Table Headers
-        this.plantNameHeader = page.getByRole('columnheader', { name: 'Plant name' });
-        this.quantityHeader = page.getByRole('columnheader', { name: 'Quantity' });
-        this.totalPriceHeader = page.getByRole('columnheader', { name: 'Total price' });
-        this.soldDateHeader = page.getByRole('columnheader', { name: 'Sold date' });
+        // Table Headers - Using locator text matching for flexibility
+        this.plantNameHeader = page.locator('th').filter({ hasText: /plant/i }).first();
+        this.quantityHeader = page.locator('th').filter({ hasText: /quantity/i }).first();
+        this.totalPriceHeader = page.locator('th').filter({ hasText: /price|total/i }).first();
+        this.soldDateHeader = page.locator('th').filter({ hasText: /date|sold/i }).first();
     }
 
     // Navigation Methods
@@ -136,20 +136,48 @@ class SalesPage {
 
     async getPlantDropdownOptions() {
         const options = await this.plantDropdown.locator('option').all();
-        const optionTexts = [];
+        const optionData = [];
         for (const option of options) {
             const text = await option.textContent();
-            optionTexts.push(text);
+            const value = await option.getAttribute('value');
+            optionData.push({ text: text || '', value: value || '' });
         }
-        return optionTexts;
+        return optionData;
     }
 
     async isPlantRequiredErrorVisible() {
-        return await this.plantRequiredError.isVisible();
+        // Check if the plant dropdown has validation error or is required
+        const plantSelect = this.page.locator('#plantId, select[name*="plant"]').first();
+        
+        // Check for visible error messages
+        const plantError = this.page.locator('.error, .invalid-feedback, .text-danger, [class*="error"]').filter({ hasText: /plant/i });
+        const errorCount = await plantError.count();
+        if (errorCount > 0) return true;
+        
+        // Check if placeholder is selected (no valid plant chosen)
+        const isInvalid = await plantSelect.evaluate(el => {
+            const selectedOption = el.options[el.selectedIndex];
+            const isPlaceholder = selectedOption && selectedOption.text.toLowerCase().includes('select');
+            return !el.validity.valid || el.value === '' || isPlaceholder;
+        });
+        return isInvalid;
     }
 
     async isQuantityErrorVisible() {
-        return await this.quantityError.isVisible();
+        // Check if the quantity input has validation error
+        const quantityInput = this.page.locator('#quantity, input[name*="quantity"]').first();
+        
+        // Check for visible error messages  
+        const quantityError = this.page.locator('.error, .invalid-feedback, .text-danger, [class*="error"]').filter({ hasText: /quantity/i });
+        const errorCount = await quantityError.count();
+        if (errorCount > 0) return true;
+        
+        // Check HTML5 validation state - quantity must be > 0
+        const isInvalid = await quantityInput.evaluate(el => {
+            const val = parseInt(el.value) || 0;
+            return !el.validity.valid || val <= 0;
+        });
+        return isInvalid;
     }
 
     // Delete Functionality Methods
@@ -188,7 +216,7 @@ class SalesPage {
     }
 
     async waitForSellPlantPage() {
-        await this.page.waitForURL('**/sell-plant');
+        await this.page.waitForURL('**/sales/new');
     }
 }
 

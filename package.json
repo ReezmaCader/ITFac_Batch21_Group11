@@ -1,21 +1,20 @@
 {
   "name": "qa-training-tests",
   "version": "1.0.0",
-  "description": "",
+  "description": "Test automation repository for the ITQA module",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm run test:playwright:ci && npm run test:cucumber",
+    "test:playwright": "npx playwright test",
+    "test:playwright:ci": "npx playwright test --reporter=list",
+    "test:cucumber": "node run-cucumber.js all"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
   "devDependencies": {
     "@cucumber/cucumber": "^12.6.0",
     "@playwright/test": "^1.58.1",
-    "chai": "^6.2.2",
-    "cucumber-html-reporter": "^7.2.0",
-    "mochawesome": "^7.1.4",
-    "playwright": "^1.58.1"
+    "@types/node": "^25.1.0"
   }
 }
