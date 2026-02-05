@@ -1,4 +1,4 @@
-markdown# Sales API Testing Framework
+# Sales API Testing Framework
 
 BDD-based API testing framework using Cucumber for Sales Management System.
 
