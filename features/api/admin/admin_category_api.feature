@@ -7,7 +7,7 @@ Feature: Admin Category API Management
     Given the API service is running
     And I am authenticated as an Admin
 
-  # C_Category_Management_API_Admin_026
+  # TC_Category_Management_API_Admin_026
   Scenario: Verify API retrieves all categories when no parameters are provided
     Given multiple categories exist in the system
     And I am authenticated as a User
