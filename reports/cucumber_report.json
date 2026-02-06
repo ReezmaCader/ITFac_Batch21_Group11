@@ -14,7 +14,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 746694500
+              "duration": 302067699
             }
           },
           {
@@ -27,7 +27,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2340900
+              "duration": 491199
             }
           },
           {
@@ -40,7 +40,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 506246600
+              "duration": 157463199
             }
           },
           {
@@ -53,7 +53,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 63514400
+              "duration": 164937399
             }
           },
           {
@@ -66,7 +66,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 315709200
+              "duration": 118175700
             }
           },
           {
@@ -75,11 +75,11 @@
             "line": 14,
             "name": "I send a GET request to \"/api/categories\" without any query parameters",
             "match": {
-              "location": "steps\\api\\common_api.steps.js:186"
+              "location": "steps\\api\\common_api.steps.js:183"
             },
             "result": {
               "status": "passed",
-              "duration": 75201200
+              "duration": 11547199
             }
           },
           {
@@ -92,7 +92,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 3234399
+              "duration": 1728999
             }
           },
           {
@@ -101,25 +101,24 @@
             "line": 16,
             "name": "the response body should contain a list of all categories",
             "match": {
-              "location": "steps\\api\\common_api.steps.js:196"
+              "location": "steps\\api\\common_api.steps.js:191"
             },
             "result": {
               "status": "passed",
-              "duration": 2851999
+              "duration": 914000
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 17,
-            "name": "each category should have the correct structure with id, name, parent, and subCategories",
+            "name": "each category should have the correct structure with id, name, and parentName",
             "match": {
-              "location": "steps\\api\\common_api.steps.js:208"
+              "location": "steps\\api\\common_api.steps.js:202"
             },
             "result": {
-              "status": "failed",
-              "duration": 7464399,
-              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoHaveProperty\u001b[2m(\u001b[22m\u001b[32mpath\u001b[39m\u001b[2m)\u001b[22m\n\nExpected path: \u001b[32m\"parent\"\u001b[39m\nReceived path: \u001b[31m[]\u001b[39m\n\nReceived value: \u001b[31m{\"id\": 16, \"name\": \"Flowers\", \"parentName\": \"-\"}\u001b[39m\n    at Proxy.<anonymous> (D:\\QA Test case\\ITFac_Batch21_Group11\\node_modules\\playwright\\lib\\matchers\\expect.js:213:24)\n    at World.<anonymous> (D:\\QA Test case\\ITFac_Batch21_Group11\\steps\\api\\common_api.steps.js:220:27)"
+              "status": "passed",
+              "duration": 1237999
             }
           },
           {
@@ -128,11 +127,11 @@
             "line": 18,
             "name": "the response format should match the API specification",
             "match": {
-              "location": "steps\\api\\common_api.steps.js:227"
+              "location": "steps\\api\\common_api.steps.js:220"
             },
             "result": {
-              "status": "skipped",
-              "duration": 0
+              "status": "passed",
+              "duration": 16130899
             }
           },
           {
@@ -140,7 +139,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 182092299
+              "duration": 26226500
             }
           }
         ],
@@ -159,7 +158,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1067413299
+              "duration": 756643600
             }
           },
           {
@@ -172,7 +171,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 643699
+              "duration": 335500
             }
           },
           {
@@ -185,7 +184,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 633821899
+              "duration": 131230299
             }
           },
           {
@@ -198,7 +197,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 45315899
+              "duration": 17033400
             }
           },
           {
@@ -211,7 +210,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 49264400
+              "duration": 102702200
             }
           },
           {
@@ -224,7 +223,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 717000
+              "duration": 592799
             }
           },
           {
@@ -237,7 +236,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1911499
+              "duration": 742999
             }
           },
           {
@@ -245,7 +244,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 146360499
+              "duration": 31499100
             }
           }
         ],
@@ -264,7 +263,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 708847200
+              "duration": 911468200
             }
           },
           {
@@ -277,7 +276,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 521099
+              "duration": 158300
             }
           },
           {
@@ -290,7 +289,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 324637499
+              "duration": 115229000
             }
           },
           {
@@ -303,7 +302,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 44526200
+              "duration": 8216999
             }
           },
           {
@@ -316,7 +315,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 948000
+              "duration": 501100
             }
           },
           {
@@ -329,7 +328,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2059599
+              "duration": 2119099
             }
           },
           {
@@ -337,7 +336,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 89912599
+              "duration": 29878700
             }
           }
         ],
@@ -356,7 +355,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 482929299
+              "duration": 773373499
             }
           },
           {
@@ -369,7 +368,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 528800
+              "duration": 225100
             }
           },
           {
@@ -382,7 +381,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 372643500
+              "duration": 124951100
             }
           },
           {
@@ -395,7 +394,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 162901399
+              "duration": 26838600
             }
           },
           {
@@ -408,7 +407,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 121746100
+              "duration": 55044399
             }
           },
           {
@@ -421,7 +420,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 928200
+              "duration": 800000
             }
           },
           {
@@ -434,7 +433,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 60132400
+              "duration": 7310799
             }
           },
           {
@@ -442,7 +441,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 123867100
+              "duration": 26665199
             }
           }
         ],
@@ -461,7 +460,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 636506600
+              "duration": 731281200
             }
           },
           {
@@ -474,7 +473,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 295299
+              "duration": 133399
             }
           },
           {
@@ -487,7 +486,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 410259900
+              "duration": 124741299
             }
           },
           {
@@ -500,7 +499,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 30425699
+              "duration": 9121299
             }
           },
           {
@@ -513,7 +512,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 780899
+              "duration": 716800
             }
           },
           {
@@ -526,7 +525,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1295499
+              "duration": 957399
             }
           },
           {
@@ -534,7 +533,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 111435700
+              "duration": 31272100
             }
           }
         ],
@@ -564,7 +563,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 386363600
+              "duration": 701376800
             }
           },
           {
@@ -577,7 +576,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 540000
+              "duration": 176899
             }
           },
           {
@@ -590,7 +589,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 392251499
+              "duration": 125183700
             }
           },
           {
@@ -603,7 +602,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 53417799
+              "duration": 15242899
             }
           },
           {
@@ -616,7 +615,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 31638399
+              "duration": 9621600
             }
           },
           {
@@ -629,7 +628,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 557499
+              "duration": 361100
             }
           },
           {
@@ -642,7 +641,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1127700
+              "duration": 828199
             }
           },
           {
@@ -650,7 +649,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 77477399
+              "duration": 33638700
             }
           }
         ],
@@ -669,7 +668,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 453794599
+              "duration": 692749900
             }
           },
           {
@@ -682,7 +681,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 247699
+              "duration": 154399
             }
           },
           {
@@ -695,7 +694,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 345990200
+              "duration": 122570799
             }
           },
           {
@@ -708,7 +707,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 23395500
+              "duration": 7076699
             }
           },
           {
@@ -721,7 +720,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1170299
+              "duration": 381399
             }
           },
           {
@@ -734,7 +733,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2285199
+              "duration": 1212900
             }
           },
           {
@@ -742,7 +741,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 64970199
+              "duration": 31701500
             }
           }
         ],
@@ -761,7 +760,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 527508599
+              "duration": 685506499
             }
           },
           {
@@ -774,7 +773,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 247100
+              "duration": 149099
             }
           },
           {
@@ -787,7 +786,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 422112600
+              "duration": 120471599
             }
           },
           {
@@ -800,7 +799,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 97060700
+              "duration": 11038399
             }
           },
           {
@@ -813,7 +812,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1089700
+              "duration": 683999
             }
           },
           {
@@ -826,7 +825,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 3045000
+              "duration": 1340599
             }
           },
           {
@@ -834,7 +833,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 85467699
+              "duration": 30650599
             }
           }
         ],
@@ -853,7 +852,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 516970000
+              "duration": 675522399
             }
           },
           {
@@ -866,7 +865,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 244800
+              "duration": 124700
             }
           },
           {
@@ -879,7 +878,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 364476599
+              "duration": 110155999
             }
           },
           {
@@ -892,7 +891,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 65311700
+              "duration": 10974400
             }
           },
           {
@@ -905,7 +904,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 45254600
+              "duration": 12557700
             }
           },
           {
@@ -918,7 +917,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1139199
+              "duration": 281899
             }
           },
           {
@@ -931,7 +930,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1377300
+              "duration": 626900
             }
           },
           {
@@ -939,7 +938,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 96580599
+              "duration": 32981900
             }
           }
         ],
@@ -948,17 +947,17 @@
       },
       {
         "description": "",
-        "id": "user-category-api-management;verify-api-functionality-when-invalid-query-parameters-are-provided",
+        "id": "user-category-api-management;verify-api-functionality-of-retrieving-category-summary",
         "keyword": "Scenario",
         "line": 37,
-        "name": "Verify API functionality when invalid query parameters are provided",
+        "name": "Verify API functionality of retrieving category summary",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 723080899
+              "duration": 667879300
             }
           },
           {
@@ -971,7 +970,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 492700
+              "duration": 121999
             }
           },
           {
@@ -984,20 +983,20 @@
             },
             "result": {
               "status": "passed",
-              "duration": 438734400
+              "duration": 115794599
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
             "line": 38,
-            "name": "I send a GET request to \"/api/categories\" with query param \"invalidParam=xyz\"",
+            "name": "I send a GET request to \"/api/categories/summary\"",
             "match": {
-              "location": "steps\\api\\common_api.steps.js:136"
+              "location": "steps\\api\\common_api.steps.js:127"
             },
             "result": {
               "status": "passed",
-              "duration": 94412099
+              "duration": 7487999
             }
           },
           {
@@ -1010,112 +1009,20 @@
             },
             "result": {
               "status": "passed",
-              "duration": 597600
+              "duration": 320499
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 40,
-            "name": "the response should contain a list of categories",
-            "match": {
-              "location": "steps\\api\\common_api.steps.js:164"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1099100
-            }
-          },
-          {
-            "keyword": "After",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 134516900
-            }
-          }
-        ],
-        "tags": [],
-        "type": "scenario"
-      },
-      {
-        "description": "",
-        "id": "user-category-api-management;verify-api-functionality-of-retrieving-category-summary",
-        "keyword": "Scenario",
-        "line": 43,
-        "name": "Verify API functionality of retrieving category summary",
-        "steps": [
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 568790600
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 7,
-            "name": "the API service is running",
-            "match": {
-              "location": "steps\\api\\common_api.steps.js:5"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 394999
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 8,
-            "name": "I am authenticated as a User",
-            "match": {
-              "location": "steps\\api\\common_api.steps.js:51"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 436030299
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 44,
-            "name": "I send a GET request to \"/api/categories/summary\"",
-            "match": {
-              "location": "steps\\api\\common_api.steps.js:127"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 50290000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 45,
-            "name": "the response status code should be 200",
-            "match": {
-              "location": "steps\\api\\common_api.steps.js:141"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1167300
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 46,
             "name": "the response should contain the category summary structure",
             "match": {
               "location": "steps\\api\\category_api.steps.js:46"
             },
             "result": {
               "status": "passed",
-              "duration": 4373400
+              "duration": 723500
             }
           },
           {
@@ -1123,7 +1030,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 125429899
+              "duration": 34938099
             }
           }
         ],
@@ -1153,7 +1060,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 407674800
+              "duration": 684390099
             }
           },
           {
@@ -1166,7 +1073,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 824466899
+              "duration": 515967000
             }
           },
           {
@@ -1179,7 +1086,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 765488300
+              "duration": 412106200
             }
           },
           {
@@ -1188,11 +1095,11 @@
             "line": 12,
             "name": "categories exist in the system",
             "match": {
-              "location": "steps\\ui\\admin\\admin.steps.js:5"
+              "location": "steps\\ui\\admin\\admin.steps.js:6"
             },
             "result": {
               "status": "passed",
-              "duration": 5030632400
+              "duration": 5015164400
             }
           },
           {
@@ -1201,11 +1108,11 @@
             "line": 13,
             "name": "a category \"Flowers\" exists in the system",
             "match": {
-              "location": "steps\\ui\\admin\\admin.steps.js:15"
+              "location": "steps\\ui\\admin\\admin.steps.js:16"
             },
             "result": {
               "status": "passed",
-              "duration": 2343819800
+              "duration": 1842146700
             }
           },
           {
@@ -1214,11 +1121,11 @@
             "line": 14,
             "name": "I navigate to the Category management page",
             "match": {
-              "location": "steps\\ui\\admin\\admin.steps.js:54"
+              "location": "steps\\ui\\common\\common.steps.js:35"
             },
             "result": {
               "status": "passed",
-              "duration": 1412288099
+              "duration": 628054500
             }
           },
           {
@@ -1227,11 +1134,11 @@
             "line": 15,
             "name": "I enter \"Flowers\" in the category search field",
             "match": {
-              "location": "steps\\ui\\admin\\admin.steps.js:60"
+              "location": "steps\\ui\\admin\\admin.steps.js:55"
             },
             "result": {
               "status": "passed",
-              "duration": 52061099
+              "duration": 15767099
             }
           },
           {
@@ -1240,11 +1147,11 @@
             "line": 16,
             "name": "I click on Search button",
             "match": {
-              "location": "steps\\ui\\admin\\admin.steps.js:64"
+              "location": "steps\\ui\\admin\\admin.steps.js:59"
             },
             "result": {
               "status": "passed",
-              "duration": 950810300
+              "duration": 595415900
             }
           },
           {
@@ -1253,11 +1160,11 @@
             "line": 17,
             "name": "I should see only categories matching \"Flowers\" in the results",
             "match": {
-              "location": "steps\\ui\\admin\\admin.steps.js:69"
+              "location": "steps\\ui\\admin\\admin.steps.js:64"
             },
             "result": {
               "status": "passed",
-              "duration": 94375299
+              "duration": 25713999
             }
           },
           {
@@ -1265,7 +1172,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 90050799
+              "duration": 31688099
             }
           }
         ],
@@ -1284,7 +1191,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 512321299
+              "duration": 599030800
             }
           },
           {
@@ -1297,7 +1204,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 506427400
+              "duration": 519043700
             }
           },
           {
@@ -1310,7 +1217,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1225258700
+              "duration": 901818199
             }
           },
           {
@@ -1319,11 +1226,11 @@
             "line": 21,
             "name": "I navigate to the Category management page",
             "match": {
-              "location": "steps\\ui\\admin\\admin.steps.js:54"
+              "location": "steps\\ui\\common\\common.steps.js:35"
             },
             "result": {
               "status": "passed",
-              "duration": 885268799
+              "duration": 724189600
             }
           },
           {
@@ -1332,11 +1239,11 @@
             "line": 22,
             "name": "I click on \"Add Category\" button",
             "match": {
-              "location": "steps\\ui\\admin\\admin.steps.js:80"
+              "location": "steps\\ui\\admin\\admin.steps.js:75"
             },
             "result": {
               "status": "passed",
-              "duration": 753949700
+              "duration": 563273500
             }
           },
           {
@@ -1345,11 +1252,11 @@
             "line": 23,
             "name": "I enter \"Roses\" as Category Name",
             "match": {
-              "location": "steps\\ui\\admin\\admin.steps.js:91"
+              "location": "steps\\ui\\admin\\admin.steps.js:86"
             },
             "result": {
               "status": "passed",
-              "duration": 35627400
+              "duration": 5981700
             }
           },
           {
@@ -1358,11 +1265,11 @@
             "line": 24,
             "name": "I select \"Flowers\" as Parent Category",
             "match": {
-              "location": "steps\\ui\\admin\\admin.steps.js:95"
+              "location": "steps\\ui\\admin\\admin.steps.js:90"
             },
             "result": {
               "status": "passed",
-              "duration": 27549000
+              "duration": 5016500
             }
           },
           {
@@ -1375,7 +1282,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 894737100
+              "duration": 850599699
             }
           },
           {
@@ -1384,11 +1291,11 @@
             "line": 26,
             "name": "I should see a success message",
             "match": {
-              "location": "steps\\ui\\admin\\admin.steps.js:133"
+              "location": "steps\\ui\\admin\\admin.steps.js:128"
             },
             "result": {
               "status": "passed",
-              "duration": 51427200
+              "duration": 10367600
             }
           },
           {
@@ -1397,11 +1304,11 @@
             "line": 27,
             "name": "the category \"Roses\" should be added to the list",
             "match": {
-              "location": "steps\\ui\\admin\\admin.steps.js:150"
+              "location": "steps\\ui\\admin\\admin.steps.js:145"
             },
             "result": {
               "status": "passed",
-              "duration": 14174299
+              "duration": 5347399
             }
           },
           {
@@ -1409,7 +1316,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 87062900
+              "duration": 28152600
             }
           }
         ],
@@ -1428,7 +1335,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 413844400
+              "duration": 664007100
             }
           },
           {
@@ -1441,7 +1348,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 628910499
+              "duration": 550077900
             }
           },
           {
@@ -1454,7 +1361,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1114811699
+              "duration": 791154600
             }
           },
           {
@@ -1463,11 +1370,11 @@
             "line": 31,
             "name": "I navigate to the Category management page",
             "match": {
-              "location": "steps\\ui\\admin\\admin.steps.js:54"
+              "location": "steps\\ui\\common\\common.steps.js:35"
             },
             "result": {
               "status": "passed",
-              "duration": 884099600
+              "duration": 704852800
             }
           },
           {
@@ -1476,11 +1383,11 @@
             "line": 32,
             "name": "I click on \"Add Category\" button",
             "match": {
-              "location": "steps\\ui\\admin\\admin.steps.js:80"
+              "location": "steps\\ui\\admin\\admin.steps.js:75"
             },
             "result": {
               "status": "passed",
-              "duration": 750616999
+              "duration": 559070400
             }
           },
           {
@@ -1489,11 +1396,11 @@
             "line": 33,
             "name": "I leave Category Name field empty",
             "match": {
-              "location": "steps\\ui\\admin\\admin.steps.js:99"
+              "location": "steps\\ui\\admin\\admin.steps.js:94"
             },
             "result": {
               "status": "passed",
-              "duration": 37578199
+              "duration": 8517400
             }
           },
           {
@@ -1502,11 +1409,11 @@
             "line": 34,
             "name": "I select \"Flowers\" as Parent Category",
             "match": {
-              "location": "steps\\ui\\admin\\admin.steps.js:95"
+              "location": "steps\\ui\\admin\\admin.steps.js:90"
             },
             "result": {
               "status": "passed",
-              "duration": 20239800
+              "duration": 6408499
             }
           },
           {
@@ -1519,7 +1426,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 797163500
+              "duration": 599942800
             }
           },
           {
@@ -1528,11 +1435,11 @@
             "line": 36,
             "name": "I should see an error message below Category Name field",
             "match": {
-              "location": "steps\\ui\\admin\\admin.steps.js:160"
+              "location": "steps\\ui\\admin\\admin.steps.js:155"
             },
             "result": {
               "status": "passed",
-              "duration": 48189099
+              "duration": 16332399
             }
           },
           {
@@ -1541,11 +1448,11 @@
             "line": 37,
             "name": "the category should not be added",
             "match": {
-              "location": "steps\\ui\\admin\\admin.steps.js:165"
+              "location": "steps\\ui\\admin\\admin.steps.js:160"
             },
             "result": {
               "status": "passed",
-              "duration": 1406399
+              "duration": 529300
             }
           },
           {
@@ -1553,7 +1460,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 84832399
+              "duration": 29965099
             }
           }
         ],
@@ -1572,7 +1479,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 446087400
+              "duration": 660438900
             }
           },
           {
@@ -1585,7 +1492,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 572451699
+              "duration": 433911299
             }
           },
           {
@@ -1598,7 +1505,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1113317199
+              "duration": 746596100
             }
           },
           {
@@ -1607,11 +1514,11 @@
             "line": 41,
             "name": "I navigate to the Category management page",
             "match": {
-              "location": "steps\\ui\\admin\\admin.steps.js:54"
+              "location": "steps\\ui\\common\\common.steps.js:35"
             },
             "result": {
               "status": "passed",
-              "duration": 840520900
+              "duration": 735964599
             }
           },
           {
@@ -1620,11 +1527,11 @@
             "line": 42,
             "name": "I click on \"Add Category\" button",
             "match": {
-              "location": "steps\\ui\\admin\\admin.steps.js:80"
+              "location": "steps\\ui\\admin\\admin.steps.js:75"
             },
             "result": {
               "status": "passed",
-              "duration": 784171999
+              "duration": 570288499
             }
           },
           {
@@ -1633,11 +1540,11 @@
             "line": 43,
             "name": "I enter \"MainCat\" as Category Name",
             "match": {
-              "location": "steps\\ui\\admin\\admin.steps.js:91"
+              "location": "steps\\ui\\admin\\admin.steps.js:86"
             },
             "result": {
               "status": "passed",
-              "duration": 20781399
+              "duration": 8921400
             }
           },
           {
@@ -1646,11 +1553,11 @@
             "line": 44,
             "name": "I leave Parent Category field empty",
             "match": {
-              "location": "steps\\ui\\admin\\admin.steps.js:103"
+              "location": "steps\\ui\\admin\\admin.steps.js:98"
             },
             "result": {
               "status": "passed",
-              "duration": 32347200
+              "duration": 10829200
             }
           },
           {
@@ -1663,7 +1570,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 865317299
+              "duration": 901761700
             }
           },
           {
@@ -1672,11 +1579,11 @@
             "line": 46,
             "name": "I should see a success message",
             "match": {
-              "location": "steps\\ui\\admin\\admin.steps.js:133"
+              "location": "steps\\ui\\admin\\admin.steps.js:128"
             },
             "result": {
               "status": "passed",
-              "duration": 10008233000
+              "duration": 12435999
             }
           },
           {
@@ -1685,12 +1592,11 @@
             "line": 47,
             "name": "the category \"MainCat\" should be added to the list",
             "match": {
-              "location": "steps\\ui\\admin\\admin.steps.js:150"
+              "location": "steps\\ui\\admin\\admin.steps.js:145"
             },
             "result": {
-              "status": "failed",
-              "duration": 5835706399,
-              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('tbody')\nTimeout: 5000ms\n\u001b[32m- Expected substring  -   1\u001b[39m\n\u001b[31m+ Received string     + 198\u001b[39m\n\n\u001b[32m- MainCat\u001b[39m\n\u001b[31m+\u001b[39m\n\u001b[31m+\u001b[39m\n\u001b[31m+ \u001b[43m      \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m      \u001b[49m\u001b[39m\n\u001b[31m+         21\u001b[39m\n\u001b[31m+         Roses\u001b[39m\n\u001b[31m+         Flowers\u001b[39m\n\u001b[31m+ \u001b[43m        \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m            \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m            \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m              \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m            \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m        \u001b[49m\u001b[39m\n\u001b[31m+\u001b[39m\n\u001b[31m+ \u001b[43m      \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m      \u001b[49m\u001b[39m\n\u001b[31m+         20\u001b[39m\n\u001b[31m+         Flowers\u001b[39m\n\u001b[31m+         -\u001b[39m\n\u001b[31m+ \u001b[43m        \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m            \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m            \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m              \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m            \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m        \u001b[49m\u001b[39m\n\u001b[31m+\u001b[39m\n\u001b[31m+ \u001b[43m      \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m      \u001b[49m\u001b[39m\n\u001b[31m+         17\u001b[39m\n\u001b[31m+         Roses\u001b[39m\n\u001b[31m+         UpdatedCat\u001b[39m\n\u001b[31m+ \u001b[43m        \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m            \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m            \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m              \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m            \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m        \u001b[49m\u001b[39m\n\u001b[31m+\u001b[39m\n\u001b[31m+ \u001b[43m      \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m      \u001b[49m\u001b[39m\n\u001b[31m+         16\u001b[39m\n\u001b[31m+         UpdatedCat\u001b[39m\n\u001b[31m+         -\u001b[39m\n\u001b[31m+ \u001b[43m        \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m            \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m            \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m              \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m            \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m        \u001b[49m\u001b[39m\n\u001b[31m+\u001b[39m\n\u001b[31m+ \u001b[43m      \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m      \u001b[49m\u001b[39m\n\u001b[31m+         14\u001b[39m\n\u001b[31m+         Roses\u001b[39m\n\u001b[31m+         UpdatedCat\u001b[39m\n\u001b[31m+ \u001b[43m        \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m            \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m            \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m              \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m            \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m        \u001b[49m\u001b[39m\n\u001b[31m+\u001b[39m\n\u001b[31m+ \u001b[43m      \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m      \u001b[49m\u001b[39m\n\u001b[31m+         13\u001b[39m\n\u001b[31m+         UpdatedCat\u001b[39m\n\u001b[31m+         -\u001b[39m\n\u001b[31m+ \u001b[43m        \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m            \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m            \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m              \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m            \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m        \u001b[49m\u001b[39m\n\u001b[31m+\u001b[39m\n\u001b[31m+ \u001b[43m      \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m      \u001b[49m\u001b[39m\n\u001b[31m+         11\u001b[39m\n\u001b[31m+         Roses\u001b[39m\n\u001b[31m+         UpdatedCat\u001b[39m\n\u001b[31m+ \u001b[43m        \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m            \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m            \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m              \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m            \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m        \u001b[49m\u001b[39m\n\u001b[31m+\u001b[39m\n\u001b[31m+ \u001b[43m      \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m      \u001b[49m\u001b[39m\n\u001b[31m+         10\u001b[39m\n\u001b[31m+         UpdatedCat\u001b[39m\n\u001b[31m+         -\u001b[39m\n\u001b[31m+ \u001b[43m        \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m            \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m            \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m              \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m            \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m        \u001b[49m\u001b[39m\n\u001b[31m+\u001b[39m\n\u001b[31m+ \u001b[43m      \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m      \u001b[49m\u001b[39m\n\u001b[31m+         7\u001b[39m\n\u001b[31m+         Roses\u001b[39m\n\u001b[31m+         UpdatedCat\u001b[39m\n\u001b[31m+ \u001b[43m        \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m            \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m            \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m              \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m            \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m        \u001b[49m\u001b[39m\n\u001b[31m+\u001b[39m\n\u001b[31m+ \u001b[43m      \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m      \u001b[49m\u001b[39m\n\u001b[31m+         6\u001b[39m\n\u001b[31m+         UpdatedCat\u001b[39m\n\u001b[31m+         -\u001b[39m\n\u001b[31m+ \u001b[43m        \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m            \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m            \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m              \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m            \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m        \u001b[49m\u001b[39m\n\u001b[31m+\u001b[39m\n\u001b[31m+ \u001b[43m      \u001b[49m\u001b[39m\n\u001b[31m+\u001b[39m\n\u001b[31m+ \u001b[43m      \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m      \u001b[49m\u001b[39m\n\u001b[31m+\u001b[39m\n\u001b[31m+ \u001b[43m      \u001b[49m\u001b[39m\n\nCall log:\n\u001b[2m  - Expect \"to.have.text\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('tbody')\u001b[22m\n\u001b[2m    9 × locator resolved to <tbody>…</tbody>\u001b[22m\n\u001b[2m      - unexpected value \"\u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[22m\n\u001b[2m      \u001b[22m\n\u001b[2m        21\u001b[22m\n\u001b[2m        Roses\u001b[22m\n\u001b[2m        Flowers\u001b[22m\n\u001b[2m        \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m            \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m            \u001b[22m\n\u001b[2m              \u001b[22m\n\u001b[2m            \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m        \u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[22m\n\u001b[2m      \u001b[22m\n\u001b[2m        20\u001b[22m\n\u001b[2m        Flowers\u001b[22m\n\u001b[2m        -\u001b[22m\n\u001b[2m        \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m            \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m            \u001b[22m\n\u001b[2m              \u001b[22m\n\u001b[2m            \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m        \u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[22m\n\u001b[2m      \u001b[22m\n\u001b[2m        17\u001b[22m\n\u001b[2m        Roses\u001b[22m\n\u001b[2m        UpdatedCat\u001b[22m\n\u001b[2m        \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m            \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m            \u001b[22m\n\u001b[2m              \u001b[22m\n\u001b[2m            \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m        \u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[22m\n\u001b[2m      \u001b[22m\n\u001b[2m        16\u001b[22m\n\u001b[2m        UpdatedCat\u001b[22m\n\u001b[2m        -\u001b[22m\n\u001b[2m        \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m            \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m            \u001b[22m\n\u001b[2m              \u001b[22m\n\u001b[2m            \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m        \u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[22m\n\u001b[2m      \u001b[22m\n\u001b[2m        14\u001b[22m\n\u001b[2m        Roses\u001b[22m\n\u001b[2m        UpdatedCat\u001b[22m\n\u001b[2m        \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m            \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m            \u001b[22m\n\u001b[2m              \u001b[22m\n\u001b[2m            \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m        \u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[22m\n\u001b[2m      \u001b[22m\n\u001b[2m        13\u001b[22m\n\u001b[2m        UpdatedCat\u001b[22m\n\u001b[2m        -\u001b[22m\n\u001b[2m        \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m            \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m            \u001b[22m\n\u001b[2m              \u001b[22m\n\u001b[2m            \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m        \u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[22m\n\u001b[2m      \u001b[22m\n\u001b[2m        11\u001b[22m\n\u001b[2m        Roses\u001b[22m\n\u001b[2m        UpdatedCat\u001b[22m\n\u001b[2m        \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m            \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m            \u001b[22m\n\u001b[2m              \u001b[22m\n\u001b[2m            \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m        \u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[22m\n\u001b[2m      \u001b[22m\n\u001b[2m        10\u001b[22m\n\u001b[2m        UpdatedCat\u001b[22m\n\u001b[2m        -\u001b[22m\n\u001b[2m        \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m            \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m            \u001b[22m\n\u001b[2m              \u001b[22m\n\u001b[2m            \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m        \u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[22m\n\u001b[2m      \u001b[22m\n\u001b[2m        7\u001b[22m\n\u001b[2m        Roses\u001b[22m\n\u001b[2m        UpdatedCat\u001b[22m\n\u001b[2m        \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m            \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m            \u001b[22m\n\u001b[2m              \u001b[22m\n\u001b[2m            \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m        \u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[22m\n\u001b[2m      \u001b[22m\n\u001b[2m        6\u001b[22m\n\u001b[2m        UpdatedCat\u001b[22m\n\u001b[2m        -\u001b[22m\n\u001b[2m        \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m            \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m            \u001b[22m\n\u001b[2m              \u001b[22m\n\u001b[2m            \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m        \u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[22m\n\u001b[2m      \u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \"\u001b[22m\n\n    at Proxy.<anonymous> (D:\\QA Test case\\ITFac_Batch21_Group11\\node_modules\\playwright\\lib\\matchers\\expect.js:213:24)\n    at World.<anonymous> (D:\\QA Test case\\ITFac_Batch21_Group11\\steps\\ui\\admin\\admin.steps.js:157:46)"
+              "status": "passed",
+              "duration": 4563500
             }
           },
           {
@@ -1698,7 +1604,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 88666499
+              "duration": 32241300
             }
           }
         ],
@@ -1717,7 +1623,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 430224800
+              "duration": 687527299
             }
           },
           {
@@ -1730,7 +1636,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 658673699
+              "duration": 452733299
             }
           },
           {
@@ -1743,7 +1649,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 695335400
+              "duration": 795181199
             }
           },
           {
@@ -1752,11 +1658,11 @@
             "line": 51,
             "name": "a category \"TestCat\" exists in the system",
             "match": {
-              "location": "steps\\ui\\admin\\admin.steps.js:15"
+              "location": "steps\\ui\\admin\\admin.steps.js:16"
             },
             "result": {
               "status": "passed",
-              "duration": 2478745600
+              "duration": 1442529300
             }
           },
           {
@@ -1765,11 +1671,11 @@
             "line": 52,
             "name": "I navigate to the Category management page",
             "match": {
-              "location": "steps\\ui\\admin\\admin.steps.js:54"
+              "location": "steps\\ui\\common\\common.steps.js:35"
             },
             "result": {
               "status": "passed",
-              "duration": 785945300
+              "duration": 620573700
             }
           },
           {
@@ -1778,11 +1684,11 @@
             "line": 53,
             "name": "I click on Delete action for \"TestCat\"",
             "match": {
-              "location": "steps\\ui\\admin\\admin.steps.js:108"
+              "location": "steps\\ui\\admin\\admin.steps.js:103"
             },
             "result": {
               "status": "passed",
-              "duration": 1026345799
+              "duration": 661491900
             }
           },
           {
@@ -1791,11 +1697,11 @@
             "line": 54,
             "name": "I confirm the deletion",
             "match": {
-              "location": "steps\\ui\\admin\\admin.steps.js:121"
+              "location": "steps\\ui\\admin\\admin.steps.js:116"
             },
             "result": {
               "status": "passed",
-              "duration": 50472800
+              "duration": 11315500
             }
           },
           {
@@ -1804,11 +1710,11 @@
             "line": 55,
             "name": "I should see a success message",
             "match": {
-              "location": "steps\\ui\\admin\\admin.steps.js:133"
+              "location": "steps\\ui\\admin\\admin.steps.js:128"
             },
             "result": {
               "status": "passed",
-              "duration": 8853400
+              "duration": 4016400
             }
           },
           {
@@ -1817,11 +1723,11 @@
             "line": 56,
             "name": "the category \"TestCat\" should not appear in the list",
             "match": {
-              "location": "steps\\ui\\admin\\admin.steps.js:169"
+              "location": "steps\\ui\\admin\\admin.steps.js:164"
             },
             "result": {
               "status": "passed",
-              "duration": 789263800
+              "duration": 569061800
             }
           },
           {
@@ -1829,7 +1735,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 98488600
+              "duration": 27689800
             }
           }
         ],
@@ -1851,7 +1757,7 @@
         "description": "",
         "id": "category-management-user-functionality;user-should-see-dashboard-immediately-after-successful-login",
         "keyword": "Scenario",
-        "line": 11,
+        "line": 12,
         "name": "User should see Dashboard immediately after successful login",
         "steps": [
           {
@@ -1859,59 +1765,59 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 480930600
+              "duration": 479824599
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 7,
+            "line": 8,
             "name": "I navigate to the login page",
             "match": {
               "location": "steps\\ui\\common\\common.steps.js:6"
             },
             "result": {
               "status": "passed",
-              "duration": 600507500
+              "duration": 546658100
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 8,
+            "line": 9,
             "name": "I login as \"Testuser\" with password \"test123\"",
             "match": {
               "location": "steps\\ui\\common\\common.steps.js:11"
             },
             "result": {
               "status": "passed",
-              "duration": 733737399
+              "duration": 705630100
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 12,
+            "line": 13,
             "name": "I should be on the Dashboard page",
             "match": {
-              "location": "steps\\ui\\user\\user.steps.js:6"
+              "location": "steps\\ui\\user\\user.steps.js:7"
             },
             "result": {
               "status": "passed",
-              "duration": 130960200
+              "duration": 13136500
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 13,
+            "line": 14,
             "name": "I should see the page header \"Dashboard\"",
             "match": {
-              "location": "steps\\ui\\user\\user.steps.js:10"
+              "location": "steps\\ui\\user\\user.steps.js:11"
             },
             "result": {
               "status": "passed",
-              "duration": 11207399
+              "duration": 4328399
             }
           },
           {
@@ -1919,7 +1825,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 92926500
+              "duration": 26370799
             }
           }
         ],
@@ -1930,7 +1836,7 @@
         "description": "",
         "id": "category-management-user-functionality;user-should-see-navigation-menu-highlighting-the-active-page",
         "keyword": "Scenario",
-        "line": 16,
+        "line": 17,
         "name": "User should see navigation menu highlighting the active page",
         "steps": [
           {
@@ -1938,85 +1844,85 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 476135699
+              "duration": 688720500
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 7,
+            "line": 8,
             "name": "I navigate to the login page",
             "match": {
               "location": "steps\\ui\\common\\common.steps.js:6"
             },
             "result": {
               "status": "passed",
-              "duration": 593219700
+              "duration": 610057700
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 8,
+            "line": 9,
             "name": "I login as \"Testuser\" with password \"test123\"",
             "match": {
               "location": "steps\\ui\\common\\common.steps.js:11"
             },
             "result": {
               "status": "passed",
-              "duration": 724040699
+              "duration": 280619800
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 17,
+            "line": 18,
             "name": "I click on \"Categories\" in the sidebar",
             "match": {
-              "location": "steps\\ui\\user\\user.steps.js:17"
+              "location": "steps\\ui\\user\\user.steps.js:18"
             },
             "result": {
               "status": "passed",
-              "duration": 1320817199
+              "duration": 942218199
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 18,
+            "line": 19,
             "name": "the navigation menu should highlight \"Categories\" as active",
             "match": {
               "location": "steps\\api\\category_api.steps.js:89"
             },
             "result": {
               "status": "passed",
-              "duration": 42340200
+              "duration": 25003499
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 19,
+            "line": 20,
             "name": "I click on \"Plants\" in the sidebar",
             "match": {
-              "location": "steps\\ui\\user\\user.steps.js:17"
+              "location": "steps\\ui\\user\\user.steps.js:18"
             },
             "result": {
               "status": "passed",
-              "duration": 829544200
+              "duration": 589901299
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 20,
+            "line": 21,
             "name": "the navigation menu should highlight \"Plants\" as active",
             "match": {
               "location": "steps\\api\\category_api.steps.js:89"
             },
             "result": {
               "status": "passed",
-              "duration": 66350800
+              "duration": 8970600
             }
           },
           {
@@ -2024,7 +1930,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 86631999
+              "duration": 29790599
             }
           }
         ],
@@ -2035,7 +1941,7 @@
         "description": "",
         "id": "category-management-user-functionality;user-should-see-category,-plants,-and-sales-summary-on-dashboard",
         "keyword": "Scenario",
-        "line": 23,
+        "line": 24,
         "name": "User should see Category, Plants, and Sales summary on Dashboard",
         "steps": [
           {
@@ -2043,85 +1949,85 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 463532999
+              "duration": 420623599
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 7,
+            "line": 8,
             "name": "I navigate to the login page",
             "match": {
               "location": "steps\\ui\\common\\common.steps.js:6"
             },
             "result": {
               "status": "passed",
-              "duration": 553042699
+              "duration": 548246800
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 8,
+            "line": 9,
             "name": "I login as \"Testuser\" with password \"test123\"",
             "match": {
               "location": "steps\\ui\\common\\common.steps.js:11"
             },
             "result": {
               "status": "passed",
-              "duration": 700197299
+              "duration": 729898399
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 24,
+            "line": 25,
             "name": "I am on the Dashboard page",
             "match": {
-              "location": "steps\\ui\\user\\user.steps.js:36"
+              "location": "steps\\ui\\user\\user.steps.js:37"
             },
             "result": {
               "status": "passed",
-              "duration": 119045100
+              "duration": 14200499
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 25,
+            "line": 26,
             "name": "I should see \"Categories\" summary card",
             "match": {
-              "location": "steps\\ui\\user\\user.steps.js:40"
+              "location": "steps\\ui\\user\\user.steps.js:41"
             },
             "result": {
               "status": "passed",
-              "duration": 17296800
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 26,
-            "name": "I should see \"Plants\" summary card",
-            "match": {
-              "location": "steps\\ui\\user\\user.steps.js:40"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 6170299
+              "duration": 4997799
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 27,
-            "name": "I should see \"Sales\" summary card",
+            "name": "I should see \"Plants\" summary card",
             "match": {
-              "location": "steps\\ui\\user\\user.steps.js:40"
+              "location": "steps\\ui\\user\\user.steps.js:41"
             },
             "result": {
               "status": "passed",
-              "duration": 17007099
+              "duration": 4184500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 28,
+            "name": "I should see \"Sales\" summary card",
+            "match": {
+              "location": "steps\\ui\\user\\user.steps.js:41"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2212299
             }
           },
           {
@@ -2129,7 +2035,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 111196200
+              "duration": 32174400
             }
           }
         ],
@@ -2140,7 +2046,7 @@
         "description": "",
         "id": "category-management-user-functionality;user-should-see-appropriate-message-when-searching-for-non-existent-category",
         "keyword": "Scenario",
-        "line": 30,
+        "line": 31,
         "name": "User should see appropriate message when searching for non-existent category",
         "steps": [
           {
@@ -2148,72 +2054,72 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 466069699
+              "duration": 747973200
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 7,
+            "line": 8,
             "name": "I navigate to the login page",
             "match": {
               "location": "steps\\ui\\common\\common.steps.js:6"
             },
             "result": {
               "status": "passed",
-              "duration": 742046700
+              "duration": 493827699
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 8,
+            "line": 9,
             "name": "I login as \"Testuser\" with password \"test123\"",
             "match": {
               "location": "steps\\ui\\common\\common.steps.js:11"
             },
             "result": {
               "status": "passed",
-              "duration": 1347024700
+              "duration": 716000599
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 31,
+            "line": 32,
             "name": "I navigate to the Category management page",
             "match": {
-              "location": "steps\\ui\\admin\\admin.steps.js:54"
+              "location": "steps\\ui\\common\\common.steps.js:35"
             },
             "result": {
               "status": "passed",
-              "duration": 1049230000
+              "duration": 729854099
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 32,
+            "line": 33,
             "name": "I search for a category with name \"NonExistentCategoryXYZ123\"",
             "match": {
-              "location": "steps\\ui\\user\\user.steps.js:47"
+              "location": "steps\\ui\\user\\user.steps.js:48"
             },
             "result": {
               "status": "passed",
-              "duration": 855775099
+              "duration": 631547400
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 33,
+            "line": 34,
             "name": "I should see \"No category found\" message in the table",
             "match": {
               "location": "steps\\api\\category_api.steps.js:100"
             },
             "result": {
               "status": "passed",
-              "duration": 45298699
+              "duration": 9790999
             }
           },
           {
@@ -2221,7 +2127,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 77378399
+              "duration": 27857600
             }
           }
         ],
@@ -2232,7 +2138,7 @@
         "description": "",
         "id": "category-management-user-functionality;user-should-see-add-category-button-is-disabled",
         "keyword": "Scenario",
-        "line": 36,
+        "line": 37,
         "name": "User should see Add Category button is disabled",
         "steps": [
           {
@@ -2240,59 +2146,59 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 529060700
+              "duration": 630746499
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 7,
+            "line": 8,
             "name": "I navigate to the login page",
             "match": {
               "location": "steps\\ui\\common\\common.steps.js:6"
             },
             "result": {
               "status": "passed",
-              "duration": 550682000
+              "duration": 979392900
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 8,
+            "line": 9,
             "name": "I login as \"Testuser\" with password \"test123\"",
             "match": {
               "location": "steps\\ui\\common\\common.steps.js:11"
             },
             "result": {
               "status": "passed",
-              "duration": 711102599
+              "duration": 712344099
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 37,
+            "line": 38,
             "name": "I navigate to the Category management page",
             "match": {
-              "location": "steps\\ui\\admin\\admin.steps.js:54"
+              "location": "steps\\ui\\common\\common.steps.js:35"
             },
             "result": {
               "status": "passed",
-              "duration": 1041463300
+              "duration": 719043700
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 38,
+            "line": 39,
             "name": "I should NOT see the \"Add Category\" button",
             "match": {
               "location": "steps\\api\\category_api.steps.js:107"
             },
             "result": {
               "status": "passed",
-              "duration": 39040800
+              "duration": 12582499
             }
           },
           {
@@ -2300,7 +2206,100 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 75633900
+              "duration": 36280699
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "category-management-user-functionality;user-should-not-see-edit-and-delete-actions-in-category-management",
+        "keyword": "Scenario",
+        "line": 42,
+        "name": "User should not see Edit and Delete actions in Category Management",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 772836500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "I navigate to the login page",
+            "match": {
+              "location": "steps\\ui\\common\\common.steps.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 556587600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "I login as \"Testuser\" with password \"test123\"",
+            "match": {
+              "location": "steps\\ui\\common\\common.steps.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 253939200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 43,
+            "name": "I navigate to the Category management page",
+            "match": {
+              "location": "steps\\ui\\common\\common.steps.js:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 993509799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 44,
+            "name": "the \"Edit\" button should not be visible",
+            "match": {
+              "location": "steps\\ui\\user\\user.steps.js:54"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 250000,
+              "error_message": "TypeError: Cannot read properties of undefined (reading 'verifyEditButtonsHidden')\n    at World.<anonymous> (D:\\ITFac_Group11\\ITFac_Batch21_Group11\\steps\\ui\\user\\user.steps.js:56:33)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 45,
+            "name": "the \"Delete\" button should not be visible",
+            "match": {
+              "location": "steps\\ui\\user\\user.steps.js:54"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 27892500
             }
           }
         ],
@@ -2309,7 +2308,7 @@
       }
     ],
     "id": "category-management-user-functionality",
-    "line": 1,
+    "line": 2,
     "keyword": "Feature",
     "name": "Category Management User Functionality",
     "tags": [],

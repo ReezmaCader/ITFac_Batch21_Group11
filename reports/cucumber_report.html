@@ -401,7 +401,7 @@ pre {
           </div>
           <div class="label-container">
             <div class="generated-on">
-              Fri Feb 06 2026 01:23:58 GMT+0530 (India Standard Time)
+              Fri Feb 06 2026 19:00:09 GMT+0530 (India Standard Time)
             </div>
           </div>
       </div>
@@ -417,7 +417,7 @@ pre {
         </div>
         <div class="feature-value">
           <h5>
-            20
+            21
           </h5>
         </div>
       </div>
@@ -427,7 +427,7 @@ pre {
         </div>
         <div class="feature-value">
           <h5>
-            19
+            20
           </h5>
         </div>
       </div>
@@ -454,7 +454,7 @@ pre {
 
     <div>
       <p class="text-left">
-        Execution Time: 1m 43s 427ms
+        Execution Time: 37s 571ms
       </p>
       <p class="text-right">
         <a id="expand_all">Expand All</a>
@@ -567,7 +567,7 @@ pre {
                     <div class="tags">
                     </div>
                     
-                    <a data-toggle="collapse" href="#collapseFeatureqa_training_tests3b8c3885-13d4-41f1-9d51-fec22387e0f1">
+                    <a data-toggle="collapse" href="#collapseFeatureqa_training_tests5a61e86d-374f-4ce4-bb79-e2c52b09206e">
                         <i class="glyphicon glyphicon-chevron-right"></i>
                         <i class="glyphicon glyphicon-chevron-down"></i>
                         <b>Feature:</b>Admin Category API Management
@@ -575,10 +575,10 @@ pre {
 
                         
 
-                        <span>5s 390ms</span>
+                        <span>1s 202ms</span>
                                 
               <span class="label label-success"
-                                                         title="4 Scenarios Passed">4</span>
+                                                         title="5 Scenarios Passed">5</span>
               
               
               
@@ -588,7 +588,7 @@ pre {
                     </a>
                 </h4>
             </div>
-            <div id="collapseFeatureqa_training_tests3b8c3885-13d4-41f1-9d51-fec22387e0f1" class="panel-collapse collapse">
+            <div id="collapseFeatureqa_training_tests5a61e86d-374f-4ce4-bb79-e2c52b09206e" class="panel-collapse collapse">
                 <div class="panel-body">
                     
                     <div class="description">  As an Admin<br/>  I want to Create, Update and Delete categories<br/>  So that I can manage the system inventory</div>
@@ -603,20 +603,20 @@ pre {
                                 <div class="tags">
                                 </div>
                                 
-                                <a data-toggle="collapse" href="#collapseScenarioqa_training_tests7db2e90c-7ba2-4317-ad69-6a5e601c31d3">
+                                <a data-toggle="collapse" href="#collapseScenarioqa_training_tests4599a278-a9bd-48b5-8fd2-b4240daf8623">
                                     <div>
 
                                         <div style="padding-right: 30px">
                                             <i class="glyphicon glyphicon-chevron-right"></i>
                                             <i class="glyphicon glyphicon-chevron-down"></i>
-                                            <b>Scenario:</b><div class="ellipsis" data-text="Verify API functionality of updating a category using an existing ID">Verify API functionality of updating a category using an existing ID</div>
+                                            <b>Scenario:</b><div class="ellipsis" data-text="Verify API retrieves all categories when no parameters are provided">Verify API retrieves all categories when no parameters are provided</div>
                                         </div>
                                         <div>
                             <span class="label-container ">
-                                <span>2s 930ms</span>
+                                <span>472ms</span>
                               
                               <span class="label label-success"
-                                                               title="6 Steps Passed">6</span>
+                                                               title="9 Steps Passed">9</span>
                               
                               
                               
@@ -629,7 +629,7 @@ pre {
                                 </a>
                             </h4>
                         </div>
-                        <div id="collapseScenarioqa_training_tests7db2e90c-7ba2-4317-ad69-6a5e601c31d3"
+                        <div id="collapseScenarioqa_training_tests4599a278-a9bd-48b5-8fd2-b4240daf8623"
                              class="panel-collapse collapse">
                             <div class="panel-body">
                                 <div></div>
@@ -652,7 +652,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               1ms
+                               < 1ms
                               </span>
                             
                          
@@ -690,7 +690,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               2s 595ms
+                               157ms
                               </span>
                             
                          
@@ -724,11 +724,49 @@ pre {
                                     
                                     <span class="text">
                         <span class="keyword highlight">Given </span>
-                          <span class="stepname"> I get a valid Category ID from the system</span>
+                          <span class="stepname"> multiple categories exist in the system</span>
                             
                           
                               <span class="step-duration">
-                               77ms
+                               164ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">And </span>
+                          <span class="stepname"> I am authenticated as a User</span>
+                            
+                          
+                              <span class="step-duration">
+                               118ms
                               </span>
                             
                          
@@ -762,11 +800,11 @@ pre {
                                     
                                     <span class="text">
                         <span class="keyword highlight">When </span>
-                          <span class="stepname"> I send a PUT request to &quot;/api/categories/{id}&quot; with a new name &quot;UpdatedCat&quot;</span>
+                          <span class="stepname"> I send a GET request to &quot;/api/categories&quot; without any query parameters</span>
                             
                           
                               <span class="step-duration">
-                               251ms
+                               11ms
                               </span>
                             
                          
@@ -838,7 +876,599 @@ pre {
                                     
                                     <span class="text">
                         <span class="keyword highlight">And </span>
+                          <span class="stepname"> the response body should contain a list of all categories</span>
+                            
+                          
+                              <span class="step-duration">
+                               < 1ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">And </span>
+                          <span class="stepname"> each category should have the correct structure with id, name, and parentName</span>
+                            
+                          
+                              <span class="step-duration">
+                               1ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">And </span>
+                          <span class="stepname"> the response format should match the API specification</span>
+                            
+                          
+                              <span class="step-duration">
+                               16ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                
+                                
+                                <div class="tags">
+                                </div>
+                                
+                                <a data-toggle="collapse" href="#collapseScenarioqa_training_testsd3fed274-d259-4975-921f-ad51f4a37626">
+                                    <div>
+
+                                        <div style="padding-right: 30px">
+                                            <i class="glyphicon glyphicon-chevron-right"></i>
+                                            <i class="glyphicon glyphicon-chevron-down"></i>
+                                            <b>Scenario:</b><div class="ellipsis" data-text="Verify API functionality of updating a category using an existing ID">Verify API functionality of updating a category using an existing ID</div>
+                                        </div>
+                                        <div>
+                            <span class="label-container ">
+                                <span>252ms</span>
+                              
+                              <span class="label label-success"
+                                                               title="6 Steps Passed">6</span>
+                              
+                              
+                              
+                              
+                              
+                            </span>
+                                        </div>
+                                    </div>
+                                    <div><small><i></i></small></div>
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseScenarioqa_training_testsd3fed274-d259-4975-921f-ad51f4a37626"
+                             class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <div></div>
+                                
+                                
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">Given </span>
+                          <span class="stepname"> the API service is running</span>
+                            
+                          
+                              <span class="step-duration">
+                               < 1ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">And </span>
+                          <span class="stepname"> I am authenticated as an Admin</span>
+                            
+                          
+                              <span class="step-duration">
+                               131ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">Given </span>
+                          <span class="stepname"> I get a valid Category ID from the system</span>
+                            
+                          
+                              <span class="step-duration">
+                               17ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">When </span>
+                          <span class="stepname"> I send a PUT request to &quot;/api/categories/{id}&quot; with a new name &quot;UpdatedCat&quot;</span>
+                            
+                          
+                              <span class="step-duration">
+                               102ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">Then </span>
+                          <span class="stepname"> the response status code should be 200</span>
+                            
+                          
+                              <span class="step-duration">
+                               < 1ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">And </span>
                           <span class="stepname"> the response should confirm the name is &quot;UpdatedCat&quot;</span>
+                            
+                          
+                              <span class="step-duration">
+                               < 1ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                
+                                
+                                <div class="tags">
+                                </div>
+                                
+                                <a data-toggle="collapse" href="#collapseScenarioqa_training_testsbdd439cc-50a7-46bf-ae1e-02fc9a20a7bc">
+                                    <div>
+
+                                        <div style="padding-right: 30px">
+                                            <i class="glyphicon glyphicon-chevron-right"></i>
+                                            <i class="glyphicon glyphicon-chevron-down"></i>
+                                            <b>Scenario:</b><div class="ellipsis" data-text="Verify API response when updating a non-existing category ID">Verify API response when updating a non-existing category ID</div>
+                                        </div>
+                                        <div>
+                            <span class="label-container ">
+                                <span>126ms</span>
+                              
+                              <span class="label label-success"
+                                                               title="5 Steps Passed">5</span>
+                              
+                              
+                              
+                              
+                              
+                            </span>
+                                        </div>
+                                    </div>
+                                    <div><small><i></i></small></div>
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseScenarioqa_training_testsbdd439cc-50a7-46bf-ae1e-02fc9a20a7bc"
+                             class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <div></div>
+                                
+                                
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">Given </span>
+                          <span class="stepname"> the API service is running</span>
+                            
+                          
+                              <span class="step-duration">
+                               < 1ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">And </span>
+                          <span class="stepname"> I am authenticated as an Admin</span>
+                            
+                          
+                              <span class="step-duration">
+                               115ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">When </span>
+                          <span class="stepname"> I send a PUT request to &quot;/api/categories/99999&quot; with a new name &quot;GhostCat&quot;</span>
+                            
+                          
+                              <span class="step-duration">
+                               8ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">Then </span>
+                          <span class="stepname"> the response status code should be 404</span>
+                            
+                          
+                              <span class="step-duration">
+                               < 1ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">And </span>
+                          <span class="stepname"> the response should contain a &quot;Category not found&quot; error message</span>
                             
                           
                               <span class="step-duration">
@@ -880,246 +1510,7 @@ pre {
                                 <div class="tags">
                                 </div>
                                 
-                                <a data-toggle="collapse" href="#collapseScenarioqa_training_testsc14134e2-0511-442b-a3ee-ac454199c878">
-                                    <div>
-
-                                        <div style="padding-right: 30px">
-                                            <i class="glyphicon glyphicon-chevron-right"></i>
-                                            <i class="glyphicon glyphicon-chevron-down"></i>
-                                            <b>Scenario:</b><div class="ellipsis" data-text="Verify API response when updating a non-existing category ID">Verify API response when updating a non-existing category ID</div>
-                                        </div>
-                                        <div>
-                            <span class="label-container ">
-                                <span>538ms</span>
-                              
-                              <span class="label label-success"
-                                                               title="5 Steps Passed">5</span>
-                              
-                              
-                              
-                              
-                              
-                            </span>
-                                        </div>
-                                    </div>
-                                    <div><small><i></i></small></div>
-                                </a>
-                            </h4>
-                        </div>
-                        <div id="collapseScenarioqa_training_testsc14134e2-0511-442b-a3ee-ac454199c878"
-                             class="panel-collapse collapse">
-                            <div class="panel-body">
-                                <div></div>
-                                
-                                
-                                
-                                
-                                
-                                <p class="scenario-container">
-                                <div class="row steps">
-                                    
-                                    
-                                    <span class="label label-success" title="Success"><i
-                                            class="glyphicon glyphicon-ok"></i></span>
-                                    
-                                    
-                                    <span class="text">
-                        <span class="keyword highlight">Given </span>
-                          <span class="stepname"> the API service is running</span>
-                            
-                          
-                              <span class="step-duration">
-                               < 1ms
-                              </span>
-                            
-                         
-                            
-                          
-                          <!-- Adding data table data-->
-                          
-                      </span>
-                                
-                                
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-                                </div>
-                                </p>
-                                
-                                
-                                
-                                <p class="scenario-container">
-                                <div class="row steps">
-                                    
-                                    
-                                    <span class="label label-success" title="Success"><i
-                                            class="glyphicon glyphicon-ok"></i></span>
-                                    
-                                    
-                                    <span class="text">
-                        <span class="keyword highlight">And </span>
-                          <span class="stepname"> I am authenticated as an Admin</span>
-                            
-                          
-                              <span class="step-duration">
-                               452ms
-                              </span>
-                            
-                         
-                            
-                          
-                          <!-- Adding data table data-->
-                          
-                      </span>
-                                
-                                
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-                                </div>
-                                </p>
-                                
-                                
-                                
-                                <p class="scenario-container">
-                                <div class="row steps">
-                                    
-                                    
-                                    <span class="label label-success" title="Success"><i
-                                            class="glyphicon glyphicon-ok"></i></span>
-                                    
-                                    
-                                    <span class="text">
-                        <span class="keyword highlight">When </span>
-                          <span class="stepname"> I send a PUT request to &quot;/api/categories/99999&quot; with a new name &quot;GhostCat&quot;</span>
-                            
-                          
-                              <span class="step-duration">
-                               77ms
-                              </span>
-                            
-                         
-                            
-                          
-                          <!-- Adding data table data-->
-                          
-                      </span>
-                                
-                                
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-                                </div>
-                                </p>
-                                
-                                
-                                
-                                <p class="scenario-container">
-                                <div class="row steps">
-                                    
-                                    
-                                    <span class="label label-success" title="Success"><i
-                                            class="glyphicon glyphicon-ok"></i></span>
-                                    
-                                    
-                                    <span class="text">
-                        <span class="keyword highlight">Then </span>
-                          <span class="stepname"> the response status code should be 404</span>
-                            
-                          
-                              <span class="step-duration">
-                               1ms
-                              </span>
-                            
-                         
-                            
-                          
-                          <!-- Adding data table data-->
-                          
-                      </span>
-                                
-                                
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-                                </div>
-                                </p>
-                                
-                                
-                                
-                                <p class="scenario-container">
-                                <div class="row steps">
-                                    
-                                    
-                                    <span class="label label-success" title="Success"><i
-                                            class="glyphicon glyphicon-ok"></i></span>
-                                    
-                                    
-                                    <span class="text">
-                        <span class="keyword highlight">And </span>
-                          <span class="stepname"> the response should contain a &quot;Category not found&quot; error message</span>
-                            
-                          
-                              <span class="step-duration">
-                               5ms
-                              </span>
-                            
-                         
-                            
-                          
-                          <!-- Adding data table data-->
-                          
-                      </span>
-                                
-                                
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-                                </div>
-                                </p>
-                                
-                                
-                                
-                                
-                            </div>
-                        </div>
-                    </div>
-                    
-                    
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h4 class="panel-title">
-                                
-                                
-                                <div class="tags">
-                                </div>
-                                
-                                <a data-toggle="collapse" href="#collapseScenarioqa_training_tests3d3c99f2-a84e-427f-8007-6fae1de85e5a">
+                                <a data-toggle="collapse" href="#collapseScenarioqa_training_tests071a29b5-157c-42a8-b207-382ec2c18a0e">
                                     <div>
 
                                         <div style="padding-right: 30px">
@@ -1129,7 +1520,7 @@ pre {
                                         </div>
                                         <div>
                             <span class="label-container ">
-                                <span>1s 497ms</span>
+                                <span>215ms</span>
                               
                               <span class="label label-success"
                                                                title="6 Steps Passed">6</span>
@@ -1145,7 +1536,7 @@ pre {
                                 </a>
                             </h4>
                         </div>
-                        <div id="collapseScenarioqa_training_tests3d3c99f2-a84e-427f-8007-6fae1de85e5a"
+                        <div id="collapseScenarioqa_training_tests071a29b5-157c-42a8-b207-382ec2c18a0e"
                              class="panel-collapse collapse">
                             <div class="panel-body">
                                 <div></div>
@@ -1206,7 +1597,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               417ms
+                               124ms
                               </span>
                             
                          
@@ -1244,7 +1635,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               316ms
+                               26ms
                               </span>
                             
                          
@@ -1282,7 +1673,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               710ms
+                               55ms
                               </span>
                             
                          
@@ -1320,7 +1711,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               1ms
+                               < 1ms
                               </span>
                             
                          
@@ -1358,7 +1749,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               52ms
+                               7ms
                               </span>
                             
                          
@@ -1396,7 +1787,7 @@ pre {
                                 <div class="tags">
                                 </div>
                                 
-                                <a data-toggle="collapse" href="#collapseScenarioqa_training_testsec8fcde2-7145-4abb-9f1c-e2784d5318eb">
+                                <a data-toggle="collapse" href="#collapseScenarioqa_training_testsa0df08ab-4960-4c76-bda3-728b50e1585c">
                                     <div>
 
                                         <div style="padding-right: 30px">
@@ -1406,7 +1797,7 @@ pre {
                                         </div>
                                         <div>
                             <span class="label-container ">
-                                <span>424ms</span>
+                                <span>135ms</span>
                               
                               <span class="label label-success"
                                                                title="5 Steps Passed">5</span>
@@ -1422,7 +1813,7 @@ pre {
                                 </a>
                             </h4>
                         </div>
-                        <div id="collapseScenarioqa_training_testsec8fcde2-7145-4abb-9f1c-e2784d5318eb"
+                        <div id="collapseScenarioqa_training_testsa0df08ab-4960-4c76-bda3-728b50e1585c"
                              class="panel-collapse collapse">
                             <div class="panel-body">
                                 <div></div>
@@ -1483,7 +1874,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               360ms
+                               124ms
                               </span>
                             
                          
@@ -1521,7 +1912,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               58ms
+                               9ms
                               </span>
                             
                          
@@ -1559,7 +1950,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               1ms
+                               < 1ms
                               </span>
                             
                          
@@ -1597,7 +1988,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               3ms
+                               < 1ms
                               </span>
                             
                          
@@ -1646,7 +2037,7 @@ pre {
                     <div class="tags">
                     </div>
                     
-                    <a data-toggle="collapse" href="#collapseFeatureqa_training_tests6ef3353f-3a28-4d21-8cf8-ac8a7f584ff2">
+                    <a data-toggle="collapse" href="#collapseFeatureqa_training_tests48077874-88cf-4bca-99aa-47efe7b21685">
                         <i class="glyphicon glyphicon-chevron-right"></i>
                         <i class="glyphicon glyphicon-chevron-down"></i>
                         <b>Feature:</b>User Category API Management
@@ -1654,10 +2045,10 @@ pre {
 
                         
 
-                        <span>2s 406ms</span>
+                        <span>675ms</span>
                                 
               <span class="label label-success"
-                                                         title="6 Scenarios Passed">6</span>
+                                                         title="5 Scenarios Passed">5</span>
               
               
               
@@ -1667,7 +2058,7 @@ pre {
                     </a>
                 </h4>
             </div>
-            <div id="collapseFeatureqa_training_tests6ef3353f-3a28-4d21-8cf8-ac8a7f584ff2" class="panel-collapse collapse">
+            <div id="collapseFeatureqa_training_tests48077874-88cf-4bca-99aa-47efe7b21685" class="panel-collapse collapse">
                 <div class="panel-body">
                     
                     <div class="description">  As a User<br/>  I want to retrieve category details<br/>  So that I can view available categories</div>
@@ -1682,7 +2073,7 @@ pre {
                                 <div class="tags">
                                 </div>
                                 
-                                <a data-toggle="collapse" href="#collapseScenarioqa_training_testsad83f6a9-8a10-4343-9391-bcb7a9ea1ee6">
+                                <a data-toggle="collapse" href="#collapseScenarioqa_training_tests2dc6e3f6-6d72-4092-a021-05fc639d1afb">
                                     <div>
 
                                         <div style="padding-right: 30px">
@@ -1692,7 +2083,7 @@ pre {
                                         </div>
                                         <div>
                             <span class="label-container ">
-                                <span>547ms</span>
+                                <span>151ms</span>
                               
                               <span class="label label-success"
                                                                title="6 Steps Passed">6</span>
@@ -1708,7 +2099,7 @@ pre {
                                 </a>
                             </h4>
                         </div>
-                        <div id="collapseScenarioqa_training_testsad83f6a9-8a10-4343-9391-bcb7a9ea1ee6"
+                        <div id="collapseScenarioqa_training_tests2dc6e3f6-6d72-4092-a021-05fc639d1afb"
                              class="panel-collapse collapse">
                             <div class="panel-body">
                                 <div></div>
@@ -1769,7 +2160,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               360ms
+                               125ms
                               </span>
                             
                          
@@ -1807,7 +2198,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               108ms
+                               15ms
                               </span>
                             
                          
@@ -1845,7 +2236,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               74ms
+                               9ms
                               </span>
                             
                          
@@ -1883,7 +2274,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               1ms
+                               < 1ms
                               </span>
                             
                          
@@ -1921,7 +2312,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               2ms
+                               < 1ms
                               </span>
                             
                          
@@ -1959,7 +2350,7 @@ pre {
                                 <div class="tags">
                                 </div>
                                 
-                                <a data-toggle="collapse" href="#collapseScenarioqa_training_testsb5a20167-ec56-4ece-a32c-f223cda84365">
+                                <a data-toggle="collapse" href="#collapseScenarioqa_training_testsfdc751dc-eb47-4d2d-9369-c9e85ac002bb">
                                     <div>
 
                                         <div style="padding-right: 30px">
@@ -1969,7 +2360,7 @@ pre {
                                         </div>
                                         <div>
                             <span class="label-container ">
-                                <span>363ms</span>
+                                <span>131ms</span>
                               
                               <span class="label label-success"
                                                                title="5 Steps Passed">5</span>
@@ -1985,7 +2376,7 @@ pre {
                                 </a>
                             </h4>
                         </div>
-                        <div id="collapseScenarioqa_training_testsb5a20167-ec56-4ece-a32c-f223cda84365"
+                        <div id="collapseScenarioqa_training_testsfdc751dc-eb47-4d2d-9369-c9e85ac002bb"
                              class="panel-collapse collapse">
                             <div class="panel-body">
                                 <div></div>
@@ -2046,7 +2437,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               319ms
+                               122ms
                               </span>
                             
                          
@@ -2084,7 +2475,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               40ms
+                               7ms
                               </span>
                             
                          
@@ -2160,7 +2551,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               2ms
+                               1ms
                               </span>
                             
                          
@@ -2198,7 +2589,7 @@ pre {
                                 <div class="tags">
                                 </div>
                                 
-                                <a data-toggle="collapse" href="#collapseScenarioqa_training_tests71431865-397d-405c-9f31-4778b28a81bf">
+                                <a data-toggle="collapse" href="#collapseScenarioqa_training_tests20c860c1-eec8-48f5-ae6c-7089f9a54c8a">
                                     <div>
 
                                         <div style="padding-right: 30px">
@@ -2208,7 +2599,7 @@ pre {
                                         </div>
                                         <div>
                             <span class="label-container ">
-                                <span>372ms</span>
+                                <span>133ms</span>
                               
                               <span class="label label-success"
                                                                title="5 Steps Passed">5</span>
@@ -2224,7 +2615,7 @@ pre {
                                 </a>
                             </h4>
                         </div>
-                        <div id="collapseScenarioqa_training_tests71431865-397d-405c-9f31-4778b28a81bf"
+                        <div id="collapseScenarioqa_training_tests20c860c1-eec8-48f5-ae6c-7089f9a54c8a"
                              class="panel-collapse collapse">
                             <div class="panel-body">
                                 <div></div>
@@ -2285,7 +2676,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               304ms
+                               120ms
                               </span>
                             
                          
@@ -2323,7 +2714,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               64ms
+                               11ms
                               </span>
                             
                          
@@ -2399,7 +2790,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               2ms
+                               1ms
                               </span>
                             
                          
@@ -2437,7 +2828,7 @@ pre {
                                 <div class="tags">
                                 </div>
                                 
-                                <a data-toggle="collapse" href="#collapseScenarioqa_training_tests0ab84d2a-ff33-467b-b9ee-153de889ac34">
+                                <a data-toggle="collapse" href="#collapseScenarioqa_training_tests2dc3405c-7165-404a-a9f1-286f60667cc2">
                                     <div>
 
                                         <div style="padding-right: 30px">
@@ -2447,7 +2838,7 @@ pre {
                                         </div>
                                         <div>
                             <span class="label-container ">
-                                <span>432ms</span>
+                                <span>134ms</span>
                               
                               <span class="label label-success"
                                                                title="6 Steps Passed">6</span>
@@ -2463,7 +2854,7 @@ pre {
                                 </a>
                             </h4>
                         </div>
-                        <div id="collapseScenarioqa_training_tests0ab84d2a-ff33-467b-b9ee-153de889ac34"
+                        <div id="collapseScenarioqa_training_tests2dc3405c-7165-404a-a9f1-286f60667cc2"
                              class="panel-collapse collapse">
                             <div class="panel-body">
                                 <div></div>
@@ -2524,7 +2915,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               297ms
+                               110ms
                               </span>
                             
                          
@@ -2562,7 +2953,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               67ms
+                               10ms
                               </span>
                             
                          
@@ -2600,7 +2991,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               65ms
+                               12ms
                               </span>
                             
                          
@@ -2676,7 +3067,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               1ms
+                               < 1ms
                               </span>
                             
                          
@@ -2714,246 +3105,7 @@ pre {
                                 <div class="tags">
                                 </div>
                                 
-                                <a data-toggle="collapse" href="#collapseScenarioqa_training_tests6a3a7478-d1ce-483d-b385-e255d6a68ff2">
-                                    <div>
-
-                                        <div style="padding-right: 30px">
-                                            <i class="glyphicon glyphicon-chevron-right"></i>
-                                            <i class="glyphicon glyphicon-chevron-down"></i>
-                                            <b>Scenario:</b><div class="ellipsis" data-text="Verify API functionality when invalid query parameters are provided">Verify API functionality when invalid query parameters are provided</div>
-                                        </div>
-                                        <div>
-                            <span class="label-container ">
-                                <span>354ms</span>
-                              
-                              <span class="label label-success"
-                                                               title="5 Steps Passed">5</span>
-                              
-                              
-                              
-                              
-                              
-                            </span>
-                                        </div>
-                                    </div>
-                                    <div><small><i></i></small></div>
-                                </a>
-                            </h4>
-                        </div>
-                        <div id="collapseScenarioqa_training_tests6a3a7478-d1ce-483d-b385-e255d6a68ff2"
-                             class="panel-collapse collapse">
-                            <div class="panel-body">
-                                <div></div>
-                                
-                                
-                                
-                                
-                                
-                                <p class="scenario-container">
-                                <div class="row steps">
-                                    
-                                    
-                                    <span class="label label-success" title="Success"><i
-                                            class="glyphicon glyphicon-ok"></i></span>
-                                    
-                                    
-                                    <span class="text">
-                        <span class="keyword highlight">Given </span>
-                          <span class="stepname"> the API service is running</span>
-                            
-                          
-                              <span class="step-duration">
-                               < 1ms
-                              </span>
-                            
-                         
-                            
-                          
-                          <!-- Adding data table data-->
-                          
-                      </span>
-                                
-                                
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-                                </div>
-                                </p>
-                                
-                                
-                                
-                                <p class="scenario-container">
-                                <div class="row steps">
-                                    
-                                    
-                                    <span class="label label-success" title="Success"><i
-                                            class="glyphicon glyphicon-ok"></i></span>
-                                    
-                                    
-                                    <span class="text">
-                        <span class="keyword highlight">And </span>
-                          <span class="stepname"> I am authenticated as a User</span>
-                            
-                          
-                              <span class="step-duration">
-                               297ms
-                              </span>
-                            
-                         
-                            
-                          
-                          <!-- Adding data table data-->
-                          
-                      </span>
-                                
-                                
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-                                </div>
-                                </p>
-                                
-                                
-                                
-                                <p class="scenario-container">
-                                <div class="row steps">
-                                    
-                                    
-                                    <span class="label label-success" title="Success"><i
-                                            class="glyphicon glyphicon-ok"></i></span>
-                                    
-                                    
-                                    <span class="text">
-                        <span class="keyword highlight">When </span>
-                          <span class="stepname"> I send a GET request to &quot;/api/categories&quot; with query param &quot;invalidParam=xyz&quot;</span>
-                            
-                          
-                              <span class="step-duration">
-                               53ms
-                              </span>
-                            
-                         
-                            
-                          
-                          <!-- Adding data table data-->
-                          
-                      </span>
-                                
-                                
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-                                </div>
-                                </p>
-                                
-                                
-                                
-                                <p class="scenario-container">
-                                <div class="row steps">
-                                    
-                                    
-                                    <span class="label label-success" title="Success"><i
-                                            class="glyphicon glyphicon-ok"></i></span>
-                                    
-                                    
-                                    <span class="text">
-                        <span class="keyword highlight">Then </span>
-                          <span class="stepname"> the response status code should be 200</span>
-                            
-                          
-                              <span class="step-duration">
-                               < 1ms
-                              </span>
-                            
-                         
-                            
-                          
-                          <!-- Adding data table data-->
-                          
-                      </span>
-                                
-                                
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-                                </div>
-                                </p>
-                                
-                                
-                                
-                                <p class="scenario-container">
-                                <div class="row steps">
-                                    
-                                    
-                                    <span class="label label-success" title="Success"><i
-                                            class="glyphicon glyphicon-ok"></i></span>
-                                    
-                                    
-                                    <span class="text">
-                        <span class="keyword highlight">And </span>
-                          <span class="stepname"> the response should contain a list of categories</span>
-                            
-                          
-                              <span class="step-duration">
-                               1ms
-                              </span>
-                            
-                         
-                            
-                          
-                          <!-- Adding data table data-->
-                          
-                      </span>
-                                
-                                
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-                                </div>
-                                </p>
-                                
-                                
-                                
-                                
-                            </div>
-                        </div>
-                    </div>
-                    
-                    
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h4 class="panel-title">
-                                
-                                
-                                <div class="tags">
-                                </div>
-                                
-                                <a data-toggle="collapse" href="#collapseScenarioqa_training_tests3ce33f38-a7a0-4613-aeed-eb25a9ea883b">
+                                <a data-toggle="collapse" href="#collapseScenarioqa_training_tests7bd1a0d5-0f30-426e-9047-e0e4bf559ca9">
                                     <div>
 
                                         <div style="padding-right: 30px">
@@ -2963,7 +3115,7 @@ pre {
                                         </div>
                                         <div>
                             <span class="label-container ">
-                                <span>335ms</span>
+                                <span>124ms</span>
                               
                               <span class="label label-success"
                                                                title="5 Steps Passed">5</span>
@@ -2979,7 +3131,7 @@ pre {
                                 </a>
                             </h4>
                         </div>
-                        <div id="collapseScenarioqa_training_tests3ce33f38-a7a0-4613-aeed-eb25a9ea883b"
+                        <div id="collapseScenarioqa_training_tests7bd1a0d5-0f30-426e-9047-e0e4bf559ca9"
                              class="panel-collapse collapse">
                             <div class="panel-body">
                                 <div></div>
@@ -3040,7 +3192,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               290ms
+                               115ms
                               </span>
                             
                          
@@ -3078,7 +3230,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               42ms
+                               7ms
                               </span>
                             
                          
@@ -3154,7 +3306,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               1ms
+                               < 1ms
                               </span>
                             
                          
@@ -3197,7 +3349,7 @@ pre {
 <div class="row" xmlns="http://www.w3.org/1999/html">
 
 
-<div class="feature-failed">
+<div class="feature-passed">
 
     <div class="col-lg-6 col-md-6">
         <div class="panel panel-default">
@@ -3207,7 +3359,7 @@ pre {
                     <div class="tags">
                     </div>
                     
-                    <a data-toggle="collapse" href="#collapseFeatureqa_training_tests10727b9e-35fd-40d8-9b36-2ee8409f2e8e">
+                    <a data-toggle="collapse" href="#collapseFeatureqa_training_tests54fe6cd0-1321-4d3e-b38b-0f1cd3e56f9c">
                         <i class="glyphicon glyphicon-chevron-right"></i>
                         <i class="glyphicon glyphicon-chevron-down"></i>
                         <b>Feature:</b>Admin Category Management
@@ -3215,12 +3367,11 @@ pre {
 
                         
 
-                        <span>1m 21s 241ms</span>
+                        <span>23s 855ms</span>
                                 
               <span class="label label-success"
-                                                         title="4 Scenarios Passed">4</span>
-              <span class="label label-danger"
-                                                         title="1 Scenarios Failed">1</span>
+                                                         title="5 Scenarios Passed">5</span>
+              
               
               
               
@@ -3229,7 +3380,7 @@ pre {
                     </a>
                 </h4>
             </div>
-            <div id="collapseFeatureqa_training_tests10727b9e-35fd-40d8-9b36-2ee8409f2e8e" class="panel-collapse collapse">
+            <div id="collapseFeatureqa_training_tests54fe6cd0-1321-4d3e-b38b-0f1cd3e56f9c" class="panel-collapse collapse">
                 <div class="panel-body">
                     
                     <div class="description">  As an Admin<br/>  I want to manage categories<br/>  So that I can organize the plant inventory system</div>
@@ -3244,7 +3395,7 @@ pre {
                                 <div class="tags">
                                 </div>
                                 
-                                <a data-toggle="collapse" href="#collapseScenarioqa_training_tests52f04133-3d68-4d57-8cde-8692dec0f1fb">
+                                <a data-toggle="collapse" href="#collapseScenarioqa_training_testsd90678a9-719c-4f9d-b44e-349aba37c69c">
                                     <div>
 
                                         <div style="padding-right: 30px">
@@ -3254,7 +3405,7 @@ pre {
                                         </div>
                                         <div>
                             <span class="label-container ">
-                                <span>13s 145ms</span>
+                                <span>9s 50ms</span>
                               
                               <span class="label label-success"
                                                                title="8 Steps Passed">8</span>
@@ -3270,7 +3421,7 @@ pre {
                                 </a>
                             </h4>
                         </div>
-                        <div id="collapseScenarioqa_training_tests52f04133-3d68-4d57-8cde-8692dec0f1fb"
+                        <div id="collapseScenarioqa_training_testsd90678a9-719c-4f9d-b44e-349aba37c69c"
                              class="panel-collapse collapse">
                             <div class="panel-body">
                                 <div></div>
@@ -3293,7 +3444,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               1s 526ms
+                               515ms
                               </span>
                             
                          
@@ -3331,7 +3482,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               1s 707ms
+                               412ms
                               </span>
                             
                          
@@ -3369,7 +3520,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               5s 32ms
+                               5s 15ms
                               </span>
                             
                          
@@ -3407,7 +3558,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               3s 59ms
+                               1s 842ms
                               </span>
                             
                          
@@ -3445,7 +3596,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               804ms
+                               628ms
                               </span>
                             
                          
@@ -3483,7 +3634,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               54ms
+                               15ms
                               </span>
                             
                          
@@ -3521,7 +3672,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               879ms
+                               595ms
                               </span>
                             
                          
@@ -3559,7 +3710,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               81ms
+                               25ms
                               </span>
                             
                          
@@ -3597,7 +3748,7 @@ pre {
                                 <div class="tags">
                                 </div>
                                 
-                                <a data-toggle="collapse" href="#collapseScenarioqa_training_tests211875ae-e587-43ea-a7af-07aa02f4b085">
+                                <a data-toggle="collapse" href="#collapseScenarioqa_training_testsfc6cee80-3c26-4b23-9ea1-812498553114">
                                     <div>
 
                                         <div style="padding-right: 30px">
@@ -3607,7 +3758,7 @@ pre {
                                         </div>
                                         <div>
                             <span class="label-container ">
-                                <span>4s 372ms</span>
+                                <span>3s 585ms</span>
                               
                               <span class="label label-success"
                                                                title="9 Steps Passed">9</span>
@@ -3623,7 +3774,7 @@ pre {
                                 </a>
                             </h4>
                         </div>
-                        <div id="collapseScenarioqa_training_tests211875ae-e587-43ea-a7af-07aa02f4b085"
+                        <div id="collapseScenarioqa_training_testsfc6cee80-3c26-4b23-9ea1-812498553114"
                              class="panel-collapse collapse">
                             <div class="panel-body">
                                 <div></div>
@@ -3646,7 +3797,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               499ms
+                               519ms
                               </span>
                             
                          
@@ -3684,7 +3835,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               821ms
+                               901ms
                               </span>
                             
                          
@@ -3722,7 +3873,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               1s 183ms
+                               724ms
                               </span>
                             
                          
@@ -3760,7 +3911,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               749ms
+                               563ms
                               </span>
                             
                          
@@ -3798,7 +3949,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               26ms
+                               5ms
                               </span>
                             
                          
@@ -3836,7 +3987,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               25ms
+                               5ms
                               </span>
                             
                          
@@ -3874,7 +4025,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               1s 24ms
+                               850ms
                               </span>
                             
                          
@@ -3912,7 +4063,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               29ms
+                               10ms
                               </span>
                             
                          
@@ -3950,7 +4101,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               12ms
+                               5ms
                               </span>
                             
                          
@@ -3988,7 +4139,7 @@ pre {
                                 <div class="tags">
                                 </div>
                                 
-                                <a data-toggle="collapse" href="#collapseScenarioqa_training_testsa605057a-2970-4126-b6de-b597aecf23d1">
+                                <a data-toggle="collapse" href="#collapseScenarioqa_training_testse28af311-0d18-4f3e-bb9d-5898f9e47a55">
                                     <div>
 
                                         <div style="padding-right: 30px">
@@ -3998,7 +4149,7 @@ pre {
                                         </div>
                                         <div>
                             <span class="label-container ">
-                                <span>4s 555ms</span>
+                                <span>3s 236ms</span>
                               
                               <span class="label label-success"
                                                                title="9 Steps Passed">9</span>
@@ -4014,7 +4165,7 @@ pre {
                                 </a>
                             </h4>
                         </div>
-                        <div id="collapseScenarioqa_training_testsa605057a-2970-4126-b6de-b597aecf23d1"
+                        <div id="collapseScenarioqa_training_testse28af311-0d18-4f3e-bb9d-5898f9e47a55"
                              class="panel-collapse collapse">
                             <div class="panel-body">
                                 <div></div>
@@ -4037,7 +4188,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               487ms
+                               550ms
                               </span>
                             
                          
@@ -4075,7 +4226,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               1s 473ms
+                               791ms
                               </span>
                             
                          
@@ -4113,7 +4264,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               973ms
+                               704ms
                               </span>
                             
                          
@@ -4151,7 +4302,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               751ms
+                               559ms
                               </span>
                             
                          
@@ -4189,7 +4340,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               50ms
+                               8ms
                               </span>
                             
                          
@@ -4227,7 +4378,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               19ms
+                               6ms
                               </span>
                             
                          
@@ -4265,7 +4416,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               749ms
+                               599ms
                               </span>
                             
                          
@@ -4303,7 +4454,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               48ms
+                               16ms
                               </span>
                             
                          
@@ -4341,7 +4492,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               1ms
+                               < 1ms
                               </span>
                             
                          
@@ -4379,7 +4530,7 @@ pre {
                                 <div class="tags">
                                 </div>
                                 
-                                <a data-toggle="collapse" href="#collapseScenarioqa_training_tests3403fa61-79e6-4834-bec6-2e310f0bd80a">
+                                <a data-toggle="collapse" href="#collapseScenarioqa_training_testsa2e14cc2-6476-492a-a4ee-a9cd30a8f496">
                                     <div>
 
                                         <div style="padding-right: 30px">
@@ -4389,7 +4540,7 @@ pre {
                                         </div>
                                         <div>
                             <span class="label-container ">
-                                <span>14s 971ms</span>
+                                <span>3s 425ms</span>
                               
                               <span class="label label-success"
                                                                title="9 Steps Passed">9</span>
@@ -4405,7 +4556,7 @@ pre {
                                 </a>
                             </h4>
                         </div>
-                        <div id="collapseScenarioqa_training_tests3403fa61-79e6-4834-bec6-2e310f0bd80a"
+                        <div id="collapseScenarioqa_training_testsa2e14cc2-6476-492a-a4ee-a9cd30a8f496"
                              class="panel-collapse collapse">
                             <div class="panel-body">
                                 <div></div>
@@ -4428,7 +4579,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               432ms
+                               433ms
                               </span>
                             
                          
@@ -4466,7 +4617,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               774ms
+                               746ms
                               </span>
                             
                          
@@ -4504,7 +4655,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               1s 310ms
+                               735ms
                               </span>
                             
                          
@@ -4542,7 +4693,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               734ms
+                               570ms
                               </span>
                             
                          
@@ -4580,7 +4731,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               40ms
+                               8ms
                               </span>
                             
                          
@@ -4618,7 +4769,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               18ms
+                               10ms
                               </span>
                             
                          
@@ -4656,7 +4807,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               814ms
+                               901ms
                               </span>
                             
                          
@@ -4694,7 +4845,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               10s 29ms
+                               12ms
                               </span>
                             
                          
@@ -4732,7 +4883,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               817ms
+                               4ms
                               </span>
                             
                          
@@ -4770,26 +4921,24 @@ pre {
                                 <div class="tags">
                                 </div>
                                 
-                                <a data-toggle="collapse" href="#collapseScenarioqa_training_tests5935658d-5b64-47cc-93e5-cb28a07937be">
+                                <a data-toggle="collapse" href="#collapseScenarioqa_training_tests8517b37e-88b2-4bed-990c-18e6c809d2db">
                                     <div>
 
-                                        <div style="padding-right: 70px">
+                                        <div style="padding-right: 30px">
                                             <i class="glyphicon glyphicon-chevron-right"></i>
                                             <i class="glyphicon glyphicon-chevron-down"></i>
                                             <b>Scenario:</b><div class="ellipsis" data-text="Admin should be able to delete a category from the list">Admin should be able to delete a category from the list</div>
                                         </div>
                                         <div>
                             <span class="label-container ">
-                                <span>44s 195ms</span>
+                                <span>4s 556ms</span>
                               
                               <span class="label label-success"
-                                                               title="4 Steps Passed">4</span>
+                                                               title="8 Steps Passed">8</span>
                               
                               
-                              <span class="label label-warning"
-                                                                title="3 Steps Skipped">3</span>
-                              <span class="label label-danger"
-                                                               title="1 Steps Failed">1</span>
+                              
+                              
                               
                             </span>
                                         </div>
@@ -4798,7 +4947,7 @@ pre {
                                 </a>
                             </h4>
                         </div>
-                        <div id="collapseScenarioqa_training_tests5935658d-5b64-47cc-93e5-cb28a07937be"
+                        <div id="collapseScenarioqa_training_tests8517b37e-88b2-4bed-990c-18e6c809d2db"
                              class="panel-collapse collapse">
                             <div class="panel-body">
                                 <div></div>
@@ -4821,7 +4970,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               448ms
+                               452ms
                               </span>
                             
                          
@@ -4859,7 +5008,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               641ms
+                               795ms
                               </span>
                             
                          
@@ -4897,7 +5046,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               12s 363ms
+                               1s 442ms
                               </span>
                             
                          
@@ -4935,7 +5084,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               732ms
+                               620ms
                               </span>
                             
                          
@@ -4963,8 +5112,8 @@ pre {
                                 <div class="row steps">
                                     
                                     
-                                    <span class="label label-danger" title="Failed"><i
-                                            class="glyphicon glyphicon-remove"></i></span>
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
                                     
                                     
                                     <span class="text">
@@ -4973,7 +5122,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               30s 9ms
+                               661ms
                               </span>
                             
                          
@@ -4984,52 +5133,6 @@ pre {
                       </span>
                                 
                                 
-
-                                    
-                                    <a href="#error2_45"
-                                       data-toggle="collapse" class="toggle">Show Error +</a>
-                                    <div id="error2_45"
-                                         class="collapse">
-                                        <pre class="info show-modal"
-                                             data-toggle="modal"
-                                             style="cursor: pointer"
-                                             data-target="#error-modal-2_45">
-                                            <br> Error: function timed out, ensure the promise resolves within 30000 milliseconds
-    at Timeout.(anonymous) (D:\QA Test case\ITFac_Batch21_Group11\node_modules\@cucumber\cucumber\lib\time.js:64:20)
-    at listOnTimeout (node:internal/timers:588:17)
-    at process.processTimers (node:internal/timers:523:7)</pre>
-                                    </div>
-
-                                <div class="modal fade" id="error-modal-2_45" tabindex="-1" role="dialog"
-                                     aria-labelledby="stacktraceModalLabel" aria-hidden="true">
-                                    <div class="modal-dialog modal-lg">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <button type="button" class="close" data-dismiss="modal"
-                                                        aria-label="Close"><span aria-hidden="true">&times;</span>
-                                                </button>
-                                                <h4 class="modal-title" id="error-modal-title">
-                                                    Error
-                                                </h4>
-                                            </div>
-                                            <div class="modal-body">
-                                                <h5>
-                                                    <pre><br>Error: function timed out, ensure the promise resolves within 30000 milliseconds
-    at Timeout.(anonymous) (D:\QA Test case\ITFac_Batch21_Group11\node_modules\@cucumber\cucumber\lib\time.js:64:20)
-    at listOnTimeout (node:internal/timers:588:17)
-    at process.processTimers (node:internal/timers:523:7)</pre>
-                                                </h5>
-                                            </div>
-
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-default" data-dismiss="modal">
-                                                    Close
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
 
                                     
 
@@ -5047,8 +5150,8 @@ pre {
                                 <div class="row steps">
                                     
                                     
-                                    <span class="label label-warning" title="Skipped"><i
-                                            class="glyphicon glyphicon-minus"></i></span>
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
                                     
                                     
                                     <span class="text">
@@ -5057,7 +5160,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               < 1ms
+                               11ms
                               </span>
                             
                          
@@ -5085,8 +5188,8 @@ pre {
                                 <div class="row steps">
                                     
                                     
-                                    <span class="label label-warning" title="Skipped"><i
-                                            class="glyphicon glyphicon-minus"></i></span>
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
                                     
                                     
                                     <span class="text">
@@ -5095,7 +5198,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               < 1ms
+                               4ms
                               </span>
                             
                          
@@ -5123,8 +5226,8 @@ pre {
                                 <div class="row steps">
                                     
                                     
-                                    <span class="label label-warning" title="Skipped"><i
-                                            class="glyphicon glyphicon-minus"></i></span>
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
                                     
                                     
                                     <span class="text">
@@ -5133,7 +5236,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               < 1ms
+                               569ms
                               </span>
                             
                          
@@ -5172,7 +5275,7 @@ pre {
 
 
 
-<div class="feature-passed">
+<div class="feature-failed">
 
     <div class="col-lg-6 col-md-6">
         <div class="panel panel-default">
@@ -5182,7 +5285,7 @@ pre {
                     <div class="tags">
                     </div>
                     
-                    <a data-toggle="collapse" href="#collapseFeatureqa_training_tests206ff506-ef78-4284-9f27-518fca64af80">
+                    <a data-toggle="collapse" href="#collapseFeatureqa_training_tests2370a4ce-c94c-464b-b29d-e843cbacc30a">
                         <i class="glyphicon glyphicon-chevron-right"></i>
                         <i class="glyphicon glyphicon-chevron-down"></i>
                         <b>Feature:</b>Category Management User Functionality
@@ -5190,11 +5293,12 @@ pre {
 
                         
 
-                        <span>14s 389ms</span>
+                        <span>11s 838ms</span>
                                 
               <span class="label label-success"
                                                          title="5 Scenarios Passed">5</span>
-              
+              <span class="label label-danger"
+                                                         title="1 Scenarios Failed">1</span>
               
               
               
@@ -5203,7 +5307,7 @@ pre {
                     </a>
                 </h4>
             </div>
-            <div id="collapseFeatureqa_training_tests206ff506-ef78-4284-9f27-518fca64af80" class="panel-collapse collapse">
+            <div id="collapseFeatureqa_training_tests2370a4ce-c94c-464b-b29d-e843cbacc30a" class="panel-collapse collapse">
                 <div class="panel-body">
                     
                     <div class="description">  As a Normal User<br/>  I want to view the category management page<br/>  So that I can check categories without modifying them</div>
@@ -5218,7 +5322,7 @@ pre {
                                 <div class="tags">
                                 </div>
                                 
-                                <a data-toggle="collapse" href="#collapseScenarioqa_training_testsea3d47e8-f733-4729-baf4-0bd239f88f3b">
+                                <a data-toggle="collapse" href="#collapseScenarioqa_training_testsdf457216-2258-47d7-b3ee-37e96d168570">
                                     <div>
 
                                         <div style="padding-right: 30px">
@@ -5228,7 +5332,7 @@ pre {
                                         </div>
                                         <div>
                             <span class="label-container ">
-                                <span>1s 723ms</span>
+                                <span>1s 269ms</span>
                               
                               <span class="label label-success"
                                                                title="4 Steps Passed">4</span>
@@ -5244,7 +5348,7 @@ pre {
                                 </a>
                             </h4>
                         </div>
-                        <div id="collapseScenarioqa_training_testsea3d47e8-f733-4729-baf4-0bd239f88f3b"
+                        <div id="collapseScenarioqa_training_testsdf457216-2258-47d7-b3ee-37e96d168570"
                              class="panel-collapse collapse">
                             <div class="panel-body">
                                 <div></div>
@@ -5267,7 +5371,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               464ms
+                               546ms
                               </span>
                             
                          
@@ -5305,7 +5409,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               1s 208ms
+                               705ms
                               </span>
                             
                          
@@ -5343,7 +5447,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               38ms
+                               13ms
                               </span>
                             
                          
@@ -5381,7 +5485,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               12ms
+                               4ms
                               </span>
                             
                          
@@ -5419,7 +5523,7 @@ pre {
                                 <div class="tags">
                                 </div>
                                 
-                                <a data-toggle="collapse" href="#collapseScenarioqa_training_tests5189463d-5f4e-4c03-95c1-3afefe8b0298">
+                                <a data-toggle="collapse" href="#collapseScenarioqa_training_tests86c24e0e-782e-499f-8d1e-60289d1ca1ae">
                                     <div>
 
                                         <div style="padding-right: 30px">
@@ -5429,7 +5533,7 @@ pre {
                                         </div>
                                         <div>
                             <span class="label-container ">
-                                <span>4s 37ms</span>
+                                <span>2s 456ms</span>
                               
                               <span class="label label-success"
                                                                title="6 Steps Passed">6</span>
@@ -5445,7 +5549,7 @@ pre {
                                 </a>
                             </h4>
                         </div>
-                        <div id="collapseScenarioqa_training_tests5189463d-5f4e-4c03-95c1-3afefe8b0298"
+                        <div id="collapseScenarioqa_training_tests86c24e0e-782e-499f-8d1e-60289d1ca1ae"
                              class="panel-collapse collapse">
                             <div class="panel-body">
                                 <div></div>
@@ -5468,7 +5572,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               449ms
+                               610ms
                               </span>
                             
                          
@@ -5506,7 +5610,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               1s 509ms
+                               280ms
                               </span>
                             
                          
@@ -5544,7 +5648,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               1s 7ms
+                               942ms
                               </span>
                             
                          
@@ -5582,7 +5686,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               30ms
+                               25ms
                               </span>
                             
                          
@@ -5620,7 +5724,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               1s 14ms
+                               589ms
                               </span>
                             
                          
@@ -5658,7 +5762,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               26ms
+                               8ms
                               </span>
                             
                          
@@ -5696,7 +5800,7 @@ pre {
                                 <div class="tags">
                                 </div>
                                 
-                                <a data-toggle="collapse" href="#collapseScenarioqa_training_testsa7ca39dc-d0d9-4ef2-a689-23de06bc4ffa">
+                                <a data-toggle="collapse" href="#collapseScenarioqa_training_tests814f4331-6d4e-4224-aa64-71b7e2910552">
                                     <div>
 
                                         <div style="padding-right: 30px">
@@ -5706,7 +5810,7 @@ pre {
                                         </div>
                                         <div>
                             <span class="label-container ">
-                                <span>1s 828ms</span>
+                                <span>1s 303ms</span>
                               
                               <span class="label label-success"
                                                                title="6 Steps Passed">6</span>
@@ -5722,7 +5826,7 @@ pre {
                                 </a>
                             </h4>
                         </div>
-                        <div id="collapseScenarioqa_training_testsa7ca39dc-d0d9-4ef2-a689-23de06bc4ffa"
+                        <div id="collapseScenarioqa_training_tests814f4331-6d4e-4224-aa64-71b7e2910552"
                              class="panel-collapse collapse">
                             <div class="panel-body">
                                 <div></div>
@@ -5745,7 +5849,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               574ms
+                               548ms
                               </span>
                             
                          
@@ -5783,7 +5887,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               1s 186ms
+                               729ms
                               </span>
                             
                          
@@ -5821,7 +5925,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               33ms
+                               14ms
                               </span>
                             
                          
@@ -5859,7 +5963,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               13ms
+                               4ms
                               </span>
                             
                          
@@ -5897,7 +6001,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               10ms
+                               4ms
                               </span>
                             
                          
@@ -5932,6 +6036,245 @@ pre {
                                     <span class="text">
                         <span class="keyword highlight">And </span>
                           <span class="stepname"> I should see &quot;Sales&quot; summary card</span>
+                            
+                          
+                              <span class="step-duration">
+                               2ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                
+                                
+                                <div class="tags">
+                                </div>
+                                
+                                <a data-toggle="collapse" href="#collapseScenarioqa_training_tests501ddb04-d72e-40a2-8a17-49d67757b76e">
+                                    <div>
+
+                                        <div style="padding-right: 30px">
+                                            <i class="glyphicon glyphicon-chevron-right"></i>
+                                            <i class="glyphicon glyphicon-chevron-down"></i>
+                                            <b>Scenario:</b><div class="ellipsis" data-text="User should see appropriate message when searching for non-existent category">User should see appropriate message when searching for non-existent category</div>
+                                        </div>
+                                        <div>
+                            <span class="label-container ">
+                                <span>2s 581ms</span>
+                              
+                              <span class="label label-success"
+                                                               title="5 Steps Passed">5</span>
+                              
+                              
+                              
+                              
+                              
+                            </span>
+                                        </div>
+                                    </div>
+                                    <div><small><i></i></small></div>
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseScenarioqa_training_tests501ddb04-d72e-40a2-8a17-49d67757b76e"
+                             class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <div></div>
+                                
+                                
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">Given </span>
+                          <span class="stepname"> I navigate to the login page</span>
+                            
+                          
+                              <span class="step-duration">
+                               493ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">And </span>
+                          <span class="stepname"> I login as &quot;Testuser&quot; with password &quot;test123&quot;</span>
+                            
+                          
+                              <span class="step-duration">
+                               716ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">When </span>
+                          <span class="stepname"> I navigate to the Category management page</span>
+                            
+                          
+                              <span class="step-duration">
+                               729ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">And </span>
+                          <span class="stepname"> I search for a category with name &quot;NonExistentCategoryXYZ123&quot;</span>
+                            
+                          
+                              <span class="step-duration">
+                               631ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">Then </span>
+                          <span class="stepname"> I should see &quot;No category found&quot; message in the table</span>
                             
                           
                               <span class="step-duration">
@@ -5973,246 +6316,7 @@ pre {
                                 <div class="tags">
                                 </div>
                                 
-                                <a data-toggle="collapse" href="#collapseScenarioqa_training_tests36384a6f-e5d6-40e5-a4ed-65a4b8022f3e">
-                                    <div>
-
-                                        <div style="padding-right: 30px">
-                                            <i class="glyphicon glyphicon-chevron-right"></i>
-                                            <i class="glyphicon glyphicon-chevron-down"></i>
-                                            <b>Scenario:</b><div class="ellipsis" data-text="User should see appropriate message when searching for non-existent category">User should see appropriate message when searching for non-existent category</div>
-                                        </div>
-                                        <div>
-                            <span class="label-container ">
-                                <span>4s 135ms</span>
-                              
-                              <span class="label label-success"
-                                                               title="5 Steps Passed">5</span>
-                              
-                              
-                              
-                              
-                              
-                            </span>
-                                        </div>
-                                    </div>
-                                    <div><small><i></i></small></div>
-                                </a>
-                            </h4>
-                        </div>
-                        <div id="collapseScenarioqa_training_tests36384a6f-e5d6-40e5-a4ed-65a4b8022f3e"
-                             class="panel-collapse collapse">
-                            <div class="panel-body">
-                                <div></div>
-                                
-                                
-                                
-                                
-                                
-                                <p class="scenario-container">
-                                <div class="row steps">
-                                    
-                                    
-                                    <span class="label label-success" title="Success"><i
-                                            class="glyphicon glyphicon-ok"></i></span>
-                                    
-                                    
-                                    <span class="text">
-                        <span class="keyword highlight">Given </span>
-                          <span class="stepname"> I navigate to the login page</span>
-                            
-                          
-                              <span class="step-duration">
-                               517ms
-                              </span>
-                            
-                         
-                            
-                          
-                          <!-- Adding data table data-->
-                          
-                      </span>
-                                
-                                
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-                                </div>
-                                </p>
-                                
-                                
-                                
-                                <p class="scenario-container">
-                                <div class="row steps">
-                                    
-                                    
-                                    <span class="label label-success" title="Success"><i
-                                            class="glyphicon glyphicon-ok"></i></span>
-                                    
-                                    
-                                    <span class="text">
-                        <span class="keyword highlight">And </span>
-                          <span class="stepname"> I login as &quot;Testuser&quot; with password &quot;test123&quot;</span>
-                            
-                          
-                              <span class="step-duration">
-                               999ms
-                              </span>
-                            
-                         
-                            
-                          
-                          <!-- Adding data table data-->
-                          
-                      </span>
-                                
-                                
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-                                </div>
-                                </p>
-                                
-                                
-                                
-                                <p class="scenario-container">
-                                <div class="row steps">
-                                    
-                                    
-                                    <span class="label label-success" title="Success"><i
-                                            class="glyphicon glyphicon-ok"></i></span>
-                                    
-                                    
-                                    <span class="text">
-                        <span class="keyword highlight">When </span>
-                          <span class="stepname"> I navigate to the Category management page</span>
-                            
-                          
-                              <span class="step-duration">
-                               1s 384ms
-                              </span>
-                            
-                         
-                            
-                          
-                          <!-- Adding data table data-->
-                          
-                      </span>
-                                
-                                
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-                                </div>
-                                </p>
-                                
-                                
-                                
-                                <p class="scenario-container">
-                                <div class="row steps">
-                                    
-                                    
-                                    <span class="label label-success" title="Success"><i
-                                            class="glyphicon glyphicon-ok"></i></span>
-                                    
-                                    
-                                    <span class="text">
-                        <span class="keyword highlight">And </span>
-                          <span class="stepname"> I search for a category with name &quot;NonExistentCategoryXYZ123&quot;</span>
-                            
-                          
-                              <span class="step-duration">
-                               1s 210ms
-                              </span>
-                            
-                         
-                            
-                          
-                          <!-- Adding data table data-->
-                          
-                      </span>
-                                
-                                
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-                                </div>
-                                </p>
-                                
-                                
-                                
-                                <p class="scenario-container">
-                                <div class="row steps">
-                                    
-                                    
-                                    <span class="label label-success" title="Success"><i
-                                            class="glyphicon glyphicon-ok"></i></span>
-                                    
-                                    
-                                    <span class="text">
-                        <span class="keyword highlight">Then </span>
-                          <span class="stepname"> I should see &quot;No category found&quot; message in the table</span>
-                            
-                          
-                              <span class="step-duration">
-                               23ms
-                              </span>
-                            
-                         
-                            
-                          
-                          <!-- Adding data table data-->
-                          
-                      </span>
-                                
-                                
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-                                </div>
-                                </p>
-                                
-                                
-                                
-                                
-                            </div>
-                        </div>
-                    </div>
-                    
-                    
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h4 class="panel-title">
-                                
-                                
-                                <div class="tags">
-                                </div>
-                                
-                                <a data-toggle="collapse" href="#collapseScenarioqa_training_tests35fc68d1-8095-483c-9a0c-1a803cea0f48">
+                                <a data-toggle="collapse" href="#collapseScenarioqa_training_tests8059978f-dfb2-441c-857b-ff95d86fc15f">
                                     <div>
 
                                         <div style="padding-right: 30px">
@@ -6222,7 +6326,7 @@ pre {
                                         </div>
                                         <div>
                             <span class="label-container ">
-                                <span>2s 665ms</span>
+                                <span>2s 423ms</span>
                               
                               <span class="label label-success"
                                                                title="4 Steps Passed">4</span>
@@ -6238,7 +6342,7 @@ pre {
                                 </a>
                             </h4>
                         </div>
-                        <div id="collapseScenarioqa_training_tests35fc68d1-8095-483c-9a0c-1a803cea0f48"
+                        <div id="collapseScenarioqa_training_tests8059978f-dfb2-441c-857b-ff95d86fc15f"
                              class="panel-collapse collapse">
                             <div class="panel-body">
                                 <div></div>
@@ -6261,7 +6365,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               480ms
+                               979ms
                               </span>
                             
                          
@@ -6299,7 +6403,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               1s 224ms
+                               712ms
                               </span>
                             
                          
@@ -6337,7 +6441,7 @@ pre {
                             
                           
                               <span class="step-duration">
-                               928ms
+                               719ms
                               </span>
                             
                          
@@ -6375,7 +6479,290 @@ pre {
                             
                           
                               <span class="step-duration">
-                               30ms
+                               12ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                
+                                
+                                <div class="tags">
+                                </div>
+                                
+                                <a data-toggle="collapse" href="#collapseScenarioqa_training_tests1a4fdad1-65c0-4522-98fc-12af637c0511">
+                                    <div>
+
+                                        <div style="padding-right: 70px">
+                                            <i class="glyphicon glyphicon-chevron-right"></i>
+                                            <i class="glyphicon glyphicon-chevron-down"></i>
+                                            <b>Scenario:</b><div class="ellipsis" data-text="User should not see Edit and Delete actions in Category Management">User should not see Edit and Delete actions in Category Management</div>
+                                        </div>
+                                        <div>
+                            <span class="label-container ">
+                                <span>1s 804ms</span>
+                              
+                              <span class="label label-success"
+                                                               title="3 Steps Passed">3</span>
+                              
+                              
+                              <span class="label label-warning"
+                                                                title="1 Steps Skipped">1</span>
+                              <span class="label label-danger"
+                                                               title="1 Steps Failed">1</span>
+                              
+                            </span>
+                                        </div>
+                                    </div>
+                                    <div><small><i></i></small></div>
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseScenarioqa_training_tests1a4fdad1-65c0-4522-98fc-12af637c0511"
+                             class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <div></div>
+                                
+                                
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">Given </span>
+                          <span class="stepname"> I navigate to the login page</span>
+                            
+                          
+                              <span class="step-duration">
+                               556ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">And </span>
+                          <span class="stepname"> I login as &quot;Testuser&quot; with password &quot;test123&quot;</span>
+                            
+                          
+                              <span class="step-duration">
+                               253ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">When </span>
+                          <span class="stepname"> I navigate to the Category management page</span>
+                            
+                          
+                              <span class="step-duration">
+                               993ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-danger" title="Failed"><i
+                                            class="glyphicon glyphicon-remove"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">Then </span>
+                          <span class="stepname"> the &quot;Edit&quot; button should not be visible</span>
+                            
+                          
+                              <span class="step-duration">
+                               < 1ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+                                    <a href="#error3_54"
+                                       data-toggle="collapse" class="toggle">Show Error +</a>
+                                    <div id="error3_54"
+                                         class="collapse">
+                                        <pre class="info show-modal"
+                                             data-toggle="modal"
+                                             style="cursor: pointer"
+                                             data-target="#error-modal-3_54">
+                                            <br> TypeError: Cannot read properties of undefined (reading 'verifyEditButtonsHidden')
+    at World.(anonymous) (D:\ITFac_Group11\ITFac_Batch21_Group11\steps\ui\user\user.steps.js:56:33)</pre>
+                                    </div>
+
+                                <div class="modal fade" id="error-modal-3_54" tabindex="-1" role="dialog"
+                                     aria-labelledby="stacktraceModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                        aria-label="Close"><span aria-hidden="true">&times;</span>
+                                                </button>
+                                                <h4 class="modal-title" id="error-modal-title">
+                                                    Error
+                                                </h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <h5>
+                                                    <pre><br>TypeError: Cannot read properties of undefined (reading 'verifyEditButtonsHidden')
+    at World.(anonymous) (D:\ITFac_Group11\ITFac_Batch21_Group11\steps\ui\user\user.steps.js:56:33)</pre>
+                                                </h5>
+                                            </div>
+
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">
+                                                    Close
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-warning" title="Skipped"><i
+                                            class="glyphicon glyphicon-minus"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">And </span>
+                          <span class="stepname"> the &quot;Delete&quot; button should not be visible</span>
+                            
+                          
+                              <span class="step-duration">
+                               < 1ms
                               </span>
                             
                          
@@ -6445,7 +6832,7 @@ pre {
       drawChart({
         "title": "Scenarios",
         "failed": 1,
-        "passed": 19,
+        "passed": 20,
         "rerun": 0,
         "notdefined": 0,
         "pending": 0,

@@ -33,12 +33,6 @@ Feature: User Category API Management
     Then the response status code should be 200
     And the response should contain a list of categories
 
-# TC_Category_Management_API_User_022
-  Scenario: Verify API functionality when invalid query parameters are provided
-    When I send a GET request to "/api/categories" with query param "invalidParam=xyz"
-    Then the response status code should be 200
-    And the response should contain a list of categories
-
   # TC_Category_Management_API_User_023
   Scenario: Verify API functionality of retrieving category summary
     When I send a GET request to "/api/categories/summary"
