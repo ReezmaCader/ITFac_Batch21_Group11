@@ -1,0 +1,1220 @@
+[
+  {
+    "description": "  As an admin user\n  I want to manage sales via the API\n  So that I can create, update, and delete sales records",
+    "elements": [
+      {
+        "description": "",
+        "id": "sales-api---admin-operations;tc_sales_api_admin_006---create-a-sale-successfully",
+        "keyword": "Scenario",
+        "line": 13,
+        "name": "TC_Sales_API_Admin_006 - Create a sale successfully",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 371599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 10,
+            "name": "the admin has a valid authentication token",
+            "match": {
+              "location": "api-test\\step-definitions\\admin\\salesApiAdminSteps.js:28"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 108508199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 14,
+            "name": "a plant with available stock exists",
+            "match": {
+              "location": "api-test\\step-definitions\\admin\\salesApiAdminSteps.js:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8900700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 15,
+            "name": "the admin sends a POST request to create a sale for available plant",
+            "match": {
+              "location": "api-test\\step-definitions\\admin\\salesApiAdminSteps.js:58"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 42105800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 16,
+            "name": "the API should return HTTP status code 201 or 400",
+            "match": {
+              "location": "api-test\\step-definitions\\user\\salesApiUserSteps.js:125"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 149900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 17,
+            "name": "if successful the response body should contain the newly created sale details",
+            "match": {
+              "location": "api-test\\step-definitions\\admin\\salesApiAdminSteps.js:229"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 65200
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1735000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@admin",
+            "line": 12
+          },
+          {
+            "name": "@post",
+            "line": 12
+          },
+          {
+            "name": "@positive",
+            "line": 12
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "sales-api---admin-operations;tc_sales_api_admin_007---validate-quantity-cannot-be-zero-or-negative",
+        "keyword": "Scenario",
+        "line": 20,
+        "name": "TC_Sales_API_Admin_007 - Validate quantity cannot be zero or negative",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 353000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 10,
+            "name": "the admin has a valid authentication token",
+            "match": {
+              "location": "api-test\\step-definitions\\admin\\salesApiAdminSteps.js:28"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 92439399
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "plantId",
+                      "quantity",
+                      "price"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "3",
+                      "0",
+                      "500"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "When ",
+            "line": 21,
+            "name": "the admin sends a POST request with quantity 0",
+            "match": {
+              "location": "api-test\\step-definitions\\admin\\salesApiAdminSteps.js:145"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5337399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 24,
+            "name": "the API should return HTTP status code 400",
+            "match": {
+              "location": "api-test\\step-definitions\\user\\salesApiUserSteps.js:82"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 154200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 25,
+            "name": "the response body should return a validation error for quantity",
+            "match": {
+              "location": "api-test\\step-definitions\\admin\\salesApiAdminSteps.js:263"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 66499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 26,
+            "name": "the response should contain error \"BAD_REQUEST\"",
+            "match": {
+              "location": "api-test\\step-definitions\\user\\salesApiUserSteps.js:158"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 83800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 27,
+            "name": "the response should contain message \"Quantity must be greater than 0\"",
+            "match": {
+              "location": "api-test\\step-definitions\\user\\salesApiUserSteps.js:169"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 54600
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 272799
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@admin",
+            "line": 19
+          },
+          {
+            "name": "@post",
+            "line": 19
+          },
+          {
+            "name": "@negative",
+            "line": 19
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "sales-api---admin-operations;tc_sales_api_admin_008---validate-stock-availability-before-sale-creation",
+        "keyword": "Scenario",
+        "line": 30,
+        "name": "TC_Sales_API_Admin_008 - Validate stock availability before sale creation",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 395700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 10,
+            "name": "the admin has a valid authentication token",
+            "match": {
+              "location": "api-test\\step-definitions\\admin\\salesApiAdminSteps.js:28"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 94407400
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "plantId",
+                      "quantity",
+                      "price"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "1",
+                      "9999",
+                      "800"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "When ",
+            "line": 31,
+            "name": "the admin sends a POST request with quantity exceeding available stock",
+            "match": {
+              "location": "api-test\\step-definitions\\admin\\salesApiAdminSteps.js:158"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7361799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 34,
+            "name": "the API should return HTTP status code 400",
+            "match": {
+              "location": "api-test\\step-definitions\\user\\salesApiUserSteps.js:82"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 96900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 35,
+            "name": "the response body should indicate insufficient stock",
+            "match": {
+              "location": "api-test\\step-definitions\\admin\\salesApiAdminSteps.js:274"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 147600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 36,
+            "name": "the response should contain error \"BAD_REQUEST\"",
+            "match": {
+              "location": "api-test\\step-definitions\\user\\salesApiUserSteps.js:158"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 51799
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 324400
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@admin",
+            "line": 29
+          },
+          {
+            "name": "@post",
+            "line": 29
+          },
+          {
+            "name": "@negative",
+            "line": 29
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "sales-api---admin-operations;tc_sales_api_admin_009---delete-a-sale-record-successfully",
+        "keyword": "Scenario",
+        "line": 39,
+        "name": "TC_Sales_API_Admin_009 - Delete a sale record successfully",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 320400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 10,
+            "name": "the admin has a valid authentication token",
+            "match": {
+              "location": "api-test\\step-definitions\\admin\\salesApiAdminSteps.js:28"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 93492400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 40,
+            "name": "the admin has a valid authentication token",
+            "match": {
+              "location": "api-test\\step-definitions\\admin\\salesApiAdminSteps.js:28"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 90249599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 41,
+            "name": "a sale record exists in the system",
+            "match": {
+              "location": "api-test\\step-definitions\\admin\\salesApiAdminSteps.js:84"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9675799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 42,
+            "name": "the admin sends a DELETE request for a sale ID",
+            "match": {
+              "location": "api-test\\step-definitions\\admin\\salesApiAdminSteps.js:171"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 11802599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 43,
+            "name": "the API should return HTTP status code 200 or 204",
+            "match": {
+              "location": "api-test\\step-definitions\\user\\salesApiUserSteps.js:125"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 79500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 44,
+            "name": "the sale record should be removed from the database successfully",
+            "match": {
+              "location": "api-test\\step-definitions\\admin\\salesApiAdminSteps.js:285"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 87099
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 169000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@admin",
+            "line": 38
+          },
+          {
+            "name": "@delete",
+            "line": 38
+          },
+          {
+            "name": "@positive",
+            "line": 38
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "sales-api---admin-operations;tc_sales_api_admin_010---validate-missing-plant-id-in-request",
+        "keyword": "Scenario",
+        "line": 47,
+        "name": "TC_Sales_API_Admin_010 - Validate missing plant ID in request",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 249000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 10,
+            "name": "the admin has a valid authentication token",
+            "match": {
+              "location": "api-test\\step-definitions\\admin\\salesApiAdminSteps.js:28"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 92365000
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "quantity",
+                      "price"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "5",
+                      "400"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "When ",
+            "line": 48,
+            "name": "the admin sends a POST request with no plant ID",
+            "match": {
+              "location": "api-test\\step-definitions\\admin\\salesApiAdminSteps.js:185"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5227300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 51,
+            "name": "the API should return HTTP status code 400 or 500",
+            "match": {
+              "location": "api-test\\step-definitions\\user\\salesApiUserSteps.js:125"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 59799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 52,
+            "name": "the response body should indicate that plant ID is mandatory",
+            "match": {
+              "location": "api-test\\step-definitions\\admin\\salesApiAdminSteps.js:293"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 92599
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 230499
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@admin",
+            "line": 46
+          },
+          {
+            "name": "@post",
+            "line": 46
+          },
+          {
+            "name": "@negative",
+            "line": 46
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "sales-api---admin-operations",
+    "line": 4,
+    "keyword": "Feature",
+    "name": "Sales API - Admin Operations",
+    "tags": [],
+    "uri": "api-test\\features\\admin\\sales_api_admin.feature"
+  },
+  {
+    "description": "  As a regular user\n  I want to interact with the Sales API\n  So that I can view sales data but not modify it",
+    "elements": [
+      {
+        "description": "",
+        "id": "sales-api---user-operations;tc_sales_api_user_001---get-sales-list-successfully",
+        "keyword": "Scenario",
+        "line": 13,
+        "name": "TC_Sales_API_User_001 - Get sales list successfully",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 386400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 10,
+            "name": "the user has a valid authentication token",
+            "match": {
+              "location": "api-test\\step-definitions\\user\\salesApiUserSteps.js:29"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 95605599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 14,
+            "name": "the user sends a GET request to the sales API",
+            "match": {
+              "location": "api-test\\step-definitions\\user\\salesApiUserSteps.js:53"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7686500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 15,
+            "name": "the API should return HTTP status code 200",
+            "match": {
+              "location": "api-test\\step-definitions\\user\\salesApiUserSteps.js:82"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 87499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 16,
+            "name": "the response body should contain a list of sales records",
+            "match": {
+              "location": "api-test\\step-definitions\\user\\salesApiUserSteps.js:91"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 126500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 17,
+            "name": "each sale object should include required fields such as id, plantId, quantity, price, and saleDate",
+            "match": {
+              "location": "api-test\\step-definitions\\user\\salesApiUserSteps.js:101"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 84900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 18,
+            "name": "the response data structure should match the API specification",
+            "match": {
+              "location": "api-test\\step-definitions\\user\\salesApiUserSteps.js:120"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 44300
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 265499
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@user",
+            "line": 12
+          },
+          {
+            "name": "@get",
+            "line": 12
+          },
+          {
+            "name": "@positive",
+            "line": 12
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "sales-api---user-operations;tc_sales_api_user_002---restrict-sale-creation-for-regular-users",
+        "keyword": "Scenario",
+        "line": 21,
+        "name": "TC_Sales_API_User_002 - Restrict sale creation for regular users",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 298699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 10,
+            "name": "the user has a valid authentication token",
+            "match": {
+              "location": "api-test\\step-definitions\\user\\salesApiUserSteps.js:29"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 93946299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 22,
+            "name": "the user has been logged in as User",
+            "match": {
+              "location": "api-test\\step-definitions\\user\\salesApiUserSteps.js:40"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 98825100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 23,
+            "name": "the user sends a POST request to the sales API",
+            "match": {
+              "location": "api-test\\step-definitions\\user\\salesApiUserSteps.js:58"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7946300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 24,
+            "name": "the API should return HTTP status code 403 or 400",
+            "match": {
+              "location": "api-test\\step-definitions\\user\\salesApiUserSteps.js:125"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 51999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 25,
+            "name": "the response body should indicate that the user is not authorized or request failed",
+            "match": {
+              "location": "api-test\\step-definitions\\user\\salesApiUserSteps.js:135"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 63400
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 190699
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@user",
+            "line": 20
+          },
+          {
+            "name": "@post",
+            "line": 20
+          },
+          {
+            "name": "@negative",
+            "line": 20
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "sales-api---user-operations;tc_sales_api_user_003---restrict-sale-deletion-for-regular-users",
+        "keyword": "Scenario",
+        "line": 28,
+        "name": "TC_Sales_API_User_003 - Restrict sale deletion for regular users",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 224799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 10,
+            "name": "the user has a valid authentication token",
+            "match": {
+              "location": "api-test\\step-definitions\\user\\salesApiUserSteps.js:29"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 97283900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 29,
+            "name": "the user has been logged in as User",
+            "match": {
+              "location": "api-test\\step-definitions\\user\\salesApiUserSteps.js:40"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 96328400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 30,
+            "name": "the user sends a DELETE request to the sales API",
+            "match": {
+              "location": "api-test\\step-definitions\\user\\salesApiUserSteps.js:68"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9021999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 31,
+            "name": "the API should return HTTP status code 403 or 404",
+            "match": {
+              "location": "api-test\\step-definitions\\user\\salesApiUserSteps.js:125"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 84499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 32,
+            "name": "the response body should indicate insufficient permissions or not found",
+            "match": {
+              "location": "api-test\\step-definitions\\user\\salesApiUserSteps.js:144"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 98899
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 322700
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@user",
+            "line": 27
+          },
+          {
+            "name": "@delete",
+            "line": 27
+          },
+          {
+            "name": "@negative",
+            "line": 27
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "sales-api---user-operations;tc_sales_api_user_004---get-sales-with-pagination-parameters",
+        "keyword": "Scenario",
+        "line": 35,
+        "name": "TC_Sales_API_User_004 - Get sales with pagination parameters",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 478999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 10,
+            "name": "the user has a valid authentication token",
+            "match": {
+              "location": "api-test\\step-definitions\\user\\salesApiUserSteps.js:29"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 96678599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 36,
+            "name": "the user sends a GET request with page \"0\" and size \"10\" params",
+            "match": {
+              "location": "api-test\\step-definitions\\user\\salesApiUserSteps.js:74"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 11028000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 37,
+            "name": "the API should return HTTP status code 200",
+            "match": {
+              "location": "api-test\\step-definitions\\user\\salesApiUserSteps.js:82"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 48099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 38,
+            "name": "the response should return only the requested number of records based on page and size parameters",
+            "match": {
+              "location": "api-test\\step-definitions\\user\\salesApiUserSteps.js:187"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 72000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 39,
+            "name": "pagination metadata should be present if applicable",
+            "match": {
+              "location": "api-test\\step-definitions\\user\\salesApiUserSteps.js:199"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 43299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 40,
+            "name": "the response should contain page \"0\"",
+            "match": {
+              "location": "api-test\\step-definitions\\user\\salesApiUserSteps.js:208"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 47800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 41,
+            "name": "the response should contain size \"10\"",
+            "match": {
+              "location": "api-test\\step-definitions\\user\\salesApiUserSteps.js:219"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 37400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 42,
+            "name": "the response should contain totalElements greater than 0",
+            "match": {
+              "location": "api-test\\step-definitions\\user\\salesApiUserSteps.js:230"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 28499
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 214099
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@user",
+            "line": 34
+          },
+          {
+            "name": "@pagination",
+            "line": 34
+          },
+          {
+            "name": "@positive",
+            "line": 34
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "sales-api---user-operations;tc_sales_api_user_005---verify-api-security-for-unauthenticated-requests",
+        "keyword": "Scenario",
+        "line": 45,
+        "name": "TC_Sales_API_User_005 - Verify API security for unauthenticated requests",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 404399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 10,
+            "name": "the user has a valid authentication token",
+            "match": {
+              "location": "api-test\\step-definitions\\user\\salesApiUserSteps.js:29"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 94514199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 46,
+            "name": "the user does not have an authentication token",
+            "match": {
+              "location": "api-test\\step-definitions\\user\\salesApiUserSteps.js:49"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1078099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 47,
+            "name": "the user sends a GET request to the sales API",
+            "match": {
+              "location": "api-test\\step-definitions\\user\\salesApiUserSteps.js:53"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2173099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 48,
+            "name": "the API should return HTTP status code 401",
+            "match": {
+              "location": "api-test\\step-definitions\\user\\salesApiUserSteps.js:82"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 53600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 49,
+            "name": "the response body should indicate missing or invalid authentication",
+            "match": {
+              "location": "api-test\\step-definitions\\user\\salesApiUserSteps.js:239"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 73100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 50,
+            "name": "the response should contain status 401",
+            "match": {
+              "location": "api-test\\step-definitions\\user\\salesApiUserSteps.js:244"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 49500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 51,
+            "name": "the response should contain error \"Unauthorized\"",
+            "match": {
+              "location": "api-test\\step-definitions\\user\\salesApiUserSteps.js:158"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 42100
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 193100
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@user",
+            "line": 44
+          },
+          {
+            "name": "@security",
+            "line": 44
+          },
+          {
+            "name": "@negative",
+            "line": 44
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "sales-api---user-operations",
+    "line": 4,
+    "keyword": "Feature",
+    "name": "Sales API - User Operations",
+    "tags": [],
+    "uri": "api-test\\features\\user\\sales_api_user.feature"
+  }
+]

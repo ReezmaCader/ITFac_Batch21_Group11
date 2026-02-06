@@ -1,10 +1,8 @@
 /**
  * Cucumber Configuration for UI and API Tests
- * All tests run from root folder
  */
 
 module.exports = {
-  // UI Tests - Default profile
   default: {
     paths: ['ui-tests/features/**/*.feature'],
     require: [
@@ -14,17 +12,14 @@ module.exports = {
     format: [
       'progress-bar',
       'html:reports/ui-cucumber-report.html',
-      'json:reports/ui-cucumber-report.json'
+      'json:reports/cucumber-report.json'  // ✅ Just JSON
     ],
     publish: false,
     failFast: false,
     parallel: 1,
-    formatOptions: {
-      snippetInterface: 'async-await'
-    }
+    formatOptions: { snippetInterface: 'async-await' }
   },
   
-  // UI Tests Profiles
   'ui': {
     paths: ['ui-tests/features/**/*.feature'],
     require: [
@@ -34,7 +29,7 @@ module.exports = {
     format: [
       'progress-bar',
       'html:reports/ui-cucumber-report.html',
-      'json:reports/ui-cucumber-report.json'
+      'json:reports/cucumber-report.json'  // ✅ Just JSON
     ],
     publish: false,
     formatOptions: { snippetInterface: 'async-await' }
@@ -46,7 +41,7 @@ module.exports = {
       'ui-tests/step-definitions/**/*.js',
       'ui-tests/support/**/*.js'
     ],
-    format: ['progress-bar', 'json:reports/ui-user-report.json'],
+    format: ['progress-bar', 'json:reports/cucumber-report.json'],
     tags: '@user'
   },
   
@@ -56,11 +51,10 @@ module.exports = {
       'ui-tests/step-definitions/**/*.js',
       'ui-tests/support/**/*.js'
     ],
-    format: ['progress-bar', 'json:reports/ui-admin-report.json'],
+    format: ['progress-bar', 'json:reports/cucumber-report.json'],
     tags: '@admin'
   },
   
-  // API Tests Profiles
   'api': {
     paths: ['api-test/features/**/*.feature'],
     require: [
@@ -70,7 +64,7 @@ module.exports = {
     format: [
       'progress-bar',
       'html:reports/api-cucumber-report.html',
-      'json:reports/api-cucumber-report.json'
+      'json:reports/cucumber-report.json'  // ✅ Just JSON
     ],
     publish: false,
     formatOptions: { snippetInterface: 'async-await' }
@@ -82,7 +76,7 @@ module.exports = {
       'api-test/step-definitions/**/*.js',
       'api-test/support/**/*.js'
     ],
-    format: ['progress-bar', 'json:reports/api-user-report.json'],
+    format: ['progress-bar', 'json:reports/cucumber-report.json'],
     tags: '@user'
   },
   
@@ -92,7 +86,7 @@ module.exports = {
       'api-test/step-definitions/**/*.js',
       'api-test/support/**/*.js'
     ],
-    format: ['progress-bar', 'json:reports/api-admin-report.json'],
+    format: ['progress-bar', 'json:reports/cucumber-report.json'],
     tags: '@admin'
   }
 };
