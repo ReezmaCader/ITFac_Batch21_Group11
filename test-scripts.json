@@ -1,0 +1,18 @@
+{
+  "name": "run-failed-plant-tests",
+  "version": "1.0.0",
+  "description": "Run only the failing plant test cases",
+  "scripts": {
+    "test:plant-api-020": "cucumber-js features/api/admin/admin_plant_api.feature:59 --require steps/**/*.js --require support/**/*.js",
+    "test:plant-api-013": "cucumber-js features/api/user/user_plant_api.feature:24 --require steps/**/*.js --require support/**/*.js",
+    "test:plant-api-015": "cucumber-js features/api/user/user_plant_api.feature:40 --require steps/**/*.js --require support/**/*.js",
+    "test:plant-ui-006": "cucumber-js features/ui/admin/admin_plant_tests.feature:11 --require steps/**/*.js --require support/**/*.js",
+    "test:plant-ui-007": "cucumber-js features/ui/admin/admin_plant_tests.feature:18 --require steps/**/*.js --require support/**/*.js",
+    "test:plant-ui-008": "cucumber-js features/ui/admin/admin_plant_tests.feature:29 --require steps/**/*.js --require support/**/*.js",
+    "test:plant-ui-009": "cucumber-js features/ui/admin/admin_plant_tests.feature:40 --require steps/**/*.js --require support/**/*.js",
+    "test:plant-ui-010": "cucumber-js features/ui/admin/admin_plant_tests.feature:51 --require steps/**/*.js --require support/**/*.js",
+    "test:plant-ui-003": "cucumber-js features/ui/user/user_plant_tests.feature:23 --require steps/**/*.js --require support/**/*.js",
+    "test:plant-ui-004": "cucumber-js features/ui/user/user_plant_tests.feature:30 --require steps/**/*.js --require support/**/*.js",
+    "test:all-failed-plants": "cucumber-js features/**/admin_plant_api.feature:59 features/**/user_plant_api.feature:24,40 features/**/admin_plant_tests.feature:11,18,29,40,51 features/**/user_plant_tests.feature:23,30 --require steps/**/*.js --require support/**/*.js"
+  }
+}

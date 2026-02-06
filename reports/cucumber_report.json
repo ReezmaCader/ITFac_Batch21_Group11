@@ -1,0 +1,2325 @@
+[
+  {
+    "description": "  As an Admin\n  I want to manage plants via API\n  So that I can create, update, and validate plant data programmatically",
+    "elements": [
+      {
+        "description": "",
+        "id": "admin-plant-api-management;verify-api-response-when-mandatory-fields-are-missing",
+        "keyword": "Scenario",
+        "line": 11,
+        "name": "Verify API response when mandatory fields are missing",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 419709800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "the API service is running",
+            "match": {
+              "location": "steps\\api\\common_api.steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2069400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "I am authenticated as an Admin",
+            "match": {
+              "location": "steps\\api\\common_api.steps.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 248378099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 12,
+            "name": "I get a valid sub-category ID from the system",
+            "match": {
+              "location": "steps\\api\\plant_api.steps.js:28"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 22494599
+            }
+          },
+          {
+            "arguments": [
+              {
+                "content": "{\n  \"name\": \"IncompletePlant\"\n}",
+                "line": 14
+              }
+            ],
+            "keyword": "When ",
+            "line": 13,
+            "name": "I send a POST request to \"/api/plants/category/{categoryId}\" with incomplete payload",
+            "match": {
+              "location": "steps\\api\\plant_api.steps.js:117"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 20146400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 19,
+            "name": "the response status code should be 400",
+            "match": {
+              "location": "steps\\api\\common_api.steps.js:141"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2467399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 20,
+            "name": "the response should contain validation errors for \"quantity\" and \"price\"",
+            "match": {
+              "location": "steps\\api\\plant_api.steps.js:191"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1964199
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 105044700
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "admin-plant-api-management;verify-api-response-when-quantity-is-negative",
+        "keyword": "Scenario",
+        "line": 23,
+        "name": "Verify API response when quantity is negative",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 376150100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "the API service is running",
+            "match": {
+              "location": "steps\\api\\common_api.steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 528600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "I am authenticated as an Admin",
+            "match": {
+              "location": "steps\\api\\common_api.steps.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 164121499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 24,
+            "name": "I get a valid sub-category ID from the system",
+            "match": {
+              "location": "steps\\api\\plant_api.steps.js:28"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 33913599
+            }
+          },
+          {
+            "arguments": [
+              {
+                "content": "{\n  \"name\": \"NegativeQtyPlant\",\n  \"price\": 50,\n  \"quantity\": -10\n}",
+                "line": 26
+              }
+            ],
+            "keyword": "When ",
+            "line": 25,
+            "name": "I send a POST request to \"/api/plants/category/{categoryId}\" with payload",
+            "match": {
+              "location": "steps\\api\\plant_api.steps.js:126"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 54028299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 33,
+            "name": "the response status code should be 400",
+            "match": {
+              "location": "steps\\api\\common_api.steps.js:141"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 583799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 34,
+            "name": "the response should contain validation error for \"quantity\" with message \"Quantity cannot be negative\"",
+            "match": {
+              "location": "steps\\api\\plant_api.steps.js:201"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3074099
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 122434499
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "admin-plant-api-management;verify-api-response-when-price-is-zero",
+        "keyword": "Scenario",
+        "line": 37,
+        "name": "Verify API response when price is zero",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 291671100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "the API service is running",
+            "match": {
+              "location": "steps\\api\\common_api.steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 301100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "I am authenticated as an Admin",
+            "match": {
+              "location": "steps\\api\\common_api.steps.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 166592700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 38,
+            "name": "I get a valid sub-category ID from the system",
+            "match": {
+              "location": "steps\\api\\plant_api.steps.js:28"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 45228200
+            }
+          },
+          {
+            "arguments": [
+              {
+                "content": "{\n  \"name\": \"InvalidPricePlant\",\n  \"price\": 0,\n  \"quantity\": 10\n}",
+                "line": 40
+              }
+            ],
+            "keyword": "When ",
+            "line": 39,
+            "name": "I send a POST request to \"/api/plants/category/{categoryId}\" with payload",
+            "match": {
+              "location": "steps\\api\\plant_api.steps.js:126"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 35021000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 47,
+            "name": "the response status code should be 400",
+            "match": {
+              "location": "steps\\api\\common_api.steps.js:141"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 820900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 48,
+            "name": "the response should contain validation error for \"price\" with message \"Price must be greater than 0\"",
+            "match": {
+              "location": "steps\\api\\plant_api.steps.js:201"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5582699
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 107614400
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "admin-plant-api-management;verify-api-response-when-user-tries-to-delete-a-plant",
+        "keyword": "Scenario",
+        "line": 51,
+        "name": "Verify API response when User tries to delete a plant",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 262781600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "the API service is running",
+            "match": {
+              "location": "steps\\api\\common_api.steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 292400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "I am authenticated as an Admin",
+            "match": {
+              "location": "steps\\api\\common_api.steps.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 158165100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 52,
+            "name": "I am authenticated as a User",
+            "match": {
+              "location": "steps\\api\\common_api.steps.js:51"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 134968499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 53,
+            "name": "I get a valid plant ID from the system",
+            "match": {
+              "location": "steps\\api\\plant_api.steps.js:73"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 20103199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 54,
+            "name": "I send a DELETE request to plant endpoint \"/api/plants/{plantId}\"",
+            "match": {
+              "location": "steps\\api\\plant_api.steps.js:146"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 15490799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 55,
+            "name": "the response status code should be 403",
+            "match": {
+              "location": "steps\\api\\common_api.steps.js:141"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 314900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 56,
+            "name": "the response should contain a \"Forbidden\" error message",
+            "match": {
+              "location": "steps\\api\\common_api.steps.js:150"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 759500
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 50261700
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "admin-plant-api-management;verify-successful-plant-creation-by-admin-in-sub-category",
+        "keyword": "Scenario",
+        "line": 59,
+        "name": "Verify successful plant creation by Admin in sub-category",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 291359099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "the API service is running",
+            "match": {
+              "location": "steps\\api\\common_api.steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 867900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "I am authenticated as an Admin",
+            "match": {
+              "location": "steps\\api\\common_api.steps.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 170072900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 60,
+            "name": "I get a valid sub-category ID from the system",
+            "match": {
+              "location": "steps\\api\\plant_api.steps.js:28"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 34438799
+            }
+          },
+          {
+            "arguments": [
+              {
+                "content": "{\n  \"name\": \"SuccessPlant\",\n  \"price\": 100,\n  \"quantity\": 10\n}",
+                "line": 62
+              }
+            ],
+            "keyword": "When ",
+            "line": 61,
+            "name": "I send a POST request to \"/api/plants/category/{categoryId}\" with payload",
+            "match": {
+              "location": "steps\\api\\plant_api.steps.js:126"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 59706600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 69,
+            "name": "the response status code should be 201",
+            "match": {
+              "location": "steps\\api\\common_api.steps.js:141"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 616100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 70,
+            "name": "the plant should be created successfully",
+            "match": {
+              "location": "steps\\api\\plant_api.steps.js:211"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3124799
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 97905499
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "admin-plant-api-management",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Admin Plant API Management",
+    "tags": [],
+    "uri": "features\\api\\admin\\admin_plant_api.feature"
+  },
+  {
+    "description": "  As a User\n  I want to retrieve plant information via API\n  So that I can view plant data programmatically",
+    "elements": [
+      {
+        "description": "",
+        "id": "user-plant-api-management;verify-api-response-when-accessing-plant-list-without-authentication",
+        "keyword": "Scenario",
+        "line": 10,
+        "name": "Verify API response when accessing plant list without authentication",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 329297700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "the API service is running",
+            "match": {
+              "location": "steps\\api\\common_api.steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 360899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 11,
+            "name": "I send a GET request to \"/api/plants\" without authentication",
+            "match": {
+              "location": "steps\\api\\plant_api.steps.js:92"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 22153800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "the response status code should be 401",
+            "match": {
+              "location": "steps\\api\\common_api.steps.js:141"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1450700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "the response should contain an \"UNAUTHORIZED\" error message",
+            "match": {
+              "location": "steps\\api\\plant_api.steps.js:221"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1546099
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 99421900
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "user-plant-api-management;verify-api-response-when-no-plant-records-exist",
+        "keyword": "Scenario",
+        "line": 16,
+        "name": "Verify API response when no plant records exist",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 383916699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "the API service is running",
+            "match": {
+              "location": "steps\\api\\common_api.steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 263100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 17,
+            "name": "I am authenticated as a User",
+            "match": {
+              "location": "steps\\api\\common_api.steps.js:51"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 135384799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 18,
+            "name": "no plant records exist in the system",
+            "match": {
+              "location": "steps\\api\\plant_api.steps.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 475699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 19,
+            "name": "I send a GET request to \"/api/plants\"",
+            "match": {
+              "location": "steps\\api\\common_api.steps.js:127"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9232700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 20,
+            "name": "the response status code should be 200",
+            "match": {
+              "location": "steps\\api\\common_api.steps.js:141"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 273100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 21,
+            "name": "the response should contain an empty plant list",
+            "match": {
+              "location": "steps\\api\\plant_api.steps.js:153"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6001999
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 67606800
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "user-plant-api-management;verify-api-returns-plants-sorted-by-price",
+        "keyword": "Scenario",
+        "line": 24,
+        "name": "Verify API returns plants sorted by price",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 231492100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "the API service is running",
+            "match": {
+              "location": "steps\\api\\common_api.steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 288999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 25,
+            "name": "I am authenticated as a User",
+            "match": {
+              "location": "steps\\api\\common_api.steps.js:51"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 165672499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 26,
+            "name": "multiple plant records with different prices exist",
+            "match": {
+              "location": "steps\\api\\plant_api.steps.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 17278400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 27,
+            "name": "I send a GET request to \"/api/plants\" with query param \"sortBy=price&direction=asc\"",
+            "match": {
+              "location": "steps\\api\\common_api.steps.js:136"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 21081199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 28,
+            "name": "the response status code should be 200",
+            "match": {
+              "location": "steps\\api\\common_api.steps.js:141"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 467200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 29,
+            "name": "the response should contain plants sorted by price in ascending order",
+            "match": {
+              "location": "steps\\api\\plant_api.steps.js:162"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 11446599,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n    at Proxy.<anonymous> (D:\\QA Test case\\New folder\\ITFac_Batch21_Group11\\node_modules\\playwright\\lib\\matchers\\expect.js:213:24)\n    at World.<anonymous> (D:\\QA Test case\\New folder\\ITFac_Batch21_Group11\\steps\\api\\plant_api.steps.js:180:41)"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 66587800
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "user-plant-api-management;verify-user-cannot-add-a-plant-using-api",
+        "keyword": "Scenario",
+        "line": 32,
+        "name": "Verify User cannot add a plant using API",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 252050700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "the API service is running",
+            "match": {
+              "location": "steps\\api\\common_api.steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 197400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 33,
+            "name": "I am authenticated as a User",
+            "match": {
+              "location": "steps\\api\\common_api.steps.js:51"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 157600300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 34,
+            "name": "I get a valid sub-category ID from the system",
+            "match": {
+              "location": "steps\\api\\plant_api.steps.js:28"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 24237200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 35,
+            "name": "I send a POST request to \"/api/plants/category/{categoryId}\" with plant data",
+            "match": {
+              "location": "steps\\api\\plant_api.steps.js:105"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 17547099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 36,
+            "name": "the response status code should be 403",
+            "match": {
+              "location": "steps\\api\\common_api.steps.js:141"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 425299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 37,
+            "name": "the response should contain a \"FORBIDDEN\" error message",
+            "match": {
+              "location": "steps\\api\\common_api.steps.js:150"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1838399
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 59153999
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "user-plant-api-management;verify-api-supports-pagination-parameters",
+        "keyword": "Scenario",
+        "line": 40,
+        "name": "Verify API supports pagination parameters",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 241842099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "the API service is running",
+            "match": {
+              "location": "steps\\api\\common_api.steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 193900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 41,
+            "name": "I am authenticated as a User",
+            "match": {
+              "location": "steps\\api\\common_api.steps.js:51"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 154847299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 42,
+            "name": "more than 10 plant records exist",
+            "match": {
+              "location": "steps\\api\\plant_api.steps.js:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 15325100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 43,
+            "name": "I send a GET request to \"/api/plants\" with query param \"page=1&size=10\"",
+            "match": {
+              "location": "steps\\api\\common_api.steps.js:136"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 24026899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 44,
+            "name": "the response status code should be 200",
+            "match": {
+              "location": "steps\\api\\common_api.steps.js:141"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 402900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 45,
+            "name": "the response should return only 10 plant records",
+            "match": {
+              "location": "steps\\api\\plant_api.steps.js:183"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 10176199,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: <= \u001b[32m10\u001b[39m\nReceived:    \u001b[31m14\u001b[39m\n    at Proxy.<anonymous> (D:\\QA Test case\\New folder\\ITFac_Batch21_Group11\\node_modules\\playwright\\lib\\matchers\\expect.js:213:24)\n    at World.<anonymous> (D:\\QA Test case\\New folder\\ITFac_Batch21_Group11\\steps\\api\\plant_api.steps.js:188:27)"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 57610399
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "user-plant-api-management",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "User Plant API Management",
+    "tags": [],
+    "uri": "features\\api\\user\\user_plant_api.feature"
+  },
+  {
+    "description": "  As an Admin\n  I want to manage plants in the system\n  So that I can add, edit, and validate plant data",
+    "elements": [
+      {
+        "description": "",
+        "id": "admin-plant-management-ui;admin-should-see-validation-messages-when-mandatory-fields-are-empty",
+        "keyword": "Scenario",
+        "line": 11,
+        "name": "Admin should see validation messages when mandatory fields are empty",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 232873999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I navigate to the login page",
+            "match": {
+              "location": "steps\\ui\\common\\common.steps.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 468326999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "I login as \"admin\" with password \"admin123\"",
+            "match": {
+              "location": "steps\\ui\\common\\common.steps.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1361313200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 12,
+            "name": "I navigate to the Plant management page",
+            "match": {
+              "location": "steps\\ui\\user\\user_plant.steps.js:52"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 859149799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "I click on Add Plant button",
+            "match": {
+              "location": "steps\\ui\\admin\\admin_plant.steps.js:50"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 753318199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "I click on Save button without entering any data",
+            "match": {
+              "location": "steps\\ui\\admin\\admin_plant.steps.js:58"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1133767700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 15,
+            "name": "I should see validation messages under all required fields",
+            "match": {
+              "location": "steps\\ui\\admin\\admin_plant.steps.js:136"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 25509600
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 38070200
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "admin-plant-management-ui;admin-should-see-error-message-when-price-is-zero",
+        "keyword": "Scenario",
+        "line": 18,
+        "name": "Admin should see error message when price is zero",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 243989299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I navigate to the login page",
+            "match": {
+              "location": "steps\\ui\\common\\common.steps.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 447779000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "I login as \"admin\" with password \"admin123\"",
+            "match": {
+              "location": "steps\\ui\\common\\common.steps.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 887340500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 19,
+            "name": "I navigate to the Plant management page",
+            "match": {
+              "location": "steps\\ui\\user\\user_plant.steps.js:52"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 734594499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 20,
+            "name": "I click on Add Plant button",
+            "match": {
+              "location": "steps\\ui\\admin\\admin_plant.steps.js:50"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 696690800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 21,
+            "name": "I enter \"TestPlant\" as Plant Name",
+            "match": {
+              "location": "steps\\ui\\admin\\admin_plant.steps.js:69"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 44495899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 22,
+            "name": "I select a valid category",
+            "match": {
+              "location": "steps\\ui\\admin\\admin_plant.steps.js:73"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 25660600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 23,
+            "name": "I enter \"0\" as Price",
+            "match": {
+              "location": "steps\\ui\\admin\\admin_plant.steps.js:88"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 27140999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 24,
+            "name": "I enter \"10\" as Quantity",
+            "match": {
+              "location": "steps\\ui\\admin\\admin_plant.steps.js:92"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 20353599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 25,
+            "name": "I click on Save button",
+            "match": {
+              "location": "steps\\ui\\admin\\admin_plant.steps.js:64"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 621373599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 26,
+            "name": "I should see an error message stating \"Price must be greater than 0\"",
+            "match": {
+              "location": "steps\\ui\\admin\\admin_plant.steps.js:144"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 48530099
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 36936500
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "admin-plant-management-ui;admin-should-see-error-message-when-quantity-is-negative",
+        "keyword": "Scenario",
+        "line": 29,
+        "name": "Admin should see error message when quantity is negative",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 256916500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I navigate to the login page",
+            "match": {
+              "location": "steps\\ui\\common\\common.steps.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 595900200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "I login as \"admin\" with password \"admin123\"",
+            "match": {
+              "location": "steps\\ui\\common\\common.steps.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 993191399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 30,
+            "name": "I navigate to the Plant management page",
+            "match": {
+              "location": "steps\\ui\\user\\user_plant.steps.js:52"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 704224699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 31,
+            "name": "I click on Add Plant button",
+            "match": {
+              "location": "steps\\ui\\admin\\admin_plant.steps.js:50"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 717858800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 32,
+            "name": "I enter \"TestPlant\" as Plant Name",
+            "match": {
+              "location": "steps\\ui\\admin\\admin_plant.steps.js:69"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 45190800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 33,
+            "name": "I select a valid category",
+            "match": {
+              "location": "steps\\ui\\admin\\admin_plant.steps.js:73"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 34187000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 34,
+            "name": "I enter \"100\" as Price",
+            "match": {
+              "location": "steps\\ui\\admin\\admin_plant.steps.js:88"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 26486100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 35,
+            "name": "I enter \"-1\" as Quantity",
+            "match": {
+              "location": "steps\\ui\\admin\\admin_plant.steps.js:92"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 13908499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 36,
+            "name": "I click on Save button",
+            "match": {
+              "location": "steps\\ui\\admin\\admin_plant.steps.js:64"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 634465499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 37,
+            "name": "I should see an error message stating \"Quantity cannot be negative\"",
+            "match": {
+              "location": "steps\\ui\\admin\\admin_plant.steps.js:144"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 53250700
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 48345799
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "admin-plant-management-ui;admin-should-see-validation-error-when-selecting-main-category",
+        "keyword": "Scenario",
+        "line": 40,
+        "name": "Admin should see validation error when selecting main category",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 235179000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I navigate to the login page",
+            "match": {
+              "location": "steps\\ui\\common\\common.steps.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 475769099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "I login as \"admin\" with password \"admin123\"",
+            "match": {
+              "location": "steps\\ui\\common\\common.steps.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 526311499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 41,
+            "name": "I navigate to the Plant management page",
+            "match": {
+              "location": "steps\\ui\\user\\user_plant.steps.js:52"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 962173100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 42,
+            "name": "I click on Add Plant button",
+            "match": {
+              "location": "steps\\ui\\admin\\admin_plant.steps.js:50"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 688430599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 43,
+            "name": "I enter \"TestPlant\" as Plant Name",
+            "match": {
+              "location": "steps\\ui\\admin\\admin_plant.steps.js:69"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 48312500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 44,
+            "name": "I select a main category",
+            "match": {
+              "location": "steps\\ui\\admin\\admin_plant.steps.js:84"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 12887900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 45,
+            "name": "I enter \"100\" as Price",
+            "match": {
+              "location": "steps\\ui\\admin\\admin_plant.steps.js:88"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 17724899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 46,
+            "name": "I enter \"10\" as Quantity",
+            "match": {
+              "location": "steps\\ui\\admin\\admin_plant.steps.js:92"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 14763900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 47,
+            "name": "I click on Save button",
+            "match": {
+              "location": "steps\\ui\\admin\\admin_plant.steps.js:64"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 651457300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 48,
+            "name": "I should see a validation error",
+            "match": {
+              "location": "steps\\ui\\admin\\admin_plant.steps.js:154"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 43844000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 46926800
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "admin-plant-management-ui;admin-should-be-able-to-edit-plant-details-successfully",
+        "keyword": "Scenario",
+        "line": 51,
+        "name": "Admin should be able to edit plant details successfully",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 261961199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I navigate to the login page",
+            "match": {
+              "location": "steps\\ui\\common\\common.steps.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 493419100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "I login as \"admin\" with password \"admin123\"",
+            "match": {
+              "location": "steps\\ui\\common\\common.steps.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1227003300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 52,
+            "name": "a plant \"EditPlant\" exists in the system",
+            "match": {
+              "location": "steps\\ui\\admin\\admin_plant.steps.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1700448200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 53,
+            "name": "I navigate to the Plant management page",
+            "match": {
+              "location": "steps\\ui\\user\\user_plant.steps.js:52"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 592563000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 54,
+            "name": "I click on Edit action for plant \"EditPlant\"",
+            "match": {
+              "location": "steps\\ui\\admin\\admin_plant.steps.js:96"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 741508100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 55,
+            "name": "I change the plant name to \"Plant\"",
+            "match": {
+              "location": "steps\\ui\\admin\\admin_plant.steps.js:130"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 41158999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 56,
+            "name": "I click on Save button",
+            "match": {
+              "location": "steps\\ui\\admin\\admin_plant.steps.js:64"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 689891500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 57,
+            "name": "I should see a plant success message",
+            "match": {
+              "location": "steps\\ui\\admin\\admin_plant.steps.js:159"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 23393100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 58,
+            "name": "the plant \"Plant\" should appear in the list",
+            "match": {
+              "location": "steps\\ui\\admin\\admin_plant.steps.js:189"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1720190599
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 53853000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "admin-plant-management-ui",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Admin Plant Management UI",
+    "tags": [],
+    "uri": "features\\ui\\admin\\admin_plant_tests.feature"
+  },
+  {
+    "description": "  As a Normal User\n  I want to view plants in the system\n  So that I can see available plant inventory",
+    "elements": [
+      {
+        "description": "",
+        "id": "user-plant-management-ui;user-should-see-\"low\"-badge-for-plants-with-quantity-less-than-5",
+        "keyword": "Scenario",
+        "line": 11,
+        "name": "User should see \"Low\" badge for plants with quantity less than 5",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 226173600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I navigate to the login page",
+            "match": {
+              "location": "steps\\ui\\common\\common.steps.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 481459699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "I login as \"Testuser\" with password \"test123\"",
+            "match": {
+              "location": "steps\\ui\\common\\common.steps.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1148131099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 12,
+            "name": "plants exist in the system with quantity less than 5",
+            "match": {
+              "location": "steps\\ui\\user\\user_plant.steps.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 753143800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 13,
+            "name": "I navigate to the Plant management page",
+            "match": {
+              "location": "steps\\ui\\user\\user_plant.steps.js:52"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 633048399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "I should see plants with quantity less than 5 displaying a \"Low\" badge",
+            "match": {
+              "location": "steps\\ui\\user\\user_plant.steps.js:82"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 28205900
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 50419900
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "user-plant-management-ui;user-should-not-see-\"low\"-badge-for-plants-with-quantity-5-or-more",
+        "keyword": "Scenario",
+        "line": 17,
+        "name": "User should NOT see \"Low\" badge for plants with quantity 5 or more",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 254646899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I navigate to the login page",
+            "match": {
+              "location": "steps\\ui\\common\\common.steps.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 565531399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "I login as \"Testuser\" with password \"test123\"",
+            "match": {
+              "location": "steps\\ui\\common\\common.steps.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1395064400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 18,
+            "name": "plants exist in the system with quantity 5 or more",
+            "match": {
+              "location": "steps\\ui\\user\\user_plant.steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 888243999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 19,
+            "name": "I navigate to the Plant management page",
+            "match": {
+              "location": "steps\\ui\\user\\user_plant.steps.js:52"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 683700300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 20,
+            "name": "I should NOT see a \"Low\" badge for plants with quantity 5 or more",
+            "match": {
+              "location": "steps\\ui\\user\\user_plant.steps.js:104"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 111839499
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 43872900
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "user-plant-management-ui;user-should-be-able-to-sort-plants-by-name",
+        "keyword": "Scenario",
+        "line": 23,
+        "name": "User should be able to sort plants by name",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 235782700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I navigate to the login page",
+            "match": {
+              "location": "steps\\ui\\common\\common.steps.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 496380399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "I login as \"Testuser\" with password \"test123\"",
+            "match": {
+              "location": "steps\\ui\\common\\common.steps.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 932420899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 24,
+            "name": "multiple plants exist in the system",
+            "match": {
+              "location": "steps\\ui\\user\\user_plant.steps.js:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 729166399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 25,
+            "name": "I navigate to the Plant management page",
+            "match": {
+              "location": "steps\\ui\\user\\user_plant.steps.js:52"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 590210899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 26,
+            "name": "I sort plants by \"Name\"",
+            "match": {
+              "location": "steps\\ui\\user\\user_plant.steps.js:59"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 57624300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 27,
+            "name": "the plant list should be displayed in alphabetical order",
+            "match": {
+              "location": "steps\\ui\\user\\user_plant.steps.js:125"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 32998099
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 48750399
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "user-plant-management-ui;user-should-be-able-to-sort-plants-by-quantity",
+        "keyword": "Scenario",
+        "line": 30,
+        "name": "User should be able to sort plants by quantity",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 242427199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I navigate to the login page",
+            "match": {
+              "location": "steps\\ui\\common\\common.steps.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 697407399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "I login as \"Testuser\" with password \"test123\"",
+            "match": {
+              "location": "steps\\ui\\common\\common.steps.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1137741799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 31,
+            "name": "multiple plants exist in the system",
+            "match": {
+              "location": "steps\\ui\\user\\user_plant.steps.js:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 878088700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 32,
+            "name": "I navigate to the Plant management page",
+            "match": {
+              "location": "steps\\ui\\user\\user_plant.steps.js:52"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 599469599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 33,
+            "name": "I sort plants by \"Quantity\"",
+            "match": {
+              "location": "steps\\ui\\user\\user_plant.steps.js:59"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 30015077199,
+              "error_message": "Error: function timed out, ensure the promise resolves within 30000 milliseconds\n    at Timeout.<anonymous> (D:\\QA Test case\\New folder\\ITFac_Batch21_Group11\\node_modules\\@cucumber\\cucumber\\lib\\time.js:64:20)\n    at listOnTimeout (node:internal/timers:588:17)\n    at process.processTimers (node:internal/timers:523:7)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 34,
+            "name": "the plant list should be ordered by quantity",
+            "match": {
+              "location": "steps\\ui\\user\\user_plant.steps.js:140"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 89258700
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "user-plant-management-ui;user-should-see-pagination-working-in-plant-list",
+        "keyword": "Scenario",
+        "line": 37,
+        "name": "User should see pagination working in plant list",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 314443599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I navigate to the login page",
+            "match": {
+              "location": "steps\\ui\\common\\common.steps.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 604920299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "I login as \"Testuser\" with password \"test123\"",
+            "match": {
+              "location": "steps\\ui\\common\\common.steps.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1459380600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 38,
+            "name": "more than one page of plants exist in the system",
+            "match": {
+              "location": "steps\\ui\\user\\user_plant.steps.js:37"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1174628799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 39,
+            "name": "I navigate to the Plant management page",
+            "match": {
+              "location": "steps\\ui\\user\\user_plant.steps.js:52"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 587860499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 40,
+            "name": "I click on the next page option",
+            "match": {
+              "location": "steps\\ui\\user\\user_plant.steps.js:74"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2460383400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 41,
+            "name": "I should see the next set of plant records",
+            "match": {
+              "location": "steps\\ui\\user\\user_plant.steps.js:155"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 39583299
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 47892999
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "user-plant-management-ui",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "User Plant Management UI",
+    "tags": [],
+    "uri": "features\\ui\\user\\user_plant_tests.feature"
+  }
+]
