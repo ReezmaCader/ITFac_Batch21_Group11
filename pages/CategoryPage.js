@@ -1,3 +1,4 @@
+
 const { expect } = require('@playwright/test');
 
 class CategoryPage {
@@ -61,55 +62,16 @@ class CategoryPage {
         }
     }
 
-    async verifyEditButtonsDisabled() {
-        const buttons = this.page.locator(this.editButtons);
-        const count = await buttons.count();
+    async verifyEditButtonsHidden() {
+    const buttons = this.page.locator(this.editButtons);
+    await expect(buttons).toHaveCount(0); 
+}
 
-        if (count > 0) {
-            for (let i = 0; i < count; i++) {
-                await expect(buttons.nth(i)).toBeDisabled();
-            }
-        }
-    }
+async verifyDeleteButtonsHidden() {
+    const buttons = this.page.locator(this.deleteButtons);
+    await expect(buttons).toHaveCount(0); 
+}
 
-    async verifyDeleteButtonsDisabled() {
-        const buttons = this.page.locator(this.deleteButtons);
-        const count = await buttons.count();
-
-        if (count > 0) {
-            for (let i = 0; i < count; i++) {
-                await expect(buttons.nth(i)).toBeDisabled();
-            }
-        }
-    }
-
-    async verifyEditButtonsDisabled() {
-        const buttons = this.page.locator(this.editButtons);
-        const count = await buttons.count();
-
-        for (let i = 0; i < count; i++) {
-            const button = buttons.nth(i);
-            const isDisabled = await button.getAttribute('disabled');
-            const isVisible = await button.isVisible();
-
-            expect(isDisabled).toBe('disabled');
-            expect(isVisible).toBe(false);
-        }
-    }
-
-    async verifyDeleteButtonsDisabled() {
-        const buttons = this.page.locator(this.deleteButtons);
-        const count = await buttons.count();
-
-        for (let i = 0; i < count; i++) {
-            const button = buttons.nth(i);
-            const isDisabled = await button.getAttribute('disabled');
-            const isVisible = await button.isVisible();
-
-            expect(isDisabled).toBe('disabled');
-            expect(isVisible).toBe(false);
-        }
-    }
 }
 
 module.exports = { CategoryPage };
