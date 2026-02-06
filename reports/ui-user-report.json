@@ -1,0 +1,482 @@
+[
+  {
+    "description": "  As a regular user\n  I want to view the sales list\n  So that I can see sales records without admin privileges",
+    "elements": [
+      {
+        "description": "",
+        "id": "sales-module---user-tests;verify-the-functionality-of-the-sales-list-page-displaying-records-correctly",
+        "keyword": "Scenario",
+        "line": 12,
+        "name": "Verify the functionality of the Sales List page displaying records correctly",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 63964999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "the user is logged in to the system",
+            "match": {
+              "location": "ui-tests\\step-definitions\\user\\salesUserSteps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1703643000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "the user navigates to the Sales page",
+            "match": {
+              "location": "ui-tests\\step-definitions\\user\\salesUserSteps.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2099168099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "the system should allow to click on Sales",
+            "match": {
+              "location": "ui-tests\\step-definitions\\user\\salesUserSteps.js:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 18317299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "the system should display records with Plant name, Quantity, Total price, and Sold date",
+            "match": {
+              "location": "ui-tests\\step-definitions\\user\\salesUserSteps.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 39282900
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 7662699
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@user",
+            "line": 1
+          },
+          {
+            "name": "@sales",
+            "line": 1
+          },
+          {
+            "name": "@TC_Sales_UI_User_001",
+            "line": 11
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "sales-module---user-tests;verify-the-functionality-of-the-default-sorting-by-sold-date",
+        "keyword": "Scenario",
+        "line": 17,
+        "name": "Verify the functionality of the default sorting by sold date",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 73166799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "the user is logged in to the system",
+            "match": {
+              "location": "ui-tests\\step-definitions\\user\\salesUserSteps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 884282700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "the user navigates to the Sales page",
+            "match": {
+              "location": "ui-tests\\step-definitions\\user\\salesUserSteps.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3617852100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 18,
+            "name": "the system should allow to click on Sales",
+            "match": {
+              "location": "ui-tests\\step-definitions\\user\\salesUserSteps.js:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 13471999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 19,
+            "name": "the system should display records sorted by sold date descending by default",
+            "match": {
+              "location": "ui-tests\\step-definitions\\user\\salesUserSteps.js:49"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 23609800
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 4904000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@user",
+            "line": 1
+          },
+          {
+            "name": "@sales",
+            "line": 1
+          },
+          {
+            "name": "@TC_Sales_UI_User_002",
+            "line": 16
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "sales-module---user-tests;verify-the-functionality-of-the-\"sell-plant\"-button-being-hidden-for-user",
+        "keyword": "Scenario",
+        "line": 22,
+        "name": "Verify the functionality of the \"Sell Plant\" button being hidden for User",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 74888700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "the user is logged in to the system",
+            "match": {
+              "location": "ui-tests\\step-definitions\\user\\salesUserSteps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 788589900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "the user navigates to the Sales page",
+            "match": {
+              "location": "ui-tests\\step-definitions\\user\\salesUserSteps.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1938353500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 23,
+            "name": "the system should allow to click on Sales",
+            "match": {
+              "location": "ui-tests\\step-definitions\\user\\salesUserSteps.js:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 12636699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 24,
+            "name": "the system should hide the \"Sell Plant\" button for User role",
+            "match": {
+              "location": "ui-tests\\step-definitions\\user\\salesUserSteps.js:69"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6910499
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 6770199
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@user",
+            "line": 1
+          },
+          {
+            "name": "@sales",
+            "line": 1
+          },
+          {
+            "name": "@TC_Sales_UI_User_003",
+            "line": 21
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "sales-module---user-tests;verify-the-functionality-of-the-\"delete\"-action-being-hidden-for-user",
+        "keyword": "Scenario",
+        "line": 27,
+        "name": "Verify the functionality of the \"Delete\" action being hidden for User",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 74245800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "the user is logged in to the system",
+            "match": {
+              "location": "ui-tests\\step-definitions\\user\\salesUserSteps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2473581200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "the user navigates to the Sales page",
+            "match": {
+              "location": "ui-tests\\step-definitions\\user\\salesUserSteps.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3657288800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 28,
+            "name": "the system should allow to click on Sales",
+            "match": {
+              "location": "ui-tests\\step-definitions\\user\\salesUserSteps.js:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 13365300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 29,
+            "name": "the system should hide the \"Delete\" action for User role",
+            "match": {
+              "location": "ui-tests\\step-definitions\\user\\salesUserSteps.js:75"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4210500
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 4921399
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@user",
+            "line": 1
+          },
+          {
+            "name": "@sales",
+            "line": 1
+          },
+          {
+            "name": "@TC_Sales_UI_User_004",
+            "line": 26
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "sales-module---user-tests;verify-the-functionality-of-displaying-an-appropriate-message-when-no-sales-exist",
+        "keyword": "Scenario",
+        "line": 32,
+        "name": "Verify the functionality of displaying an appropriate message when no sales exist",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 86580000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "the user is logged in to the system",
+            "match": {
+              "location": "ui-tests\\step-definitions\\user\\salesUserSteps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2613034800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "the user navigates to the Sales page",
+            "match": {
+              "location": "ui-tests\\step-definitions\\user\\salesUserSteps.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2059377000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 33,
+            "name": "the system should allow to click on Sales",
+            "match": {
+              "location": "ui-tests\\step-definitions\\user\\salesUserSteps.js:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16016400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 34,
+            "name": "the system should display a message as \"No sales found\" when no records exist",
+            "match": {
+              "location": "ui-tests\\step-definitions\\user\\salesUserSteps.js:81"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4217899
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 6679199
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@user",
+            "line": 1
+          },
+          {
+            "name": "@sales",
+            "line": 1
+          },
+          {
+            "name": "@TC_Sales_UI_User_005",
+            "line": 31
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "sales-module---user-tests",
+    "line": 2,
+    "keyword": "Feature",
+    "name": "Sales Module - User Tests",
+    "tags": [
+      {
+        "name": "@user",
+        "line": 1
+      },
+      {
+        "name": "@sales",
+        "line": 1
+      }
+    ],
+    "uri": "ui-tests\\features\\user\\sales_user.feature"
+  }
+]

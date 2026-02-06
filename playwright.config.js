@@ -23,9 +23,11 @@ export default defineConfig({
   reporter: [
     ['list'],  // Terminal output
     ['html', { 
-      open: 'always',  // IMPORTANT: Auto-open report
+      open: 'never',  // Don't auto-open report (blocks npm test from running cucumber)
       outputFolder: 'playwright-report'
-    }]
+    }],
+    ['json', { outputFile: 'playwright-report/report.json' }],  // For Allure
+    ['allure-playwright', { outputFolder: 'allure-results' }]  // Allure results
   ],
   
   /* Shared settings */
