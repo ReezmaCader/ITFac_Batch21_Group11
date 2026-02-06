@@ -1,0 +1,2318 @@
+[
+  {
+    "description": "  As an Admin\n  I want to Create, Update and Delete categories\n  So that I can manage the system inventory",
+    "elements": [
+      {
+        "description": "",
+        "id": "admin-category-api-management;verify-api-retrieves-all-categories-when-no-parameters-are-provided",
+        "keyword": "Scenario",
+        "line": 11,
+        "name": "Verify API retrieves all categories when no parameters are provided",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 746694500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "the API service is running",
+            "match": {
+              "location": "steps\\api\\common_api.steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2340900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "I am authenticated as an Admin",
+            "match": {
+              "location": "steps\\api\\common_api.steps.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 506246600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 12,
+            "name": "multiple categories exist in the system",
+            "match": {
+              "location": "steps\\api\\common_api.steps.js:170"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 63514400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "I am authenticated as a User",
+            "match": {
+              "location": "steps\\api\\common_api.steps.js:51"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 315709200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 14,
+            "name": "I send a GET request to \"/api/categories\" without any query parameters",
+            "match": {
+              "location": "steps\\api\\common_api.steps.js:186"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 75201200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 15,
+            "name": "the response status code should be 200",
+            "match": {
+              "location": "steps\\api\\common_api.steps.js:141"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3234399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 16,
+            "name": "the response body should contain a list of all categories",
+            "match": {
+              "location": "steps\\api\\common_api.steps.js:196"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2851999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 17,
+            "name": "each category should have the correct structure with id, name, parent, and subCategories",
+            "match": {
+              "location": "steps\\api\\common_api.steps.js:208"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 7464399,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoHaveProperty\u001b[2m(\u001b[22m\u001b[32mpath\u001b[39m\u001b[2m)\u001b[22m\n\nExpected path: \u001b[32m\"parent\"\u001b[39m\nReceived path: \u001b[31m[]\u001b[39m\n\nReceived value: \u001b[31m{\"id\": 16, \"name\": \"Flowers\", \"parentName\": \"-\"}\u001b[39m\n    at Proxy.<anonymous> (D:\\QA Test case\\ITFac_Batch21_Group11\\node_modules\\playwright\\lib\\matchers\\expect.js:213:24)\n    at World.<anonymous> (D:\\QA Test case\\ITFac_Batch21_Group11\\steps\\api\\common_api.steps.js:220:27)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 18,
+            "name": "the response format should match the API specification",
+            "match": {
+              "location": "steps\\api\\common_api.steps.js:227"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 182092299
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "admin-category-api-management;verify-api-functionality-of-updating-a-category-using-an-existing-id",
+        "keyword": "Scenario",
+        "line": 22,
+        "name": "Verify API functionality of updating a category using an existing ID",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1067413299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "the API service is running",
+            "match": {
+              "location": "steps\\api\\common_api.steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 643699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "I am authenticated as an Admin",
+            "match": {
+              "location": "steps\\api\\common_api.steps.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 633821899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 23,
+            "name": "I get a valid Category ID from the system",
+            "match": {
+              "location": "steps\\api\\common_api.steps.js:102"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 45315899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 24,
+            "name": "I send a PUT request to \"/api/categories/{id}\" with a new name \"UpdatedCat\"",
+            "match": {
+              "location": "steps\\api\\category_api.steps.js:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 49264400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 25,
+            "name": "the response status code should be 200",
+            "match": {
+              "location": "steps\\api\\common_api.steps.js:141"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 717000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 26,
+            "name": "the response should confirm the name is \"UpdatedCat\"",
+            "match": {
+              "location": "steps\\api\\category_api.steps.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1911499
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 146360499
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "admin-category-api-management;verify-api-response-when-updating-a-non-existing-category-id",
+        "keyword": "Scenario",
+        "line": 29,
+        "name": "Verify API response when updating a non-existing category ID",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 708847200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "the API service is running",
+            "match": {
+              "location": "steps\\api\\common_api.steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 521099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "I am authenticated as an Admin",
+            "match": {
+              "location": "steps\\api\\common_api.steps.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 324637499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 30,
+            "name": "I send a PUT request to \"/api/categories/99999\" with a new name \"GhostCat\"",
+            "match": {
+              "location": "steps\\api\\category_api.steps.js:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 44526200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 31,
+            "name": "the response status code should be 404",
+            "match": {
+              "location": "steps\\api\\common_api.steps.js:141"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 948000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 32,
+            "name": "the response should contain a \"Category not found\" error message",
+            "match": {
+              "location": "steps\\api\\common_api.steps.js:150"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2059599
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 89912599
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "admin-category-api-management;verify-api-functionality-of-deleting-a-category-using-an-existing-id",
+        "keyword": "Scenario",
+        "line": 35,
+        "name": "Verify API functionality of deleting a category using an existing ID",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 482929299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "the API service is running",
+            "match": {
+              "location": "steps\\api\\common_api.steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 528800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "I am authenticated as an Admin",
+            "match": {
+              "location": "steps\\api\\common_api.steps.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 372643500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 36,
+            "name": "I create a temporary category to delete",
+            "match": {
+              "location": "steps\\api\\category_api.steps.js:59"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 162901399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 37,
+            "name": "I send a DELETE request to the created category endpoint",
+            "match": {
+              "location": "steps\\api\\category_api.steps.js:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 121746100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 38,
+            "name": "the response status code should be 204",
+            "match": {
+              "location": "steps\\api\\common_api.steps.js:141"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 928200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 39,
+            "name": "the category should no longer exist in the system",
+            "match": {
+              "location": "steps\\api\\category_api.steps.js:34"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 60132400
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 123867100
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "admin-category-api-management;verify-api-response-when-deleting-a-non-existing-category-id",
+        "keyword": "Scenario",
+        "line": 42,
+        "name": "Verify API response when deleting a non-existing category ID",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 636506600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "the API service is running",
+            "match": {
+              "location": "steps\\api\\common_api.steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 295299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "I am authenticated as an Admin",
+            "match": {
+              "location": "steps\\api\\common_api.steps.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 410259900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 43,
+            "name": "I send a DELETE request to \"/api/categories/99999\"",
+            "match": {
+              "location": "steps\\api\\category_api.steps.js:29"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 30425699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 44,
+            "name": "the response status code should be 404",
+            "match": {
+              "location": "steps\\api\\common_api.steps.js:141"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 780899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 45,
+            "name": "the response should contain a \"Category not found\" error message",
+            "match": {
+              "location": "steps\\api\\common_api.steps.js:150"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1295499
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 111435700
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "admin-category-api-management",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Admin Category API Management",
+    "tags": [],
+    "uri": "features\\api\\admin\\admin_category_api.feature"
+  },
+  {
+    "description": "  As a User\n  I want to retrieve category details\n  So that I can view available categories",
+    "elements": [
+      {
+        "description": "",
+        "id": "user-category-api-management;verify-api-response-when-requesting-a-category-using-a-valid-category-id",
+        "keyword": "Scenario",
+        "line": 11,
+        "name": "Verify API response when requesting a category using a valid category ID",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 386363600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "the API service is running",
+            "match": {
+              "location": "steps\\api\\common_api.steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 540000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "I am authenticated as a User",
+            "match": {
+              "location": "steps\\api\\common_api.steps.js:51"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 392251499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 12,
+            "name": "I get a valid Category ID from the system",
+            "match": {
+              "location": "steps\\api\\common_api.steps.js:102"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 53417799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 13,
+            "name": "I send a GET request to \"/api/categories/{id}\" with the valid ID",
+            "match": {
+              "location": "steps\\api\\common_api.steps.js:131"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 31638399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "the response status code should be 200",
+            "match": {
+              "location": "steps\\api\\common_api.steps.js:141"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 557499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 15,
+            "name": "the response should contain the category details with the correct ID",
+            "match": {
+              "location": "steps\\api\\category_api.steps.js:40"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1127700
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 77477399
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "user-category-api-management;verify-api-response-when-requesting-a-category-using-an-invalid-category-id",
+        "keyword": "Scenario",
+        "line": 18,
+        "name": "Verify API response when requesting a category using an invalid category ID",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 453794599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "the API service is running",
+            "match": {
+              "location": "steps\\api\\common_api.steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 247699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "I am authenticated as a User",
+            "match": {
+              "location": "steps\\api\\common_api.steps.js:51"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 345990200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 19,
+            "name": "I send a GET request to \"/api/categories/99999\"",
+            "match": {
+              "location": "steps\\api\\common_api.steps.js:127"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 23395500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 20,
+            "name": "the response status code should be 404",
+            "match": {
+              "location": "steps\\api\\common_api.steps.js:141"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1170299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 21,
+            "name": "the response should contain a \"Category Not Found\" error message",
+            "match": {
+              "location": "steps\\api\\common_api.steps.js:150"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2285199
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 64970199
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "user-category-api-management;verify-api-functionality-of-retrieving-all-categories-(no-params)",
+        "keyword": "Scenario",
+        "line": 24,
+        "name": "Verify API functionality of retrieving all categories (No params)",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 527508599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "the API service is running",
+            "match": {
+              "location": "steps\\api\\common_api.steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 247100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "I am authenticated as a User",
+            "match": {
+              "location": "steps\\api\\common_api.steps.js:51"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 422112600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 25,
+            "name": "I send a GET request to \"/api/categories\"",
+            "match": {
+              "location": "steps\\api\\common_api.steps.js:127"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 97060700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 26,
+            "name": "the response status code should be 200",
+            "match": {
+              "location": "steps\\api\\common_api.steps.js:141"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1089700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 27,
+            "name": "the response should contain a list of categories",
+            "match": {
+              "location": "steps\\api\\common_api.steps.js:164"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3045000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 85467699
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "user-category-api-management;verify-api-functionality-of-retrieving-categories-with-valid-query-parameters",
+        "keyword": "Scenario",
+        "line": 30,
+        "name": "Verify API functionality of retrieving categories with valid query parameters",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 516970000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "the API service is running",
+            "match": {
+              "location": "steps\\api\\common_api.steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 244800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "I am authenticated as a User",
+            "match": {
+              "location": "steps\\api\\common_api.steps.js:51"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 364476599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 31,
+            "name": "I get a valid Category ID from the system",
+            "match": {
+              "location": "steps\\api\\common_api.steps.js:102"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 65311700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 32,
+            "name": "I send a GET request to \"/api/categories\" with query param \"page=0\"",
+            "match": {
+              "location": "steps\\api\\common_api.steps.js:136"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 45254600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 33,
+            "name": "the response status code should be 200",
+            "match": {
+              "location": "steps\\api\\common_api.steps.js:141"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1139199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 34,
+            "name": "the response should contain a list of categories",
+            "match": {
+              "location": "steps\\api\\common_api.steps.js:164"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1377300
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 96580599
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "user-category-api-management;verify-api-functionality-when-invalid-query-parameters-are-provided",
+        "keyword": "Scenario",
+        "line": 37,
+        "name": "Verify API functionality when invalid query parameters are provided",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 723080899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "the API service is running",
+            "match": {
+              "location": "steps\\api\\common_api.steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 492700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "I am authenticated as a User",
+            "match": {
+              "location": "steps\\api\\common_api.steps.js:51"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 438734400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 38,
+            "name": "I send a GET request to \"/api/categories\" with query param \"invalidParam=xyz\"",
+            "match": {
+              "location": "steps\\api\\common_api.steps.js:136"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 94412099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 39,
+            "name": "the response status code should be 200",
+            "match": {
+              "location": "steps\\api\\common_api.steps.js:141"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 597600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 40,
+            "name": "the response should contain a list of categories",
+            "match": {
+              "location": "steps\\api\\common_api.steps.js:164"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1099100
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 134516900
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "user-category-api-management;verify-api-functionality-of-retrieving-category-summary",
+        "keyword": "Scenario",
+        "line": 43,
+        "name": "Verify API functionality of retrieving category summary",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 568790600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "the API service is running",
+            "match": {
+              "location": "steps\\api\\common_api.steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 394999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "I am authenticated as a User",
+            "match": {
+              "location": "steps\\api\\common_api.steps.js:51"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 436030299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 44,
+            "name": "I send a GET request to \"/api/categories/summary\"",
+            "match": {
+              "location": "steps\\api\\common_api.steps.js:127"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 50290000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 45,
+            "name": "the response status code should be 200",
+            "match": {
+              "location": "steps\\api\\common_api.steps.js:141"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1167300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 46,
+            "name": "the response should contain the category summary structure",
+            "match": {
+              "location": "steps\\api\\category_api.steps.js:46"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4373400
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 125429899
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "user-category-api-management",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "User Category API Management",
+    "tags": [],
+    "uri": "features\\api\\user\\user_category_api.feature"
+  },
+  {
+    "description": "  As an Admin\n  I want to manage categories\n  So that I can organize the plant inventory system",
+    "elements": [
+      {
+        "description": "",
+        "id": "admin-category-management;admin-should-be-able-to-search-categories-by-name",
+        "keyword": "Scenario",
+        "line": 11,
+        "name": "Admin should be able to search categories by name",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 407674800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I navigate to the login page",
+            "match": {
+              "location": "steps\\ui\\common\\common.steps.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 824466899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "I login as \"admin\" with password \"admin123\"",
+            "match": {
+              "location": "steps\\ui\\common\\common.steps.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 765488300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 12,
+            "name": "categories exist in the system",
+            "match": {
+              "location": "steps\\ui\\admin\\admin.steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5030632400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "a category \"Flowers\" exists in the system",
+            "match": {
+              "location": "steps\\ui\\admin\\admin.steps.js:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2343819800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 14,
+            "name": "I navigate to the Category management page",
+            "match": {
+              "location": "steps\\ui\\admin\\admin.steps.js:54"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1412288099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 15,
+            "name": "I enter \"Flowers\" in the category search field",
+            "match": {
+              "location": "steps\\ui\\admin\\admin.steps.js:60"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 52061099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 16,
+            "name": "I click on Search button",
+            "match": {
+              "location": "steps\\ui\\admin\\admin.steps.js:64"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 950810300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 17,
+            "name": "I should see only categories matching \"Flowers\" in the results",
+            "match": {
+              "location": "steps\\ui\\admin\\admin.steps.js:69"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 94375299
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 90050799
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "admin-category-management;admin-should-be-able-to-add-a-category-with-both-category-name-and-parent-category",
+        "keyword": "Scenario",
+        "line": 20,
+        "name": "Admin should be able to add a category with both Category Name and Parent Category",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 512321299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I navigate to the login page",
+            "match": {
+              "location": "steps\\ui\\common\\common.steps.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 506427400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "I login as \"admin\" with password \"admin123\"",
+            "match": {
+              "location": "steps\\ui\\common\\common.steps.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1225258700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 21,
+            "name": "I navigate to the Category management page",
+            "match": {
+              "location": "steps\\ui\\admin\\admin.steps.js:54"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 885268799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 22,
+            "name": "I click on \"Add Category\" button",
+            "match": {
+              "location": "steps\\ui\\admin\\admin.steps.js:80"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 753949700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 23,
+            "name": "I enter \"Roses\" as Category Name",
+            "match": {
+              "location": "steps\\ui\\admin\\admin.steps.js:91"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 35627400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 24,
+            "name": "I select \"Flowers\" as Parent Category",
+            "match": {
+              "location": "steps\\ui\\admin\\admin.steps.js:95"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 27549000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 25,
+            "name": "I click on Add button",
+            "match": {
+              "location": "steps\\ui\\common\\common.steps.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 894737100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 26,
+            "name": "I should see a success message",
+            "match": {
+              "location": "steps\\ui\\admin\\admin.steps.js:133"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 51427200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 27,
+            "name": "the category \"Roses\" should be added to the list",
+            "match": {
+              "location": "steps\\ui\\admin\\admin.steps.js:150"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 14174299
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 87062900
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "admin-category-management;admin-should-not-be-able-to-add-a-category-without-category-name",
+        "keyword": "Scenario",
+        "line": 30,
+        "name": "Admin should not be able to add a category without Category Name",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 413844400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I navigate to the login page",
+            "match": {
+              "location": "steps\\ui\\common\\common.steps.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 628910499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "I login as \"admin\" with password \"admin123\"",
+            "match": {
+              "location": "steps\\ui\\common\\common.steps.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1114811699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 31,
+            "name": "I navigate to the Category management page",
+            "match": {
+              "location": "steps\\ui\\admin\\admin.steps.js:54"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 884099600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 32,
+            "name": "I click on \"Add Category\" button",
+            "match": {
+              "location": "steps\\ui\\admin\\admin.steps.js:80"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 750616999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 33,
+            "name": "I leave Category Name field empty",
+            "match": {
+              "location": "steps\\ui\\admin\\admin.steps.js:99"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 37578199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 34,
+            "name": "I select \"Flowers\" as Parent Category",
+            "match": {
+              "location": "steps\\ui\\admin\\admin.steps.js:95"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 20239800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 35,
+            "name": "I click on Add button",
+            "match": {
+              "location": "steps\\ui\\common\\common.steps.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 797163500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 36,
+            "name": "I should see an error message below Category Name field",
+            "match": {
+              "location": "steps\\ui\\admin\\admin.steps.js:160"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 48189099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 37,
+            "name": "the category should not be added",
+            "match": {
+              "location": "steps\\ui\\admin\\admin.steps.js:165"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1406399
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 84832399
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "admin-category-management;admin-should-be-able-to-add-a-category-with-category-name-without-parent-category",
+        "keyword": "Scenario",
+        "line": 40,
+        "name": "Admin should be able to add a category with Category Name without Parent Category",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 446087400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I navigate to the login page",
+            "match": {
+              "location": "steps\\ui\\common\\common.steps.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 572451699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "I login as \"admin\" with password \"admin123\"",
+            "match": {
+              "location": "steps\\ui\\common\\common.steps.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1113317199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 41,
+            "name": "I navigate to the Category management page",
+            "match": {
+              "location": "steps\\ui\\admin\\admin.steps.js:54"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 840520900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 42,
+            "name": "I click on \"Add Category\" button",
+            "match": {
+              "location": "steps\\ui\\admin\\admin.steps.js:80"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 784171999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 43,
+            "name": "I enter \"MainCat\" as Category Name",
+            "match": {
+              "location": "steps\\ui\\admin\\admin.steps.js:91"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 20781399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 44,
+            "name": "I leave Parent Category field empty",
+            "match": {
+              "location": "steps\\ui\\admin\\admin.steps.js:103"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 32347200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 45,
+            "name": "I click on Add button",
+            "match": {
+              "location": "steps\\ui\\common\\common.steps.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 865317299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 46,
+            "name": "I should see a success message",
+            "match": {
+              "location": "steps\\ui\\admin\\admin.steps.js:133"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10008233000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 47,
+            "name": "the category \"MainCat\" should be added to the list",
+            "match": {
+              "location": "steps\\ui\\admin\\admin.steps.js:150"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 5835706399,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('tbody')\nTimeout: 5000ms\n\u001b[32m- Expected substring  -   1\u001b[39m\n\u001b[31m+ Received string     + 198\u001b[39m\n\n\u001b[32m- MainCat\u001b[39m\n\u001b[31m+\u001b[39m\n\u001b[31m+\u001b[39m\n\u001b[31m+ \u001b[43m      \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m      \u001b[49m\u001b[39m\n\u001b[31m+         21\u001b[39m\n\u001b[31m+         Roses\u001b[39m\n\u001b[31m+         Flowers\u001b[39m\n\u001b[31m+ \u001b[43m        \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m            \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m            \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m              \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m            \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m        \u001b[49m\u001b[39m\n\u001b[31m+\u001b[39m\n\u001b[31m+ \u001b[43m      \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m      \u001b[49m\u001b[39m\n\u001b[31m+         20\u001b[39m\n\u001b[31m+         Flowers\u001b[39m\n\u001b[31m+         -\u001b[39m\n\u001b[31m+ \u001b[43m        \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m            \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m            \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m              \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m            \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m        \u001b[49m\u001b[39m\n\u001b[31m+\u001b[39m\n\u001b[31m+ \u001b[43m      \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m      \u001b[49m\u001b[39m\n\u001b[31m+         17\u001b[39m\n\u001b[31m+         Roses\u001b[39m\n\u001b[31m+         UpdatedCat\u001b[39m\n\u001b[31m+ \u001b[43m        \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m            \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m            \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m              \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m            \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m        \u001b[49m\u001b[39m\n\u001b[31m+\u001b[39m\n\u001b[31m+ \u001b[43m      \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m      \u001b[49m\u001b[39m\n\u001b[31m+         16\u001b[39m\n\u001b[31m+         UpdatedCat\u001b[39m\n\u001b[31m+         -\u001b[39m\n\u001b[31m+ \u001b[43m        \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m            \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m            \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m              \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m            \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m        \u001b[49m\u001b[39m\n\u001b[31m+\u001b[39m\n\u001b[31m+ \u001b[43m      \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m      \u001b[49m\u001b[39m\n\u001b[31m+         14\u001b[39m\n\u001b[31m+         Roses\u001b[39m\n\u001b[31m+         UpdatedCat\u001b[39m\n\u001b[31m+ \u001b[43m        \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m            \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m            \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m              \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m            \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m        \u001b[49m\u001b[39m\n\u001b[31m+\u001b[39m\n\u001b[31m+ \u001b[43m      \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m      \u001b[49m\u001b[39m\n\u001b[31m+         13\u001b[39m\n\u001b[31m+         UpdatedCat\u001b[39m\n\u001b[31m+         -\u001b[39m\n\u001b[31m+ \u001b[43m        \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m            \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m            \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m              \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m            \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m        \u001b[49m\u001b[39m\n\u001b[31m+\u001b[39m\n\u001b[31m+ \u001b[43m      \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m      \u001b[49m\u001b[39m\n\u001b[31m+         11\u001b[39m\n\u001b[31m+         Roses\u001b[39m\n\u001b[31m+         UpdatedCat\u001b[39m\n\u001b[31m+ \u001b[43m        \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m            \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m            \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m              \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m            \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m        \u001b[49m\u001b[39m\n\u001b[31m+\u001b[39m\n\u001b[31m+ \u001b[43m      \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m      \u001b[49m\u001b[39m\n\u001b[31m+         10\u001b[39m\n\u001b[31m+         UpdatedCat\u001b[39m\n\u001b[31m+         -\u001b[39m\n\u001b[31m+ \u001b[43m        \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m            \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m            \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m              \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m            \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m        \u001b[49m\u001b[39m\n\u001b[31m+\u001b[39m\n\u001b[31m+ \u001b[43m      \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m      \u001b[49m\u001b[39m\n\u001b[31m+         7\u001b[39m\n\u001b[31m+         Roses\u001b[39m\n\u001b[31m+         UpdatedCat\u001b[39m\n\u001b[31m+ \u001b[43m        \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m            \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m            \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m              \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m            \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m        \u001b[49m\u001b[39m\n\u001b[31m+\u001b[39m\n\u001b[31m+ \u001b[43m      \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m      \u001b[49m\u001b[39m\n\u001b[31m+         6\u001b[39m\n\u001b[31m+         UpdatedCat\u001b[39m\n\u001b[31m+         -\u001b[39m\n\u001b[31m+ \u001b[43m        \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m            \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m            \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m              \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m            \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m          \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m        \u001b[49m\u001b[39m\n\u001b[31m+\u001b[39m\n\u001b[31m+ \u001b[43m      \u001b[49m\u001b[39m\n\u001b[31m+\u001b[39m\n\u001b[31m+ \u001b[43m      \u001b[49m\u001b[39m\n\u001b[31m+ \u001b[43m      \u001b[49m\u001b[39m\n\u001b[31m+\u001b[39m\n\u001b[31m+ \u001b[43m      \u001b[49m\u001b[39m\n\nCall log:\n\u001b[2m  - Expect \"to.have.text\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('tbody')\u001b[22m\n\u001b[2m    9 × locator resolved to <tbody>…</tbody>\u001b[22m\n\u001b[2m      - unexpected value \"\u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[22m\n\u001b[2m      \u001b[22m\n\u001b[2m        21\u001b[22m\n\u001b[2m        Roses\u001b[22m\n\u001b[2m        Flowers\u001b[22m\n\u001b[2m        \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m            \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m            \u001b[22m\n\u001b[2m              \u001b[22m\n\u001b[2m            \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m        \u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[22m\n\u001b[2m      \u001b[22m\n\u001b[2m        20\u001b[22m\n\u001b[2m        Flowers\u001b[22m\n\u001b[2m        -\u001b[22m\n\u001b[2m        \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m            \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m            \u001b[22m\n\u001b[2m              \u001b[22m\n\u001b[2m            \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m        \u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[22m\n\u001b[2m      \u001b[22m\n\u001b[2m        17\u001b[22m\n\u001b[2m        Roses\u001b[22m\n\u001b[2m        UpdatedCat\u001b[22m\n\u001b[2m        \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m            \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m            \u001b[22m\n\u001b[2m              \u001b[22m\n\u001b[2m            \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m        \u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[22m\n\u001b[2m      \u001b[22m\n\u001b[2m        16\u001b[22m\n\u001b[2m        UpdatedCat\u001b[22m\n\u001b[2m        -\u001b[22m\n\u001b[2m        \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m            \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m            \u001b[22m\n\u001b[2m              \u001b[22m\n\u001b[2m            \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m        \u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[22m\n\u001b[2m      \u001b[22m\n\u001b[2m        14\u001b[22m\n\u001b[2m        Roses\u001b[22m\n\u001b[2m        UpdatedCat\u001b[22m\n\u001b[2m        \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m            \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m            \u001b[22m\n\u001b[2m              \u001b[22m\n\u001b[2m            \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m        \u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[22m\n\u001b[2m      \u001b[22m\n\u001b[2m        13\u001b[22m\n\u001b[2m        UpdatedCat\u001b[22m\n\u001b[2m        -\u001b[22m\n\u001b[2m        \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m            \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m            \u001b[22m\n\u001b[2m              \u001b[22m\n\u001b[2m            \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m        \u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[22m\n\u001b[2m      \u001b[22m\n\u001b[2m        11\u001b[22m\n\u001b[2m        Roses\u001b[22m\n\u001b[2m        UpdatedCat\u001b[22m\n\u001b[2m        \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m            \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m            \u001b[22m\n\u001b[2m              \u001b[22m\n\u001b[2m            \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m        \u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[22m\n\u001b[2m      \u001b[22m\n\u001b[2m        10\u001b[22m\n\u001b[2m        UpdatedCat\u001b[22m\n\u001b[2m        -\u001b[22m\n\u001b[2m        \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m            \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m            \u001b[22m\n\u001b[2m              \u001b[22m\n\u001b[2m            \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m        \u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[22m\n\u001b[2m      \u001b[22m\n\u001b[2m        7\u001b[22m\n\u001b[2m        Roses\u001b[22m\n\u001b[2m        UpdatedCat\u001b[22m\n\u001b[2m        \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m            \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m            \u001b[22m\n\u001b[2m              \u001b[22m\n\u001b[2m            \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m        \u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[22m\n\u001b[2m      \u001b[22m\n\u001b[2m        6\u001b[22m\n\u001b[2m        UpdatedCat\u001b[22m\n\u001b[2m        -\u001b[22m\n\u001b[2m        \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m            \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m            \u001b[22m\n\u001b[2m              \u001b[22m\n\u001b[2m            \u001b[22m\n\u001b[2m          \u001b[22m\n\u001b[2m        \u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[22m\n\u001b[2m      \u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \"\u001b[22m\n\n    at Proxy.<anonymous> (D:\\QA Test case\\ITFac_Batch21_Group11\\node_modules\\playwright\\lib\\matchers\\expect.js:213:24)\n    at World.<anonymous> (D:\\QA Test case\\ITFac_Batch21_Group11\\steps\\ui\\admin\\admin.steps.js:157:46)"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 88666499
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "admin-category-management;admin-should-be-able-to-delete-a-category-from-the-list",
+        "keyword": "Scenario",
+        "line": 50,
+        "name": "Admin should be able to delete a category from the list",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 430224800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I navigate to the login page",
+            "match": {
+              "location": "steps\\ui\\common\\common.steps.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 658673699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "I login as \"admin\" with password \"admin123\"",
+            "match": {
+              "location": "steps\\ui\\common\\common.steps.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 695335400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 51,
+            "name": "a category \"TestCat\" exists in the system",
+            "match": {
+              "location": "steps\\ui\\admin\\admin.steps.js:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2478745600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 52,
+            "name": "I navigate to the Category management page",
+            "match": {
+              "location": "steps\\ui\\admin\\admin.steps.js:54"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 785945300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 53,
+            "name": "I click on Delete action for \"TestCat\"",
+            "match": {
+              "location": "steps\\ui\\admin\\admin.steps.js:108"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1026345799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 54,
+            "name": "I confirm the deletion",
+            "match": {
+              "location": "steps\\ui\\admin\\admin.steps.js:121"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 50472800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 55,
+            "name": "I should see a success message",
+            "match": {
+              "location": "steps\\ui\\admin\\admin.steps.js:133"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8853400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 56,
+            "name": "the category \"TestCat\" should not appear in the list",
+            "match": {
+              "location": "steps\\ui\\admin\\admin.steps.js:169"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 789263800
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 98488600
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "admin-category-management",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Admin Category Management",
+    "tags": [],
+    "uri": "features\\ui\\admin\\admin_tests.feature"
+  },
+  {
+    "description": "  As a Normal User\n  I want to view the category management page\n  So that I can check categories without modifying them",
+    "elements": [
+      {
+        "description": "",
+        "id": "category-management-user-functionality;user-should-see-dashboard-immediately-after-successful-login",
+        "keyword": "Scenario",
+        "line": 11,
+        "name": "User should see Dashboard immediately after successful login",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 480930600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I navigate to the login page",
+            "match": {
+              "location": "steps\\ui\\common\\common.steps.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 600507500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "I login as \"Testuser\" with password \"test123\"",
+            "match": {
+              "location": "steps\\ui\\common\\common.steps.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 733737399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "I should be on the Dashboard page",
+            "match": {
+              "location": "steps\\ui\\user\\user.steps.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 130960200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "I should see the page header \"Dashboard\"",
+            "match": {
+              "location": "steps\\ui\\user\\user.steps.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 11207399
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 92926500
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "category-management-user-functionality;user-should-see-navigation-menu-highlighting-the-active-page",
+        "keyword": "Scenario",
+        "line": 16,
+        "name": "User should see navigation menu highlighting the active page",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 476135699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I navigate to the login page",
+            "match": {
+              "location": "steps\\ui\\common\\common.steps.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 593219700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "I login as \"Testuser\" with password \"test123\"",
+            "match": {
+              "location": "steps\\ui\\common\\common.steps.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 724040699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 17,
+            "name": "I click on \"Categories\" in the sidebar",
+            "match": {
+              "location": "steps\\ui\\user\\user.steps.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1320817199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 18,
+            "name": "the navigation menu should highlight \"Categories\" as active",
+            "match": {
+              "location": "steps\\api\\category_api.steps.js:89"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 42340200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 19,
+            "name": "I click on \"Plants\" in the sidebar",
+            "match": {
+              "location": "steps\\ui\\user\\user.steps.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 829544200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 20,
+            "name": "the navigation menu should highlight \"Plants\" as active",
+            "match": {
+              "location": "steps\\api\\category_api.steps.js:89"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 66350800
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 86631999
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "category-management-user-functionality;user-should-see-category,-plants,-and-sales-summary-on-dashboard",
+        "keyword": "Scenario",
+        "line": 23,
+        "name": "User should see Category, Plants, and Sales summary on Dashboard",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 463532999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I navigate to the login page",
+            "match": {
+              "location": "steps\\ui\\common\\common.steps.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 553042699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "I login as \"Testuser\" with password \"test123\"",
+            "match": {
+              "location": "steps\\ui\\common\\common.steps.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 700197299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 24,
+            "name": "I am on the Dashboard page",
+            "match": {
+              "location": "steps\\ui\\user\\user.steps.js:36"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 119045100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 25,
+            "name": "I should see \"Categories\" summary card",
+            "match": {
+              "location": "steps\\ui\\user\\user.steps.js:40"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 17296800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 26,
+            "name": "I should see \"Plants\" summary card",
+            "match": {
+              "location": "steps\\ui\\user\\user.steps.js:40"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6170299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 27,
+            "name": "I should see \"Sales\" summary card",
+            "match": {
+              "location": "steps\\ui\\user\\user.steps.js:40"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 17007099
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 111196200
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "category-management-user-functionality;user-should-see-appropriate-message-when-searching-for-non-existent-category",
+        "keyword": "Scenario",
+        "line": 30,
+        "name": "User should see appropriate message when searching for non-existent category",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 466069699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I navigate to the login page",
+            "match": {
+              "location": "steps\\ui\\common\\common.steps.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 742046700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "I login as \"Testuser\" with password \"test123\"",
+            "match": {
+              "location": "steps\\ui\\common\\common.steps.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1347024700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 31,
+            "name": "I navigate to the Category management page",
+            "match": {
+              "location": "steps\\ui\\admin\\admin.steps.js:54"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1049230000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 32,
+            "name": "I search for a category with name \"NonExistentCategoryXYZ123\"",
+            "match": {
+              "location": "steps\\ui\\user\\user.steps.js:47"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 855775099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 33,
+            "name": "I should see \"No category found\" message in the table",
+            "match": {
+              "location": "steps\\api\\category_api.steps.js:100"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 45298699
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 77378399
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "category-management-user-functionality;user-should-see-add-category-button-is-disabled",
+        "keyword": "Scenario",
+        "line": 36,
+        "name": "User should see Add Category button is disabled",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 529060700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I navigate to the login page",
+            "match": {
+              "location": "steps\\ui\\common\\common.steps.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 550682000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "I login as \"Testuser\" with password \"test123\"",
+            "match": {
+              "location": "steps\\ui\\common\\common.steps.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 711102599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 37,
+            "name": "I navigate to the Category management page",
+            "match": {
+              "location": "steps\\ui\\admin\\admin.steps.js:54"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1041463300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 38,
+            "name": "I should NOT see the \"Add Category\" button",
+            "match": {
+              "location": "steps\\api\\category_api.steps.js:107"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 39040800
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 75633900
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "category-management-user-functionality",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Category Management User Functionality",
+    "tags": [],
+    "uri": "features\\ui\\user\\user_tests.feature"
+  }
+]
