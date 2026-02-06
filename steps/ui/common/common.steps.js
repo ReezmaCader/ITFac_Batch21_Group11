@@ -31,3 +31,8 @@ Then('I should be navigated to the {string} page', async function (pageName) {
         await this.page.waitForURL(/.*\/ui\/plants/);
     }
 });
+
+When('I navigate to the Category management page', async function () {
+    await this.page.click('.sidebar a[href="/ui/categories"]');
+    await this.page.waitForLoadState('networkidle');
+});

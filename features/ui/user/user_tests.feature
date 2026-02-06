@@ -36,3 +36,9 @@ Feature: Category Management User Functionality
   Scenario: User should see Add Category button is disabled
     When I navigate to the Category management page
     Then I should NOT see the "Add Category" button
+
+  # TC_Category_Management_UI_User_006
+  Scenario: User should see Edit and Delete actions are disabled
+    When I navigate to the Category management page
+    Then the "Edit" buttons should be disabled
+    And the "Delete" buttons should be disabled

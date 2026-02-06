@@ -50,12 +50,6 @@ Given('a category {string} exists in the system', async function (categoryName) 
     }
 });
 
-// --- NAVIGATION ---
-When('I navigate to the Category management page', async function () {
-    await this.page.goto('http://localhost:8080/ui/categories');
-    await this.page.waitForLoadState('networkidle');
-});
-
 // --- SEARCH ---
 When('I enter {string} in the category search field', async function (searchText) {
     await this.page.fill('input[name="name"]', searchText);
