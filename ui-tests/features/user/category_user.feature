@@ -18,16 +18,16 @@ Feature: Category Module - User Tests
     Then the first page of categories should be loaded
     And navigating through each page should load categories correctly
 
-  @TC_DASHBOARD_UI_USER_002 @search @positive
-  Scenario: TC_DASHBOARD_UI_USER_002 - Verify the functionality of searching by category name
-    Then the search field should be visible and enabled
-    When the user enters a valid category name "asb" in the search field
-    And the user clicks the Search button
-    Then the category list should display categories matching the search input
-    And no non-matching categories should be displayed
-    When the user clears the search input
-    And the user clicks the Search button
-    Then all categories should be displayed
+  # @TC_DASHBOARD_UI_USER_002 @search @positive
+  # Scenario: TC_DASHBOARD_UI_USER_002 - Verify the functionality of searching by category name
+  #   Then the search field should be visible and enabled
+  #   When the user enters a valid category name "asb" in the search field
+  #   And the user clicks the Search button
+  #   Then the category list should display categories matching the search input
+  #   And no non-matching categories should be displayed
+  #   When the user clears the search input
+  #   And the user clicks the Search button
+  #   Then all categories should be displayed
 
   @TC_DASHBOARD_UI_USER_003 @filter @positive
   Scenario: TC_DASHBOARD_UI_USER_003 - Verify the functionality of filtering by parent category

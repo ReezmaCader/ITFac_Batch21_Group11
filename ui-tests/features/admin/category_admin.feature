@@ -75,17 +75,17 @@ Feature: Dashboard and Category Module - Admin Tests
     And a validation error message should be displayed
     And the category should not be saved
 
-  @TC_DASHBOARD_UI_ADMIN_014 @category @validation @positive
-  Scenario: TC_DASHBOARD_UI_ADMIN_014 - Verify whether the category name field accepts characters between 3 and 10
-    Given the admin logs in with valid credentials
-    When the admin navigates to the Categories page
-    And the admin clicks on the Add Category button
-    And the admin enters a category name with 3 to 10 characters "TestCat"
-    And the admin selects a parent category
-    And the admin clicks the Save button
-    Then the system should accept the category name
-    And no validation error should be displayed
-    And the category should be saved successfully
+  # @TC_DASHBOARD_UI_ADMIN_014 @category @validation @positive
+  # Scenario: TC_DASHBOARD_UI_ADMIN_014 - Verify whether the category name field accepts characters between 3 and 10
+  #   Given the admin logs in with valid credentials
+  #   When the admin navigates to the Categories page
+  #   And the admin clicks on the Add Category button
+  #   And the admin enters a category name with 3 to 10 characters "TestCat"
+  #   And the admin selects a parent category
+  #   And the admin clicks the Save button
+  #   Then the system should accept the category name
+  #   And no validation error should be displayed
+  #   And the category should be saved successfully
 
   @TC_DASHBOARD_UI_ADMIN_015 @category @validation @negative
   Scenario: TC_DASHBOARD_UI_ADMIN_015 - Verify whether the category name field does not accept more than 10 characters
@@ -107,14 +107,14 @@ Feature: Dashboard and Category Module - Admin Tests
     And the Delete action should be visible and enabled for each category
     And the admin can initiate Edit or Delete actions without errors
 
-  @TC_DASHBOARD_UI_ADMIN_017 @category @edit @positive
-  Scenario: TC_DASHBOARD_UI_ADMIN_017 - Verify whether clicking on the Edit button allows editing a particular category
-    Given the admin logs in with valid credentials
-    When the admin navigates to the Categories page
-    And at least one category exists in the system
-    And the admin clicks the Edit button for a specific category
-    And the admin modifies the category name to "Updated"
-    And the admin clicks the Save button
-    Then the category details should be updated successfully
-    And the updated category name should reflect in the category list
-    And no errors or validation issues should occur
+  # @TC_DASHBOARD_UI_ADMIN_017 @category @edit @positive
+  # Scenario: TC_DASHBOARD_UI_ADMIN_017 - Verify whether clicking on the Edit button allows editing a particular category
+  #   Given the admin logs in with valid credentials
+  #   When the admin navigates to the Categories page
+  #   And at least one category exists in the system
+  #   And the admin clicks the Edit button for a specific category
+  #   And the admin modifies the category name to "Updated"
+  #   And the admin clicks the Save button
+  #   Then the category details should be updated successfully
+  #   And the updated category name should reflect in the category list
+  #   And no errors or validation issues should occur

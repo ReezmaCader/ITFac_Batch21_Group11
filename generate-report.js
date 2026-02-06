@@ -33,7 +33,7 @@ report.generate({
   customData: {
     title: 'Test Execution Report',
     data: [
-      { label: 'Project', value: 'Plant Sales Application' },
+      { label: 'Project', value: 'Dashboard and Category' },
       { label: 'Test Types', value: 'UI Tests + API Tests (Cucumber + Playwright)' },
       { label: 'Execution Date', value: new Date().toLocaleDateString() }
     ]

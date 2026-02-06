@@ -7,7 +7,10 @@
     "test": "npm run test:playwright:ci && npm run test:cucumber",
     "test:playwright": "npx playwright test",
     "test:playwright:ci": "npx playwright test --reporter=list",
-    "test:cucumber": "node run-cucumber.js all"
+    "test:cucumber": "node run-cucumber.js all",
+    "report:generate": "node generate-report.js",
+    "report:open": "start reports/html/index.html",
+    "test:full": "npm run test:cucumber && npm run report:generate && npm run report:open"
   },
   "keywords": [],
   "author": "",
@@ -15,6 +18,7 @@
   "devDependencies": {
     "@cucumber/cucumber": "^12.6.0",
     "@playwright/test": "^1.58.1",
-    "@types/node": "^25.1.0"
+    "@types/node": "^25.1.0",
+    "multiple-cucumber-html-reporter": "^3.9.3"
   }
 }

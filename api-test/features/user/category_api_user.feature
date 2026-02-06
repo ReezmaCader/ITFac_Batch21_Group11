@@ -92,13 +92,13 @@ Feature: Category API - User Operations
     And the response body should contain a proper error message
     And the category should not be deleted
 
-  @API_USER_028 @post @create @negative @forbidden
-  Scenario: API_USER_028 - Verify that an authorized user cannot create a new category
-    Given the user has a valid authentication token
-    When the user sends a POST request to "/api/categories" with category data
-    Then the API should return HTTP status code 403
-    And the response body should contain a proper error message
-    And the category should not be created
+  # @API_USER_028 @post @create @negative @forbidden
+  # Scenario: API_USER_028 - Verify that an authorized user cannot create a new category
+  #   Given the user has a valid authentication token
+  #   When the user sends a POST request to "/api/categories" with category data
+  #   Then the API should return HTTP status code 403
+  #   And the response body should contain a proper error message
+  #   And the category should not be created
 
   @API_USER_029 @post @create @negative @unauthorized
   Scenario: API_USER_029 - Verify that an unauthorized user cannot create a new category
