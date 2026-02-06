@@ -1,0 +1,2963 @@
+[
+  {
+    "description": "  As an admin user\n  I want to interact with the Category API\n  So that I can perform full CRUD operations on categories",
+    "elements": [
+      {
+        "description": "",
+        "id": "category-api---admin-operations;api_admin_030---verify-that-an-admin-can-retrieve-all-categories-using-correct-parameter",
+        "keyword": "Scenario",
+        "line": 14,
+        "name": "API_ADMIN_030 - Verify that an admin can retrieve all categories using correct parameter",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 3295099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 11,
+            "name": "the API service is running",
+            "match": {
+              "location": "api-test\\step-definitions\\common\\commonApiSteps.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1857799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 15,
+            "name": "the admin has a valid authentication token",
+            "match": {
+              "location": "api-test\\step-definitions\\admin\\categoryApiAdminSteps.js:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 401468700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 16,
+            "name": "the admin sends a GET request to \"/api/categories\" with name parameter \"Test\"",
+            "match": {
+              "location": "api-test\\step-definitions\\admin\\categoryApiAdminSteps.js:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 47756800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 17,
+            "name": "the API should return HTTP status code 200",
+            "match": {
+              "location": "api-test\\step-definitions\\common\\commonApiSteps.js:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1739499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 18,
+            "name": "the response body should contain a list of categories matching the parameter",
+            "match": {
+              "location": "api-test\\step-definitions\\admin\\categoryApiAdminSteps.js:133"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 699300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 19,
+            "name": "no error message should be returned",
+            "match": {
+              "location": "api-test\\step-definitions\\common\\commonApiSteps.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 447999
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 2437899
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@admin",
+            "line": 4
+          },
+          {
+            "name": "@category",
+            "line": 4
+          },
+          {
+            "name": "@api",
+            "line": 4
+          },
+          {
+            "name": "@API_ADMIN_030",
+            "line": 13
+          },
+          {
+            "name": "@get",
+            "line": 13
+          },
+          {
+            "name": "@filter",
+            "line": 13
+          },
+          {
+            "name": "@positive",
+            "line": 13
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "category-api---admin-operations;api_admin_031---verify-that-an-admin-can-retrieve-all-categories-without-providing-parameters",
+        "keyword": "Scenario",
+        "line": 22,
+        "name": "API_ADMIN_031 - Verify that an admin can retrieve all categories without providing parameters",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1669400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 11,
+            "name": "the API service is running",
+            "match": {
+              "location": "api-test\\step-definitions\\common\\commonApiSteps.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1043200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 23,
+            "name": "the admin has a valid authentication token",
+            "match": {
+              "location": "api-test\\step-definitions\\admin\\categoryApiAdminSteps.js:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 364128200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 24,
+            "name": "the admin sends a GET request to \"/api/categories\" without parameters",
+            "match": {
+              "location": "api-test\\step-definitions\\admin\\categoryApiAdminSteps.js:48"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 31846099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 25,
+            "name": "the API should return HTTP status code 200",
+            "match": {
+              "location": "api-test\\step-definitions\\common\\commonApiSteps.js:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1169000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 26,
+            "name": "the response body should contain a list of all categories",
+            "match": {
+              "location": "api-test\\step-definitions\\admin\\categoryApiAdminSteps.js:146"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 979399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 27,
+            "name": "no error message should be returned",
+            "match": {
+              "location": "api-test\\step-definitions\\common\\commonApiSteps.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 236100
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 951500
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@admin",
+            "line": 4
+          },
+          {
+            "name": "@category",
+            "line": 4
+          },
+          {
+            "name": "@api",
+            "line": 4
+          },
+          {
+            "name": "@API_ADMIN_031",
+            "line": 21
+          },
+          {
+            "name": "@get",
+            "line": 21
+          },
+          {
+            "name": "@all",
+            "line": 21
+          },
+          {
+            "name": "@positive",
+            "line": 21
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "category-api---admin-operations;api_admin_032---verify-the-api-response-when-the-admin-provides-invalid-query-parameters-while-retrieving-categories",
+        "keyword": "Scenario",
+        "line": 30,
+        "name": "API_ADMIN_032 - Verify the API response when the admin provides invalid query parameters while retrieving categories",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 2125399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 11,
+            "name": "the API service is running",
+            "match": {
+              "location": "api-test\\step-definitions\\common\\commonApiSteps.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 533199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 31,
+            "name": "the admin has a valid authentication token",
+            "match": {
+              "location": "api-test\\step-definitions\\admin\\categoryApiAdminSteps.js:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 297585100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 32,
+            "name": "the admin sends a GET request to \"/api/categories\" with invalid parameter \"InvalidParam!@#\"",
+            "match": {
+              "location": "api-test\\step-definitions\\admin\\categoryApiAdminSteps.js:53"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 33866599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 33,
+            "name": "the API should return HTTP status code 400 or empty result",
+            "match": {
+              "location": "api-test\\step-definitions\\admin\\categoryApiAdminSteps.js:120"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 591699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 34,
+            "name": "if error, the response body should contain a clear error message indicating invalid parameter",
+            "match": {
+              "location": "api-test\\step-definitions\\admin\\categoryApiAdminSteps.js:153"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 399400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 35,
+            "name": "no categories should be returned or empty list",
+            "match": {
+              "location": "api-test\\step-definitions\\admin\\categoryApiAdminSteps.js:162"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 341199
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 786199
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@admin",
+            "line": 4
+          },
+          {
+            "name": "@category",
+            "line": 4
+          },
+          {
+            "name": "@api",
+            "line": 4
+          },
+          {
+            "name": "@API_ADMIN_032",
+            "line": 29
+          },
+          {
+            "name": "@get",
+            "line": 29
+          },
+          {
+            "name": "@filter",
+            "line": 29
+          },
+          {
+            "name": "@negative",
+            "line": 29
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "category-api---admin-operations;api_admin_033---verify-that-an-admin-can-successfully-retrieve-the-summary-of-all-categories",
+        "keyword": "Scenario",
+        "line": 38,
+        "name": "API_ADMIN_033 - Verify that an admin can successfully retrieve the summary of all categories",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 2393600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 11,
+            "name": "the API service is running",
+            "match": {
+              "location": "api-test\\step-definitions\\common\\commonApiSteps.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 481200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 39,
+            "name": "the admin has a valid authentication token",
+            "match": {
+              "location": "api-test\\step-definitions\\admin\\categoryApiAdminSteps.js:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 258872800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 40,
+            "name": "the admin sends a GET request to \"/api/categories/summary\"",
+            "match": {
+              "location": "api-test\\step-definitions\\admin\\categoryApiAdminSteps.js:60"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 31408300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 41,
+            "name": "the API should return HTTP status code 200",
+            "match": {
+              "location": "api-test\\step-definitions\\common\\commonApiSteps.js:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 366999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 42,
+            "name": "the response body should contain category summary information",
+            "match": {
+              "location": "api-test\\step-definitions\\admin\\categoryApiAdminSteps.js:177"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 538900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 43,
+            "name": "no error message should be returned",
+            "match": {
+              "location": "api-test\\step-definitions\\common\\commonApiSteps.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 208100
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1350599
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@admin",
+            "line": 4
+          },
+          {
+            "name": "@category",
+            "line": 4
+          },
+          {
+            "name": "@api",
+            "line": 4
+          },
+          {
+            "name": "@API_ADMIN_033",
+            "line": 37
+          },
+          {
+            "name": "@get",
+            "line": 37
+          },
+          {
+            "name": "@summary",
+            "line": 37
+          },
+          {
+            "name": "@positive",
+            "line": 37
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "category-api---admin-operations;api_admin_034---verify-that-an-admin-can-successfully-retrieve-all-sub-categories-when-providing-valid-authorization",
+        "keyword": "Scenario",
+        "line": 46,
+        "name": "API_ADMIN_034 - Verify that an admin can successfully retrieve all sub-categories when providing valid authorization",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 2972800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 11,
+            "name": "the API service is running",
+            "match": {
+              "location": "api-test\\step-definitions\\common\\commonApiSteps.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 471700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 47,
+            "name": "the admin has a valid authentication token",
+            "match": {
+              "location": "api-test\\step-definitions\\admin\\categoryApiAdminSteps.js:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 305567500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 48,
+            "name": "the admin sends a GET request to \"/api/categories/sub-categories\"",
+            "match": {
+              "location": "api-test\\step-definitions\\admin\\categoryApiAdminSteps.js:60"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 33918099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 49,
+            "name": "the API should return HTTP status code 200",
+            "match": {
+              "location": "api-test\\step-definitions\\common\\commonApiSteps.js:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 449499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 50,
+            "name": "the response body should contain a list of all sub-categories with expected fields",
+            "match": {
+              "location": "api-test\\step-definitions\\admin\\categoryApiAdminSteps.js:200"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 956499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 51,
+            "name": "no error message should be returned",
+            "match": {
+              "location": "api-test\\step-definitions\\common\\commonApiSteps.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 132400
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 829400
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@admin",
+            "line": 4
+          },
+          {
+            "name": "@category",
+            "line": 4
+          },
+          {
+            "name": "@api",
+            "line": 4
+          },
+          {
+            "name": "@API_ADMIN_034",
+            "line": 45
+          },
+          {
+            "name": "@get",
+            "line": 45
+          },
+          {
+            "name": "@subcategories",
+            "line": 45
+          },
+          {
+            "name": "@positive",
+            "line": 45
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "category-api---admin-operations;api_admin_035---verify-that-an-admin-can-successfully-search-categories-by-name-or-parent-id-with-pagination-and-sorting-using-valid-authorization",
+        "keyword": "Scenario",
+        "line": 54,
+        "name": "API_ADMIN_035 - Verify that an admin can successfully search categories by name or parent ID with Pagination and sorting using valid authorization",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1713899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 11,
+            "name": "the API service is running",
+            "match": {
+              "location": "api-test\\step-definitions\\common\\commonApiSteps.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 365799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 55,
+            "name": "the admin has a valid authentication token",
+            "match": {
+              "location": "api-test\\step-definitions\\admin\\categoryApiAdminSteps.js:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 292625600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 56,
+            "name": "the admin sends a GET request to \"/api/categories/page\" with page \"0\" and name parameter",
+            "match": {
+              "location": "api-test\\step-definitions\\admin\\categoryApiAdminSteps.js:78"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 43957599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 57,
+            "name": "the API should return HTTP status code 200",
+            "match": {
+              "location": "api-test\\step-definitions\\common\\commonApiSteps.js:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1078199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 58,
+            "name": "the response body should contain a paginated and sorted list",
+            "match": {
+              "location": "api-test\\step-definitions\\common\\commonApiSteps.js:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 495800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 59,
+            "name": "categories should match the search input",
+            "match": {
+              "location": "api-test\\step-definitions\\common\\commonApiSteps.js:48"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 316299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 60,
+            "name": "no error message should be returned",
+            "match": {
+              "location": "api-test\\step-definitions\\common\\commonApiSteps.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 166200
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 841599
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@admin",
+            "line": 4
+          },
+          {
+            "name": "@category",
+            "line": 4
+          },
+          {
+            "name": "@api",
+            "line": 4
+          },
+          {
+            "name": "@API_ADMIN_035",
+            "line": 53
+          },
+          {
+            "name": "@get",
+            "line": 53
+          },
+          {
+            "name": "@pagination",
+            "line": 53
+          },
+          {
+            "name": "@positive",
+            "line": 53
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "category-api---admin-operations;api_admin_036---verify-that-an-admin-can-successfully-retrieve-main-categories-only-when-providing-valid-authorization",
+        "keyword": "Scenario",
+        "line": 63,
+        "name": "API_ADMIN_036 - Verify that an admin can successfully retrieve main categories only when providing valid authorization",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 6435099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 11,
+            "name": "the API service is running",
+            "match": {
+              "location": "api-test\\step-definitions\\common\\commonApiSteps.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 428300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 64,
+            "name": "the admin has a valid authentication token",
+            "match": {
+              "location": "api-test\\step-definitions\\admin\\categoryApiAdminSteps.js:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 323232200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 65,
+            "name": "the admin sends a GET request to \"/api/categories/main\"",
+            "match": {
+              "location": "api-test\\step-definitions\\admin\\categoryApiAdminSteps.js:60"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 49649399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 66,
+            "name": "the API should return HTTP status code 200",
+            "match": {
+              "location": "api-test\\step-definitions\\common\\commonApiSteps.js:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 329999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 67,
+            "name": "the response body should contain a list of main categories only",
+            "match": {
+              "location": "api-test\\step-definitions\\common\\commonApiSteps.js:55"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1074299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 68,
+            "name": "the returned categories should not contain sub-categories",
+            "match": {
+              "location": "api-test\\step-definitions\\admin\\categoryApiAdminSteps.js:213"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 484199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 69,
+            "name": "no error message should be returned",
+            "match": {
+              "location": "api-test\\step-definitions\\common\\commonApiSteps.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 175599
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 3709299
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@admin",
+            "line": 4
+          },
+          {
+            "name": "@category",
+            "line": 4
+          },
+          {
+            "name": "@api",
+            "line": 4
+          },
+          {
+            "name": "@API_ADMIN_036",
+            "line": 62
+          },
+          {
+            "name": "@get",
+            "line": 62
+          },
+          {
+            "name": "@main",
+            "line": 62
+          },
+          {
+            "name": "@positive",
+            "line": 62
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "category-api---admin-operations;api_admin_037---verify-that-an-admin-can-successfully-create-a-category-by-providing-a-valid-name",
+        "keyword": "Scenario",
+        "line": 72,
+        "name": "API_ADMIN_037 - Verify that an admin can successfully create a category by providing a valid name",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 3736499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 11,
+            "name": "the API service is running",
+            "match": {
+              "location": "api-test\\step-definitions\\common\\commonApiSteps.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 414499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 73,
+            "name": "the admin has a valid authentication token",
+            "match": {
+              "location": "api-test\\step-definitions\\admin\\categoryApiAdminSteps.js:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 258654700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 74,
+            "name": "the admin sends a POST request to \"/api/categories\" with valid category name \"APITest\"",
+            "match": {
+              "location": "api-test\\step-definitions\\admin\\categoryApiAdminSteps.js:89"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 23528299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 75,
+            "name": "the API should return HTTP status code 201",
+            "match": {
+              "location": "api-test\\step-definitions\\common\\commonApiSteps.js:16"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 5712299,
+              "error_message": "AssertionError [ERR_ASSERTION]: Expected status 201 but got 400. Response: {\"details\":{\"name\":\"Category name must be between 3 and 10 characters\"},\"error\":\"BAD_REQUEST\",\"message\":\"Validation failed\",\"status\":400,\"timestamp\":\"2026-02-06T13:38:35.9836736\"}\n\n400 !== 201\n\n    + expected - actual\n\n    -400\n    +201\n\n    at CustomWorld.<anonymous> (C:\\Users\\zulfa\\Downloads\\Zulfaa-ITQA\\qa-training-tests\\api-test\\step-definitions\\common\\commonApiSteps.js:18:10)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 76,
+            "name": "the response body should contain newly created category details",
+            "match": {
+              "location": "api-test\\step-definitions\\admin\\categoryApiAdminSteps.js:227"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 77,
+            "name": "the category should be saved successfully in the database",
+            "match": {
+              "location": "api-test\\step-definitions\\admin\\categoryApiAdminSteps.js:243"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 78,
+            "name": "no error message should be returned",
+            "match": {
+              "location": "api-test\\step-definitions\\common\\commonApiSteps.js:26"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1848799
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@admin",
+            "line": 4
+          },
+          {
+            "name": "@category",
+            "line": 4
+          },
+          {
+            "name": "@api",
+            "line": 4
+          },
+          {
+            "name": "@API_ADMIN_037",
+            "line": 71
+          },
+          {
+            "name": "@post",
+            "line": 71
+          },
+          {
+            "name": "@create",
+            "line": 71
+          },
+          {
+            "name": "@positive",
+            "line": 71
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "category-api---admin-operations;api_admin_038---verify-that-the-api-does-not-allow-creating-a-category-when-the-name-field-is-missing-or-empty",
+        "keyword": "Scenario",
+        "line": 81,
+        "name": "API_ADMIN_038 - Verify that the API does not allow creating a category when the name field is missing or empty",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1639500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 11,
+            "name": "the API service is running",
+            "match": {
+              "location": "api-test\\step-definitions\\common\\commonApiSteps.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 421099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 82,
+            "name": "the admin has a valid authentication token",
+            "match": {
+              "location": "api-test\\step-definitions\\admin\\categoryApiAdminSteps.js:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 323685199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 83,
+            "name": "the admin sends a POST request to \"/api/categories\" with invalid request body",
+            "match": {
+              "location": "api-test\\step-definitions\\admin\\categoryApiAdminSteps.js:108"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 25337799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 84,
+            "name": "the API should return HTTP status code 400",
+            "match": {
+              "location": "api-test\\step-definitions\\common\\commonApiSteps.js:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 674100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 85,
+            "name": "the response body should contain a clear error message indicating invalid request body",
+            "match": {
+              "location": "api-test\\step-definitions\\admin\\categoryApiAdminSteps.js:250"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 405099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 86,
+            "name": "no category should be created",
+            "match": {
+              "location": "api-test\\step-definitions\\admin\\categoryApiAdminSteps.js:261"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 297799
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1030500
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@admin",
+            "line": 4
+          },
+          {
+            "name": "@category",
+            "line": 4
+          },
+          {
+            "name": "@api",
+            "line": 4
+          },
+          {
+            "name": "@API_ADMIN_038",
+            "line": 80
+          },
+          {
+            "name": "@post",
+            "line": 80
+          },
+          {
+            "name": "@create",
+            "line": 80
+          },
+          {
+            "name": "@negative",
+            "line": 80
+          },
+          {
+            "name": "@validation",
+            "line": 80
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "category-api---admin-operations",
+    "line": 5,
+    "keyword": "Feature",
+    "name": "Category API - Admin Operations",
+    "tags": [
+      {
+        "name": "@admin",
+        "line": 4
+      },
+      {
+        "name": "@category",
+        "line": 4
+      },
+      {
+        "name": "@api",
+        "line": 4
+      }
+    ],
+    "uri": "api-test\\features\\admin\\category_api_admin.feature"
+  },
+  {
+    "description": "  As a regular user\n  I want to interact with the Category API\n  So that I can view categories but not modify them",
+    "elements": [
+      {
+        "description": "",
+        "id": "category-api---user-operations;api_user_018---verify-the-api-response-when-retrieving-all-sub-categories-with-valid-authorization",
+        "keyword": "Scenario",
+        "line": 14,
+        "name": "API_USER_018 - Verify the API response when retrieving all sub-categories with valid authorization",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1532900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 11,
+            "name": "the API service is running",
+            "match": {
+              "location": "api-test\\step-definitions\\common\\commonApiSteps.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 279899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 15,
+            "name": "the user has a valid authentication token",
+            "match": {
+              "location": "api-test\\step-definitions\\user\\categoryApiUserSteps.js:29"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 319027799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 16,
+            "name": "the user sends a GET request to \"/api/categories/sub-categories\"",
+            "match": {
+              "location": "api-test\\step-definitions\\user\\categoryApiUserSteps.js:43"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 37075299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 17,
+            "name": "the API should return HTTP status code 200",
+            "match": {
+              "location": "api-test\\step-definitions\\common\\commonApiSteps.js:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 231200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 18,
+            "name": "the response body should contain a list of all sub-categories",
+            "match": {
+              "location": "api-test\\step-definitions\\user\\categoryApiUserSteps.js:99"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 262499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 19,
+            "name": "each sub-category should include expected fields",
+            "match": {
+              "location": "api-test\\step-definitions\\user\\categoryApiUserSteps.js:106"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 236099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 20,
+            "name": "no error message should be returned",
+            "match": {
+              "location": "api-test\\step-definitions\\common\\commonApiSteps.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 78999
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 785000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@user",
+            "line": 4
+          },
+          {
+            "name": "@category",
+            "line": 4
+          },
+          {
+            "name": "@api",
+            "line": 4
+          },
+          {
+            "name": "@API_USER_018",
+            "line": 13
+          },
+          {
+            "name": "@get",
+            "line": 13
+          },
+          {
+            "name": "@subcategories",
+            "line": 13
+          },
+          {
+            "name": "@positive",
+            "line": 13
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "category-api---user-operations;api_user_019---verify-the-api-response-when-retrieving-all-sub-categories-without-authorization",
+        "keyword": "Scenario",
+        "line": 23,
+        "name": "API_USER_019 - Verify the API response when retrieving all sub-categories without authorization",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1434000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 11,
+            "name": "the API service is running",
+            "match": {
+              "location": "api-test\\step-definitions\\common\\commonApiSteps.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 317600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 24,
+            "name": "the user does not have an authentication token",
+            "match": {
+              "location": "api-test\\step-definitions\\user\\categoryApiUserSteps.js:38"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4824800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 25,
+            "name": "the user sends a GET request to \"/api/categories/sub-categories\"",
+            "match": {
+              "location": "api-test\\step-definitions\\user\\categoryApiUserSteps.js:43"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9106200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 26,
+            "name": "the API should return HTTP status code 401",
+            "match": {
+              "location": "api-test\\step-definitions\\common\\commonApiSteps.js:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 271400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 27,
+            "name": "the response body should contain a proper error message",
+            "match": {
+              "location": "api-test\\step-definitions\\user\\categoryApiUserSteps.js:119"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 339600
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 767600
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@user",
+            "line": 4
+          },
+          {
+            "name": "@category",
+            "line": 4
+          },
+          {
+            "name": "@api",
+            "line": 4
+          },
+          {
+            "name": "@API_USER_019",
+            "line": 22
+          },
+          {
+            "name": "@get",
+            "line": 22
+          },
+          {
+            "name": "@subcategories",
+            "line": 22
+          },
+          {
+            "name": "@negative",
+            "line": 22
+          },
+          {
+            "name": "@unauthorized",
+            "line": 22
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "category-api---user-operations;api_user_020---verify-the-api-response-when-searching-by-name-or-parent-id-with-pagination-and-sorting-using-valid-authorization",
+        "keyword": "Scenario",
+        "line": 30,
+        "name": "API_USER_020 - Verify the API response when searching by name or parent ID with Pagination and sorting using valid authorization",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1801400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 11,
+            "name": "the API service is running",
+            "match": {
+              "location": "api-test\\step-definitions\\common\\commonApiSteps.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 314900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 31,
+            "name": "the user has a valid authentication token",
+            "match": {
+              "location": "api-test\\step-definitions\\user\\categoryApiUserSteps.js:29"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 289597099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 32,
+            "name": "the user sends a GET request to \"/api/categories/page\" with pagination parameters",
+            "match": {
+              "location": "api-test\\step-definitions\\user\\categoryApiUserSteps.js:59"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 34245700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 33,
+            "name": "the API should return HTTP status code 200",
+            "match": {
+              "location": "api-test\\step-definitions\\common\\commonApiSteps.js:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 374799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 34,
+            "name": "the response body should contain a paginated and sorted list",
+            "match": {
+              "location": "api-test\\step-definitions\\common\\commonApiSteps.js:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 163700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 35,
+            "name": "categories should match the search input",
+            "match": {
+              "location": "api-test\\step-definitions\\common\\commonApiSteps.js:48"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 122600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 36,
+            "name": "no error message should be returned",
+            "match": {
+              "location": "api-test\\step-definitions\\common\\commonApiSteps.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 105400
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 729599
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@user",
+            "line": 4
+          },
+          {
+            "name": "@category",
+            "line": 4
+          },
+          {
+            "name": "@api",
+            "line": 4
+          },
+          {
+            "name": "@API_USER_020",
+            "line": 29
+          },
+          {
+            "name": "@get",
+            "line": 29
+          },
+          {
+            "name": "@pagination",
+            "line": 29
+          },
+          {
+            "name": "@positive",
+            "line": 29
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "category-api---user-operations;api_user_021---verify-the-api-response-when-searching-by-name-or-parent-id-with-pagination-and-sorting-without-authorization",
+        "keyword": "Scenario",
+        "line": 39,
+        "name": "API_USER_021 - Verify the API response when searching by name or parent ID with Pagination and sorting without authorization",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1545599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 11,
+            "name": "the API service is running",
+            "match": {
+              "location": "api-test\\step-definitions\\common\\commonApiSteps.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 258499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 40,
+            "name": "the user does not have an authentication token",
+            "match": {
+              "location": "api-test\\step-definitions\\user\\categoryApiUserSteps.js:38"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3446699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 41,
+            "name": "the user sends a GET request to \"/api/categories/page\" with pagination parameters",
+            "match": {
+              "location": "api-test\\step-definitions\\user\\categoryApiUserSteps.js:59"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9058600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 42,
+            "name": "the API should return HTTP status code 401",
+            "match": {
+              "location": "api-test\\step-definitions\\common\\commonApiSteps.js:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 229100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 43,
+            "name": "the response body should contain a proper error message",
+            "match": {
+              "location": "api-test\\step-definitions\\user\\categoryApiUserSteps.js:119"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 90599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 44,
+            "name": "no category data should be returned",
+            "match": {
+              "location": "api-test\\step-definitions\\user\\categoryApiUserSteps.js:128"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 376199
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 921800
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@user",
+            "line": 4
+          },
+          {
+            "name": "@category",
+            "line": 4
+          },
+          {
+            "name": "@api",
+            "line": 4
+          },
+          {
+            "name": "@API_USER_021",
+            "line": 38
+          },
+          {
+            "name": "@get",
+            "line": 38
+          },
+          {
+            "name": "@pagination",
+            "line": 38
+          },
+          {
+            "name": "@negative",
+            "line": 38
+          },
+          {
+            "name": "@unauthorized",
+            "line": 38
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "category-api---user-operations;api_user_022---verify-the-api-response-when-retrieving-main-categories-only-using-valid-authorization",
+        "keyword": "Scenario",
+        "line": 47,
+        "name": "API_USER_022 - Verify the API response when retrieving main categories only using valid authorization",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1186000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 11,
+            "name": "the API service is running",
+            "match": {
+              "location": "api-test\\step-definitions\\common\\commonApiSteps.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 264299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 48,
+            "name": "the user has a valid authentication token",
+            "match": {
+              "location": "api-test\\step-definitions\\user\\categoryApiUserSteps.js:29"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 304886100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 49,
+            "name": "the user sends a GET request to \"/api/categories/main\"",
+            "match": {
+              "location": "api-test\\step-definitions\\user\\categoryApiUserSteps.js:43"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 62549599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 50,
+            "name": "the API should return HTTP status code 200",
+            "match": {
+              "location": "api-test\\step-definitions\\common\\commonApiSteps.js:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 273700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 51,
+            "name": "the response body should contain a list of main categories only",
+            "match": {
+              "location": "api-test\\step-definitions\\common\\commonApiSteps.js:55"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 161599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 52,
+            "name": "no sub-categories should be included",
+            "match": {
+              "location": "api-test\\step-definitions\\user\\categoryApiUserSteps.js:136"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 510599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 53,
+            "name": "no error message should be returned",
+            "match": {
+              "location": "api-test\\step-definitions\\common\\commonApiSteps.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 154599
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 560099
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@user",
+            "line": 4
+          },
+          {
+            "name": "@category",
+            "line": 4
+          },
+          {
+            "name": "@api",
+            "line": 4
+          },
+          {
+            "name": "@API_USER_022",
+            "line": 46
+          },
+          {
+            "name": "@get",
+            "line": 46
+          },
+          {
+            "name": "@main",
+            "line": 46
+          },
+          {
+            "name": "@positive",
+            "line": 46
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "category-api---user-operations;api_user_023---verify-the-api-response-when-retrieving-main-categories-only-without-authorization",
+        "keyword": "Scenario",
+        "line": 56,
+        "name": "API_USER_023 - Verify the API response when retrieving main categories only without authorization",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1693800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 11,
+            "name": "the API service is running",
+            "match": {
+              "location": "api-test\\step-definitions\\common\\commonApiSteps.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 351799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 57,
+            "name": "the user does not have an authentication token",
+            "match": {
+              "location": "api-test\\step-definitions\\user\\categoryApiUserSteps.js:38"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3408499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 58,
+            "name": "the user sends a GET request to \"/api/categories/main\"",
+            "match": {
+              "location": "api-test\\step-definitions\\user\\categoryApiUserSteps.js:43"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7622000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 59,
+            "name": "the API should return HTTP status code 401",
+            "match": {
+              "location": "api-test\\step-definitions\\common\\commonApiSteps.js:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 254100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 60,
+            "name": "the response body should contain a proper error message",
+            "match": {
+              "location": "api-test\\step-definitions\\user\\categoryApiUserSteps.js:119"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 145799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 61,
+            "name": "no category data should be returned",
+            "match": {
+              "location": "api-test\\step-definitions\\user\\categoryApiUserSteps.js:128"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 123399
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 3736100
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@user",
+            "line": 4
+          },
+          {
+            "name": "@category",
+            "line": 4
+          },
+          {
+            "name": "@api",
+            "line": 4
+          },
+          {
+            "name": "@API_USER_023",
+            "line": 55
+          },
+          {
+            "name": "@get",
+            "line": 55
+          },
+          {
+            "name": "@main",
+            "line": 55
+          },
+          {
+            "name": "@negative",
+            "line": 55
+          },
+          {
+            "name": "@unauthorized",
+            "line": 55
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "category-api---user-operations;api_user_024---verify-that-an-authorized-user-is-not-allowed-to-update-categories",
+        "keyword": "Scenario",
+        "line": 64,
+        "name": "API_USER_024 - Verify that an authorized user is not allowed to update categories",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 3324300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 11,
+            "name": "the API service is running",
+            "match": {
+              "location": "api-test\\step-definitions\\common\\commonApiSteps.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 379799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 65,
+            "name": "the user has a valid authentication token",
+            "match": {
+              "location": "api-test\\step-definitions\\user\\categoryApiUserSteps.js:29"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 202193199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 66,
+            "name": "the user sends a PUT request to \"/api/categories/{id}\" with category data",
+            "match": {
+              "location": "api-test\\step-definitions\\user\\categoryApiUserSteps.js:69"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 26916299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 67,
+            "name": "the API should return HTTP status code 403",
+            "match": {
+              "location": "api-test\\step-definitions\\common\\commonApiSteps.js:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 112499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 68,
+            "name": "the response body should contain a proper error message",
+            "match": {
+              "location": "api-test\\step-definitions\\user\\categoryApiUserSteps.js:119"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 45399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 69,
+            "name": "the category details should not be updated",
+            "match": {
+              "location": "api-test\\step-definitions\\user\\categoryApiUserSteps.js:149"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 283100
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 606899
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@user",
+            "line": 4
+          },
+          {
+            "name": "@category",
+            "line": 4
+          },
+          {
+            "name": "@api",
+            "line": 4
+          },
+          {
+            "name": "@API_USER_024",
+            "line": 63
+          },
+          {
+            "name": "@put",
+            "line": 63
+          },
+          {
+            "name": "@update",
+            "line": 63
+          },
+          {
+            "name": "@negative",
+            "line": 63
+          },
+          {
+            "name": "@forbidden",
+            "line": 63
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "category-api---user-operations;api_user_025---verify-that-an-unauthorized-user-cannot-update-categories",
+        "keyword": "Scenario",
+        "line": 72,
+        "name": "API_USER_025 - Verify that an unauthorized user cannot update categories",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1947500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 11,
+            "name": "the API service is running",
+            "match": {
+              "location": "api-test\\step-definitions\\common\\commonApiSteps.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 338899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 73,
+            "name": "the user does not have an authentication token",
+            "match": {
+              "location": "api-test\\step-definitions\\user\\categoryApiUserSteps.js:38"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2568000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 74,
+            "name": "the user sends a PUT request to \"/api/categories/{id}\" with category data",
+            "match": {
+              "location": "api-test\\step-definitions\\user\\categoryApiUserSteps.js:69"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 12163600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 75,
+            "name": "the API should return HTTP status code 401",
+            "match": {
+              "location": "api-test\\step-definitions\\common\\commonApiSteps.js:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 262799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 76,
+            "name": "the response body should contain a proper error message",
+            "match": {
+              "location": "api-test\\step-definitions\\user\\categoryApiUserSteps.js:119"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 132399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 77,
+            "name": "the category should not be updated",
+            "match": {
+              "location": "api-test\\step-definitions\\user\\categoryApiUserSteps.js:157"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 318000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 573300
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@user",
+            "line": 4
+          },
+          {
+            "name": "@category",
+            "line": 4
+          },
+          {
+            "name": "@api",
+            "line": 4
+          },
+          {
+            "name": "@API_USER_025",
+            "line": 71
+          },
+          {
+            "name": "@put",
+            "line": 71
+          },
+          {
+            "name": "@update",
+            "line": 71
+          },
+          {
+            "name": "@negative",
+            "line": 71
+          },
+          {
+            "name": "@unauthorized",
+            "line": 71
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "category-api---user-operations;api_user_026---verify-that-an-authorized-user-is-not-allowed-to-delete-a-category",
+        "keyword": "Scenario",
+        "line": 80,
+        "name": "API_USER_026 - Verify that an authorized user is not allowed to delete a category",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 896099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 11,
+            "name": "the API service is running",
+            "match": {
+              "location": "api-test\\step-definitions\\common\\commonApiSteps.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 293800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 81,
+            "name": "the user has a valid authentication token",
+            "match": {
+              "location": "api-test\\step-definitions\\user\\categoryApiUserSteps.js:29"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 203094399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 82,
+            "name": "the user sends a DELETE request to \"/api/categories/{id}\"",
+            "match": {
+              "location": "api-test\\step-definitions\\user\\categoryApiUserSteps.js:81"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 44775399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 83,
+            "name": "the API should return HTTP status code 403",
+            "match": {
+              "location": "api-test\\step-definitions\\common\\commonApiSteps.js:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 482600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 84,
+            "name": "the response body should contain a proper error message",
+            "match": {
+              "location": "api-test\\step-definitions\\user\\categoryApiUserSteps.js:119"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 191599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 85,
+            "name": "the category should not be deleted",
+            "match": {
+              "location": "api-test\\step-definitions\\user\\categoryApiUserSteps.js:165"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 341799
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1109099
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@user",
+            "line": 4
+          },
+          {
+            "name": "@category",
+            "line": 4
+          },
+          {
+            "name": "@api",
+            "line": 4
+          },
+          {
+            "name": "@API_USER_026",
+            "line": 79
+          },
+          {
+            "name": "@delete",
+            "line": 79
+          },
+          {
+            "name": "@negative",
+            "line": 79
+          },
+          {
+            "name": "@forbidden",
+            "line": 79
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "category-api---user-operations;api_user_027---verify-that-an-unauthorized-user-cannot-delete-a-category",
+        "keyword": "Scenario",
+        "line": 88,
+        "name": "API_USER_027 - Verify that an unauthorized user cannot delete a category",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 2129600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 11,
+            "name": "the API service is running",
+            "match": {
+              "location": "api-test\\step-definitions\\common\\commonApiSteps.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 376100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 89,
+            "name": "the user does not have an authentication token",
+            "match": {
+              "location": "api-test\\step-definitions\\user\\categoryApiUserSteps.js:38"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2654399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 90,
+            "name": "the user sends a DELETE request to \"/api/categories/{id}\"",
+            "match": {
+              "location": "api-test\\step-definitions\\user\\categoryApiUserSteps.js:81"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6618600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 91,
+            "name": "the API should return HTTP status code 401",
+            "match": {
+              "location": "api-test\\step-definitions\\common\\commonApiSteps.js:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 257100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 92,
+            "name": "the response body should contain a proper error message",
+            "match": {
+              "location": "api-test\\step-definitions\\user\\categoryApiUserSteps.js:119"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 131900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 93,
+            "name": "the category should not be deleted",
+            "match": {
+              "location": "api-test\\step-definitions\\user\\categoryApiUserSteps.js:165"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 106399
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 2264699
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@user",
+            "line": 4
+          },
+          {
+            "name": "@category",
+            "line": 4
+          },
+          {
+            "name": "@api",
+            "line": 4
+          },
+          {
+            "name": "@API_USER_027",
+            "line": 87
+          },
+          {
+            "name": "@delete",
+            "line": 87
+          },
+          {
+            "name": "@negative",
+            "line": 87
+          },
+          {
+            "name": "@unauthorized",
+            "line": 87
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "category-api---user-operations;api_user_028---verify-that-an-authorized-user-cannot-create-a-new-category",
+        "keyword": "Scenario",
+        "line": 96,
+        "name": "API_USER_028 - Verify that an authorized user cannot create a new category",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 12419899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 11,
+            "name": "the API service is running",
+            "match": {
+              "location": "api-test\\step-definitions\\common\\commonApiSteps.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 394600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 97,
+            "name": "the user has a valid authentication token",
+            "match": {
+              "location": "api-test\\step-definitions\\user\\categoryApiUserSteps.js:29"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 220962399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 98,
+            "name": "the user sends a POST request to \"/api/categories\" with category data",
+            "match": {
+              "location": "api-test\\step-definitions\\user\\categoryApiUserSteps.js:88"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 19285399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 99,
+            "name": "the API should return HTTP status code 403",
+            "match": {
+              "location": "api-test\\step-definitions\\common\\commonApiSteps.js:16"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 1229999,
+              "error_message": "AssertionError [ERR_ASSERTION]: Expected status 403 but got 400. Response: {\"details\":{\"name\":\"Category name must be between 3 and 10 characters\"},\"error\":\"BAD_REQUEST\",\"message\":\"Validation failed\",\"status\":400,\"timestamp\":\"2026-02-06T13:38:38.3070889\"}\n\n400 !== 403\n\n    + expected - actual\n\n    -400\n    +403\n\n    at CustomWorld.<anonymous> (C:\\Users\\zulfa\\Downloads\\Zulfaa-ITQA\\qa-training-tests\\api-test\\step-definitions\\common\\commonApiSteps.js:18:10)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 100,
+            "name": "the response body should contain a proper error message",
+            "match": {
+              "location": "api-test\\step-definitions\\user\\categoryApiUserSteps.js:119"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 101,
+            "name": "the category should not be created",
+            "match": {
+              "location": "api-test\\step-definitions\\user\\categoryApiUserSteps.js:173"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1003099
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@user",
+            "line": 4
+          },
+          {
+            "name": "@category",
+            "line": 4
+          },
+          {
+            "name": "@api",
+            "line": 4
+          },
+          {
+            "name": "@API_USER_028",
+            "line": 95
+          },
+          {
+            "name": "@post",
+            "line": 95
+          },
+          {
+            "name": "@create",
+            "line": 95
+          },
+          {
+            "name": "@negative",
+            "line": 95
+          },
+          {
+            "name": "@forbidden",
+            "line": 95
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "category-api---user-operations;api_user_029---verify-that-an-unauthorized-user-cannot-create-a-new-category",
+        "keyword": "Scenario",
+        "line": 104,
+        "name": "API_USER_029 - Verify that an unauthorized user cannot create a new category",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 2250299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 11,
+            "name": "the API service is running",
+            "match": {
+              "location": "api-test\\step-definitions\\common\\commonApiSteps.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 239700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 105,
+            "name": "the user does not have an authentication token",
+            "match": {
+              "location": "api-test\\step-definitions\\user\\categoryApiUserSteps.js:38"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5724399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 106,
+            "name": "the user sends a POST request to \"/api/categories\" with category data",
+            "match": {
+              "location": "api-test\\step-definitions\\user\\categoryApiUserSteps.js:88"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 12437699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 107,
+            "name": "the API should return HTTP status code 401",
+            "match": {
+              "location": "api-test\\step-definitions\\common\\commonApiSteps.js:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 119599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 108,
+            "name": "the response body should contain a proper error message",
+            "match": {
+              "location": "api-test\\step-definitions\\user\\categoryApiUserSteps.js:119"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 39199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 109,
+            "name": "the category should not be created",
+            "match": {
+              "location": "api-test\\step-definitions\\user\\categoryApiUserSteps.js:173"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 163499
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 788199
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@user",
+            "line": 4
+          },
+          {
+            "name": "@category",
+            "line": 4
+          },
+          {
+            "name": "@api",
+            "line": 4
+          },
+          {
+            "name": "@API_USER_029",
+            "line": 103
+          },
+          {
+            "name": "@post",
+            "line": 103
+          },
+          {
+            "name": "@create",
+            "line": 103
+          },
+          {
+            "name": "@negative",
+            "line": 103
+          },
+          {
+            "name": "@unauthorized",
+            "line": 103
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "category-api---user-operations",
+    "line": 5,
+    "keyword": "Feature",
+    "name": "Category API - User Operations",
+    "tags": [
+      {
+        "name": "@user",
+        "line": 4
+      },
+      {
+        "name": "@category",
+        "line": 4
+      },
+      {
+        "name": "@api",
+        "line": 4
+      }
+    ],
+    "uri": "api-test\\features\\user\\category_api_user.feature"
+  }
+]
