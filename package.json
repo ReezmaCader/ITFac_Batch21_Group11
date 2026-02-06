@@ -1,21 +1,16 @@
 {
-  "name": "qa-training-tests",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "name": "qa-training-app-automation",
+  "version": "0.1.0",
+  "private": true,
   "type": "commonjs",
+  "scripts": {
+    "test": "cucumber-js",
+    "test:headed": "HEADLESS=false cucumber-js",
+    "test:report": "cucumber-js --format json:reports/cucumber-report.json --format html:reports/cucumber-report.html"
+  },
   "devDependencies": {
-    "@cucumber/cucumber": "^12.6.0",
-    "@playwright/test": "^1.58.1",
-    "chai": "^6.2.2",
-    "cucumber-html-reporter": "^7.2.0",
-    "mochawesome": "^7.1.4",
-    "playwright": "^1.58.1"
+    "@cucumber/cucumber": "^10.7.0",
+    "dotenv": "^16.4.5",
+    "playwright": "^1.50.1"
   }
 }

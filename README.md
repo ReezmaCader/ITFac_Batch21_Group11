@@ -1,27 +1,90 @@
-# ITFac_Batch21_Group11
+# QA Training App Automation (Playwright + Cucumber + JavaScript)
 
-Test automation repository for the ITQA module
+This project is a starter automation framework for the **QA Training App** using Playwright and Cucumber in JavaScript.
 
-## Playwright
+## 1) Prerequisites
 
-First do a git pull and get the updates
+- **Java JDK 21**
+- **MySQL 8.0**
+- **Node.js 20+** (LTS recommended)
+- **Google Chrome** (recommended browser)
 
-Then do a npm install (So playeright and needed dependecies will be installed)
+## 2) Run the QA Training App (local)
 
-Create separate pages for your specific UI pages. Always yse POM model
-(for login, you can use the already available model)
+The app artifacts are already in this repo under `QA Training App/`.
 
-Write your admin test cases under tests/admin and user test cases under tests/user folder and end them with .spec.js format (Refer to the test case files written by me)
+1. Start MySQL and create the database:
+   ```sql
+   CREATE DATABASE qa_training;
+   ```
 
-Create a branch for yourselves and add your test files under admin and user, once done update in the group so I will merge to main
+2. Update `QA Training App/application.properties` with your MySQL root password:
+   ```properties
+   spring.datasource.username=root
+   spring.datasource.password=<your-root-password>
+   ```
 
-### Run all:
-npx playwright test
+3. Run the app:
+   ```bash
+   cd "QA Training App"
+   java -jar qa-training-app.jar
+   ```
 
-### Run only user tests:
-npx playwright test tests/user
+4. Verify the login page:
+   - UI: `http://localhost:8080/ui/login`
+   - Swagger: `http://localhost:8080/swagger-ui/index.html`
 
-### Run only one file:
-npx playwright test plant-list-user.spec.js
+Default credentials (from app config):
+- Admin: `admin / admin123`
+- User: `testuser / test123`
 
+If your assignment document lists different user credentials, override them in `.env`.
 
+## 3) Install automation dependencies
+
+From the `automation/` directory:
+
+```bash
+npm install
+npx playwright install
+```
+
+## 4) Configure environment
+
+Copy the example env file and adjust if needed:
+
+```bash
+cp .env.example .env
+```
+
+Key values:
+- `BASE_URL` (default `http://localhost:8080`)
+- `HEADLESS` (true/false)
+- `TIMEOUT_MS` (default 10000)
+
+## 5) Run tests
+
+```bash
+npm test
+```
+
+Headed mode:
+```bash
+npm run test:headed
+```
+
+Reports are generated in `automation/reports/`.
+
+## Notes
+
+- Plant Management scenarios are aligned with `TestCaseDocument__11__v0.1.pdf`:
+  - UI: `features/plant-management-ui.feature`
+  - API: `features/plant-management-api.feature`
+- API tests authenticate via `POST /api/auth/login` and pass the JWT as `Authorization: Bearer <token>`.
+- Data setup/cleanup for API tests is automated in hooks (creates categories, plants, and sales as needed).
+- Selectors are mapped to the current HTML templates inside the JAR.
+
+## Suggested next steps
+
+- Implement full CRUD scenarios for Categories/Plants/Sales.
+- Add Allure reporting if required by your assignment.
