@@ -5,7 +5,8 @@ node_modules/
 test-results/
 playwright-report/
 playwright/.cache/
-
+allure-results/
+reports/
 # Environment variables
 .env
 .env.local
